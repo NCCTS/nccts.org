@@ -8,6 +8,7 @@ fuse*
 *.swp
 
 .repl/
+.vagrant/
 node_modules/
 
 .floo
@@ -24,7 +25,7 @@ node_modules/
 *.yo-rc.json
 lib-cov
 logs
+npm-debug.log
 pids
 results
-
-npm-debug.log
+user-data
