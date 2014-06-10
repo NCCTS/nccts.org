@@ -1,7 +1,7 @@
 # DOCKER-VERSION 0.12.0
 
 # Use ncct/baseimage as base image.
-FROM nccts/baseimage:0.0.1
+FROM nccts/baseimage:0.0.5
 
 # Set correct environment variables.
 ENV HOME /root
