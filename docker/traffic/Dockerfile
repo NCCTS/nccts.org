@@ -23,6 +23,10 @@ ENV HOME /root
 RUN cd /home/sailor/Downloads/trafficserver && make install
 RUN cd /opt/ats && bin/traffic_server -R 1
 RUN rm -rf /home/sailor/Downloads
+USER sailor
+RUN printf "\nexport MANPATH=\`man -w\`:/opt/ats/man\n" >> /home/sailor/.bashrc
+USER root
+RUN printf "\nexport MANPATH=\`man -w\`:/opt/ats/man\n" >> /root/.bashrc
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
