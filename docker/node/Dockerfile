@@ -10,9 +10,9 @@ ENV HOME /root
 CMD ["/sbin/my_init"]
 
 # nvm / Node
-USER nccts
-WORKDIR /home/nccts
-ENV HOME /home/nccts
+USER sailor
+WORKDIR /home/sailor
+ENV HOME /home/sailor
 RUN git clone https://github.com/creationix/nvm.git ~/.nvm
 RUN printf "\nsource ~/.nvm/nvm.sh\n" >> .bashrc
 RUN bash -c "source ~/.nvm/nvm.sh && nvm install v0.10.28"

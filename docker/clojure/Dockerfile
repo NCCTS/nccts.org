@@ -16,9 +16,9 @@ RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true 
 RUN apt-get install -y oracle-java7-installer
 
 #  Leiningen / Clojure
-USER nccts
-WORKDIR /home/nccts
-ENV HOME /home/nccts
+USER sailor
+WORKDIR /home/sailor
+ENV HOME /home/sailor
 RUN mkdir bin && wget -O bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.3.4/bin/lein
 RUN chmod +x bin/lein && printf "\nexport PATH=~/bin:\$PATH\n" >> .bashrc
 USER root

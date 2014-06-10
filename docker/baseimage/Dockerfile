@@ -22,10 +22,10 @@ RUN apt-get update
 RUN apt-get install -y ca-certificates git-core software-properties-common tmux
 
 # Unprivileged user
-RUN adduser --disabled-password --gecos "" nccts
-USER nccts
-WORKDIR /home/nccts
-ENV HOME /home/nccts
+RUN adduser --disabled-password --gecos "" sailor
+USER sailor
+WORKDIR /home/sailor
+ENV HOME /home/sailor
 RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> .bashrc
 USER root
 WORKDIR /
