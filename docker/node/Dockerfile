@@ -15,7 +15,7 @@ WORKDIR /home/sailor
 ENV HOME /home/sailor
 RUN git clone https://github.com/creationix/nvm.git ~/.nvm
 RUN printf "\nsource ~/.nvm/nvm.sh\n" >> .bashrc
-RUN bash -c "source ~/.nvm/nvm.sh && nvm install v0.10.28"
+RUN bash -c "source ~/.nvm/nvm.sh && nvm install v0.10.28 && nvm alias default 0.10.28"
 USER root
 WORKDIR /
 ENV HOME /root
