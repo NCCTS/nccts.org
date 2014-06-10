@@ -19,7 +19,7 @@ RUN apt-get install -y oracle-java7-installer
 USER sailor
 WORKDIR /home/sailor
 ENV HOME /home/sailor
-RUN mkdir bin && wget -O bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.3.4/bin/lein
+RUN mkdir bin && wget -O bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.4.0/bin/lein
 RUN chmod +x bin/lein && printf "\nexport PATH=~/bin:\$PATH\n" >> .bashrc
 USER root
 WORKDIR /
