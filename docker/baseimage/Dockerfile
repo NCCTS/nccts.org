@@ -19,7 +19,7 @@ RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAG
 
 # Common tools
 RUN apt-get update
-RUN apt-get install -y ca-certificates git-core software-properties-common tmux
+RUN apt-get install -y autoconf automake build-essential ca-certificates curl git-core libpcre3-dev liblzma-dev man-db pkg-config software-properties-common tmux wget zlib1g-dev
 
 # Unprivileged user
 RUN adduser --disabled-password --gecos "" sailor
