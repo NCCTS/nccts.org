@@ -11,7 +11,7 @@ CMD ["/sbin/my_init"]
 
 # Traffice Server
 RUN apt-get update
-RUN apt-get install -y wget autoconf automake autotools-dev bison debhelper dh-apparmor flex gettext intltool-debian libbison-dev libcap-dev libexpat1-dev libfl-dev libpcre3-dev libpcrecpp0 libsigsegv2 libsqlite3-dev libssl-dev libtool m4 po-debconf tcl-dev tcl8.6-dev zlib1g-dev libboost-dev libboost1.54-dev lua5.1 libxml2-dev liblua5.1-0-dev libhwloc-dev libhwloc-plugins libhwloc5 libpci-dev
+RUN apt-get install -y python-sphinx autoconf automake autotools-dev bison debhelper dh-apparmor flex gettext intltool-debian libbison-dev libcap-dev libexpat1-dev libfl-dev libpcre3-dev libpcrecpp0 libsigsegv2 libsqlite3-dev libssl-dev libtool m4 po-debconf tcl-dev tcl8.6-dev zlib1g-dev libboost-dev libboost1.54-dev lua5.1 libxml2-dev liblua5.1-0-dev libhwloc-dev libhwloc-plugins libhwloc5 libpci-dev
 USER sailor
 WORKDIR /home/sailor
 ENV HOME /home/sailor
