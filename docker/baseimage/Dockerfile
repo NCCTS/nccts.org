@@ -27,9 +27,18 @@ USER sailor
 WORKDIR /home/sailor
 ENV HOME /home/sailor
 RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> .bashrc
+
+# Build and install: watchman, ag
+RUN mkdir Downloads && cd Downloads && git clone https://github.com/facebook/watchman.git
+RUN cd Downloads/watchman && git checkout v2.9.8 && ./autogen.sh && ./configure && make
+RUN cd Downloads && git clone https://github.com/ggreer/the_silver_searcher.git
+RUN cd Downloads/the_silver_searcher && git checkout 0.22.0 && ./build.sh
 USER root
 WORKDIR /
 ENV HOME /root
+RUN cd /home/sailor/Downloads/watchman && make install
+RUN cd /home/sailor/Downloads/the_silver_searcher && make install
+RUN rm -rf /home/sailor/Downloads
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
