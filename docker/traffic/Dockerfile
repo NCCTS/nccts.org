@@ -21,6 +21,7 @@ USER root
 WORKDIR /
 ENV HOME /root
 RUN cd /home/nccts/Downloads/trafficserver && make install
+RUN cd /opt/ats && bin/traffic_server -R 1
 RUN rm -rf /home/nccts/Downloads
 
 # Clean up APT when done.
