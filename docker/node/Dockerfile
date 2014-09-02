@@ -1,7 +1,7 @@
 # DOCKER-VERSION 0.12.0
 
 # Use ncct/baseimage as base image.
-FROM nccts/baseimage:0.0.5
+FROM nccts/baseimage:0.0.6
 
 # Set correct environment variables.
 ENV HOME /root
@@ -15,7 +15,7 @@ WORKDIR /home/sailor
 ENV HOME /home/sailor
 RUN git clone https://github.com/creationix/nvm.git ~/.nvm
 RUN printf "\nsource ~/.nvm/nvm.sh\n" >> .bashrc
-RUN bash -c "source ~/.nvm/nvm.sh && nvm install v0.10.28 && nvm alias default 0.10.28"
+RUN bash -c "source ~/.nvm/nvm.sh && nvm install v0.10.29 && nvm alias default 0.10.29"
 USER root
 WORKDIR /
 ENV HOME /root
