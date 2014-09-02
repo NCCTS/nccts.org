@@ -32,6 +32,7 @@ WORKDIR /home/sailor
 ENV HOME /home/sailor
 RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> .bashrc
 RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> .bashrc
+RUN printf '\n alias e="emacs -Q"\n' >> .bashrc
 ADD ./tmux.conf /home/sailor/.tmux.conf
 
 # Build and install: watchman, ag
