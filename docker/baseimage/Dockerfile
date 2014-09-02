@@ -35,6 +35,9 @@ RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> .bashrc
 RUN printf '\n alias e="emacs -Q"\n' >> .bashrc
 ADD ./tmux.conf /home/sailor/.tmux.conf
 
+# Safety catch, i.e. when attached with `docker attach`
+RUN printf '\nalias exit="printf '\''\\nWARNING !!! WATCH OUT !!! VORSICHT !!!\\n     Do you really want to exit?\\n            \`command exit\`\\nWARNING !!! WATCH OUT !!! VORSICHT !!!\\n\\n'\''"\n' >> .bashrc
+
 # Build and install: watchman, ag
 RUN mkdir Downloads && cd Downloads && git clone https://github.com/facebook/watchman.git
 RUN cd Downloads/watchman && git checkout v2.9.8 && ./autogen.sh && ./configure && make
