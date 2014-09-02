@@ -12,10 +12,12 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-# Locale
+# Locale, other settings for root
 RUN locale-gen --purge en_US.UTF-8
 RUN echo -e 'LANG="en_US.UTF-8"\nLANGUAGE="en_US:en"\n' > /etc/default/locale
 RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> /root/.bashrc
+RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> /root/.bashrc
+ADD ./tmux.conf /root/.tmux.conf
 
 # Common tools
 RUN apt-get update
@@ -27,6 +29,8 @@ USER sailor
 WORKDIR /home/sailor
 ENV HOME /home/sailor
 RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> .bashrc
+RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> .bashrc
+ADD ./tmux.conf /home/sailor/.tmux.conf
 
 # Build and install: watchman, ag
 RUN mkdir Downloads && cd Downloads && git clone https://github.com/facebook/watchman.git
