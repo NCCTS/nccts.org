@@ -43,11 +43,14 @@ RUN mkdir Downloads && cd Downloads && git clone https://github.com/facebook/wat
 RUN cd Downloads/watchman && git checkout v2.9.8 && ./autogen.sh && ./configure && make
 RUN cd Downloads && git clone https://github.com/ggreer/the_silver_searcher.git
 RUN cd Downloads/the_silver_searcher && git checkout 0.22.0 && ./build.sh
+
+# Back to root
 USER root
 WORKDIR /
 ENV HOME /root
 RUN cd /home/sailor/Downloads/watchman && make install
 RUN cd /home/sailor/Downloads/the_silver_searcher && make install
+RUN ldconfig
 RUN rm -rf /home/sailor/Downloads
 
 # Clean up APT when done.
