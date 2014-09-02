@@ -17,6 +17,7 @@ RUN locale-gen --purge en_US.UTF-8
 RUN echo -e 'LANG="en_US.UTF-8"\nLANGUAGE="en_US:en"\n' > /etc/default/locale
 RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> /root/.bashrc
 RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> /root/.bashrc
+RUN printf '\n alias e="emacs -Q"\n' >> /root/.bashrc
 ADD ./tmux.conf /root/.tmux.conf
 
 # Common tools
