@@ -22,7 +22,8 @@ ADD ./tmux.conf /root/.tmux.conf
 
 # Common tools
 RUN apt-get update
-RUN apt-get install -y autoconf automake build-essential ca-certificates curl git-core libpcre3-dev liblzma-dev man-db pkg-config software-properties-common tmux wget zlib1g-dev
+RUN apt-get install -y autoconf automake build-essential ca-certificates curl emacs24-nox git-core libpcre3-dev liblzma-dev man-db pkg-config software-properties-common tmux wget zlib1g-dev
+RUN ldconfig
 
 # Unprivileged user
 RUN adduser --disabled-password --gecos "" sailor
