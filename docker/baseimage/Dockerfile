@@ -1,7 +1,7 @@
-# DOCKER-VERSION 0.12.0
+# DOCKER-VERSION 1.2.0, build fa7b24f
 
 # Use phusion/baseimage as base image.
-FROM phusion/baseimage:0.9.10
+FROM phusion/baseimage:0.9.13
 
 # Set correct environment variables.
 ENV HOME /root
