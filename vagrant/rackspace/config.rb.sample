@@ -1,0 +1,43 @@
+if File.exists?('user-data') && ARGV[0].eql?('up')
+  require 'open-uri'
+  require 'yaml'
+
+  # generate a new discovery token during `vagrant up`
+  token = open('https://discovery.etcd.io/new').read
+
+  def rand_password_hash()
+    %x( docker run nccts/secgen /secgen/rand_hash )
+  end
+
+  # no need to retain the randomly generated passwords, since ssh keys will be
+  # used for remote login; but these md5-based hashes will be used to override
+  # any default passwords for the root and core users
+  root_user_password_hash = rand_password_hash()
+  core_user_password_hash = rand_password_hash()
+
+  data = YAML::load_file('user-data') #Load
+  data['coreos']['etcd']['discovery'] = token #Modify
+  data['users'][0]['passwd'] = root_user_password_hash #Modify
+  data['users'][1]['passwd'] = core_user_password_hash #Modify
+  File.open('user-data', 'r+') {|f| f.write( "#cloud-config\n" + data.to_yaml ) } #Store
+end
+
+# Size of the CoreOS cluster created by Vagrant
+#$num_instances = 1
+
+# Prefix for vm_name
+#$vm_name_prefix = "my-proj-prefix-"
+
+# Rackspace API credentials (!! take care !!)
+#$rs_api_user = "myuser"
+#$rs_api_key  = "myapikey"
+
+# Rackspace image preferences
+# https://coreos.com/docs/running-coreos/cloud-providers/rackspace/
+#$rs_api_image_flavor = /2GB Standard Instance/
+#$rs_api_image_id     = "78a24bc3-2545-433b-8067-a5143c04a3c3"
+#$rs_api_region       = :ord
+
+# SSH keys
+#$my_private_key_path = "/some/path/to/.ssh/id_rsa_my_proj"
+#$my_public_key_path  = "/some/path/to/.ssh/id_rsa_my_proj.pub"
