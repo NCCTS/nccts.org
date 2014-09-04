@@ -1,4 +1,4 @@
-# DOCKER-VERSION 0.12.0
+# DOCKER-VERSION 1.2.0, build fa7b24f
 
 # Use ncct/baseimage as base image.
 FROM nccts/baseimage:0.0.6
