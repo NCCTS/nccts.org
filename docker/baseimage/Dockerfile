@@ -53,5 +53,5 @@ RUN cd /home/sailor/Downloads/the_silver_searcher && make install
 RUN ldconfig
 RUN rm -rf /home/sailor/Downloads
 
-# Clean up APT when done.
+# Clean up APT when done
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
