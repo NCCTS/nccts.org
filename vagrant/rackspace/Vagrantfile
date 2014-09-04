@@ -13,10 +13,13 @@ CONFIG = File.join(File.dirname(__FILE__), "config.rb")
 
 # Defaults for config options defined in CONFIG
 $num_instances       = 1
+$vm_name_prefix      = ""
+
+# Default Rackspace image preferences, override in CONFIG
+# https://coreos.com/docs/running-coreos/cloud-providers/rackspace/
 $rs_api_image_flavor = /2GB Standard Instance/
 $rs_api_image_id     = "78a24bc3-2545-433b-8067-a5143c04a3c3"
 $rs_api_region       = :ord
-$vm_name_prefix      = ""
 
 # Attempt to apply the deprecated environment variable NUM_INSTANCES to
 # $num_instances while allowing config.rb to override it
