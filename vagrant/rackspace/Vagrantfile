@@ -17,6 +17,7 @@ $vm_name_prefix      = ""
 
 # Default Rackspace image preferences, override in CONFIG
 # https://coreos.com/docs/running-coreos/cloud-providers/rackspace/
+# https://github.com/mitchellh/vagrant-rackspace#configuration
 $rs_api_image_flavor = /2GB Standard Instance/
 $rs_api_image_id     = "78a24bc3-2545-433b-8067-a5143c04a3c3"
 $rs_api_region       = :ord
@@ -51,6 +52,7 @@ Vagrant.configure("2") do |config|
       config.vm.hostname = vm_name
 
       config.vm.provider :rackspace do |rs, override|
+        # See https://github.com/mitchellh/vagrant-rackspace#configuration
         rs.username = $rs_api_user
         rs.api_key  = $rs_api_key
         rs.flavor   = $rs_api_image_flavor
