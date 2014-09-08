@@ -2,13 +2,14 @@
 FROM phusion/baseimage:0.9.13
 
 # nccts/baseimage
-# Version: 0.0.8-pre
+# Version: 0.0.7
 MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
 # Ave, maris stella, Dei mater alma, atque semper virgo, felix cœli porta.
 
-ENV REFRESHED_AT [2014-09-07 Sun 16:12]
+# Cache buster
+ENV REFRESHED_AT [2014-09-07 Sun 19:45]
 
-# Set correct environment variables
+# Set environment variables
 ENV HOME /root
 
 # Disable sshd
