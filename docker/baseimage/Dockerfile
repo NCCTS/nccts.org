@@ -1,57 +1,33 @@
-# DOCKER-VERSION 1.2.0, build fa7b24f
-
-# Use phusion/baseimage as base image.
+# Docker version 1.1.2, build d84a070
 FROM phusion/baseimage:0.9.13
 
-# Set correct environment variables.
+# nccts/baseimage
+# Version: 0.0.8-pre
+MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
+# Ave, maris stella, Dei mater alma, atque semper virgo, felix cœli porta.
+
+ENV REFRESHED_AT [2014-09-07 Sun 16:12]
+
+# Set correct environment variables
 ENV HOME /root
 
 # Disable sshd
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
+# Add supporting files for the build
+ADD . /docker-build
+RUN chmod -R 777 /docker-build
 
-# Locale, other settings for root
-RUN locale-gen --purge en_US.UTF-8
-RUN echo -e 'LANG="en_US.UTF-8"\nLANGUAGE="en_US:en"\n' > /etc/default/locale
-RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> /root/.bashrc
-RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> /root/.bashrc
-RUN printf '\n alias e="emacs -Q"\n' >> /root/.bashrc
-ADD ./tmux.conf /root/.tmux.conf
+# Run main setup script
+RUN /docker-build/setup.sh
 
-# Common tools
-RUN apt-get update
-RUN apt-get install -y autoconf automake build-essential ca-certificates curl emacs24-nox git-core libpcre3-dev liblzma-dev man-db pkg-config software-properties-common tmux wget zlib1g-dev
-RUN ldconfig
+# Cleanup
+RUN rm -rf /docker-build
 
-# Unprivileged user
-RUN adduser --disabled-password --gecos "" sailor
-USER sailor
-WORKDIR /home/sailor
-ENV HOME /home/sailor
-RUN printf "\nexport LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\n" >> .bashrc
-RUN printf "\n[ -n \"\$TMUX\" ] && export TERM=screen-256color\n" >> .bashrc
-RUN printf '\n alias e="emacs -Q"\n' >> .bashrc
-ADD ./tmux.conf /home/sailor/.tmux.conf
+# Use baseimage-docker's init system as the entrypoint; by default fire up tmux
+# as the 'sailor' user; exiting that session will drop back to a root shell
+ENTRYPOINT ["/sbin/my_init", "--"]
+CMD ["bash", "-l", "-c", "su -c 'tmux new-session -s base' - sailor"]
 
-# Safety catch, i.e. when attached with `docker attach`
-RUN printf '\nalias exit="printf '\''\\nWARNING !!! WATCH OUT !!! VORSICHT !!!\\n     Do you really want to exit?\\n            \`command exit\`\\nWARNING !!! WATCH OUT !!! VORSICHT !!!\\n\\n'\''"\n' >> .bashrc
-
-# Build and install: watchman, ag
-RUN mkdir Downloads && cd Downloads && git clone https://github.com/facebook/watchman.git
-RUN cd Downloads/watchman && git checkout v2.9.8 && ./autogen.sh && ./configure && make
-RUN cd Downloads && git clone https://github.com/ggreer/the_silver_searcher.git
-RUN cd Downloads/the_silver_searcher && git checkout 0.22.0 && ./build.sh
-
-# Back to root
-USER root
-WORKDIR /
-ENV HOME /root
-RUN cd /home/sailor/Downloads/watchman && make install
-RUN cd /home/sailor/Downloads/the_silver_searcher && make install
-RUN ldconfig
-RUN rm -rf /home/sailor/Downloads
-
-# Clean up APT when done
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Would allow `command exit` in a 'sailor' tmux/shell to drop back to a root shell
+# CMD ["bash", "-l", "-c", "su -c 'tmux new-session -s base' - sailor; exec bash -l"]
