@@ -3,9 +3,6 @@
 export DEBIAN_FRONTEND=noninteractive
 export HOME=/root
 
-# Install entry script
-cp /docker-build/support/entry.sh /usr/local/bin/entry.sh
-
 # Install packages
 apt-get update
 apt-get -y install software-properties-common
@@ -23,5 +20,3 @@ apt-get -y autoclean
 apt-get -y clean
 apt-get -y autoremove
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-# ENTRYPOINT, CMD inherited from nccts/baseimage
