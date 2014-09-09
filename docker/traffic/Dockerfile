@@ -6,7 +6,7 @@ FROM nccts/baseimage:0.0.7
 # Set correct environment variables.
 ENV HOME /root
 
-# Use baseimage-docker's init system.
+# Use phusion/baseimage's init system.
 CMD ["/sbin/my_init"]
 
 # Traffice Server

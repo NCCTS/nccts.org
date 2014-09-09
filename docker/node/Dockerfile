@@ -19,6 +19,8 @@ RUN bash -c "source ~/.nvm/nvm.sh && nvm install v0.10.29 && nvm alias default 0
 USER root
 WORKDIR /
 ENV HOME /root
+# Use phusion/baseimage's init system as the entrypoint:
+# 'entry.sh' starts tmux as the 'sailor' user with a session named 'clojure'
 
 # # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
