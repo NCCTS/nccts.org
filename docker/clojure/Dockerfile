@@ -1,31 +1,19 @@
-# DOCKER-VERSION 1.2.0, build fa7b24f
+# Docker version 1.1.2, build d84a070
+FROM nccts/baseimage:0.0.8
 
-# Use ncct/baseimage as base image.
-FROM nccts/baseimage:0.0.7
+# nccts/clojure
+# Version: 0.0.8
+MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
+# Salve, Regina, Mater misericordiæ, vita, dulcedo, et spes nostra, salve.
 
-# Set correct environment variables.
+# Cache buster
+ENV REFRESHED_AT [2014-09-08 Mon 21:30]
+
+# Set environment variables
 ENV HOME /root
 
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
+# Add supporting files for the build
+ADD . /docker-build
 
-# Java
-RUN add-apt-repository -y ppa:webupd8team/java
-RUN apt-get update
-RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-RUN apt-get install -y oracle-java7-installer
-RUN ldconfig
-
-#  Leiningen / Clojure
-USER sailor
-WORKDIR /home/sailor
-ENV HOME /home/sailor
-RUN mkdir bin && wget -O bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.4.2/bin/lein
-RUN chmod +x bin/lein && printf "\nexport PATH=~/bin:\$PATH\n" >> .bashrc
-RUN bin/lein self-install && bin/lein version
-USER root
-WORKDIR /
-ENV HOME /root
-
-# # Clean up APT when done.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Run main setup script, cleanup supporting files
+RUN chmod -R 777 /docker-build && /docker-build/setup.sh && rm -rf /docker-build
