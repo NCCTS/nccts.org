@@ -23,3 +23,7 @@ RUN chmod -R 777 /docker-build && /docker-build/setup.sh && rm -rf /docker-build
 ENTRYPOINT ["/sbin/my_init", "--", "/usr/local/bin/entry.sh", "clojure"]
 CMD [""]
 
+# example usage
+# --------------------------------------------------
+# docker run -it --rm nccts/clojure
+# docker run -it --rm nccts/clojure lein repl
