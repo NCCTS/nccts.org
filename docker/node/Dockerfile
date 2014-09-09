@@ -21,6 +21,8 @@ WORKDIR /
 ENV HOME /root
 # Use phusion/baseimage's init system as the entrypoint:
 # 'entry.sh' starts tmux as the 'sailor' user with a session named 'clojure'
+ENTRYPOINT ["/sbin/my_init", "--", "/usr/local/bin/entry.sh", "node"]
+CMD [""]
 
 # # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
