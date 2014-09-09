@@ -26,3 +26,7 @@ CMD [""]
 
 # # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# example usage
+# --------------------------------------------------
+# docker run -it --rm nccts/node
+# docker run -it --rm nccts/node 'source ./.nvm/nvm.sh && node'
