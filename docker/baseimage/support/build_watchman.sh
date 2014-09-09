@@ -8,3 +8,4 @@ git checkout v2.9.8
 ./autogen.sh
 ./configure
 make
+make install
