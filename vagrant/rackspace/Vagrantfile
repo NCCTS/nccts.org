@@ -19,7 +19,7 @@ $vm_name_prefix      = ""
 # https://coreos.com/docs/running-coreos/cloud-providers/rackspace/
 # https://github.com/mitchellh/vagrant-rackspace#configuration
 $rs_api_image_flavor = /2GB Standard Instance/
-$rs_api_image_id     = "78a24bc3-2545-433b-8067-a5143c04a3c3"
+$rs_api_image_id     = "78a24bc3-2545-433b-8067-a5143c04a3c3" #v410.0.0
 $rs_api_region       = :ord
 
 # Attempt to apply the deprecated environment variable NUM_INSTANCES to
