@@ -77,7 +77,9 @@ Vagrant.configure("2") do |config|
       config.vm.synced_folder "../..",
                               "/home/core/vagrant",
                               type: "rsync",
-                              rsync__exclude: ".git/",
+                              rsync__args: ["--verbose", "--archive", "--delete", "-z",
+                                            "--exclude-from", "../../support/rsync-exclude.txt"],
+                              rsync__exclude: [".git/", ".vagrant/"],
                               rsync__auto: true
       config.vm.provision :shell, :inline => "chown -R core:core /home/core/vagrant", :privileged => true
 
