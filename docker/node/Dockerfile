@@ -19,7 +19,7 @@ ADD . /docker-build
 RUN chmod -R 777 /docker-build && /docker-build/setup.sh && rm -rf /docker-build
 
 # Use phusion/baseimage's init system as the entrypoint:
-# 'entry.sh' starts tmux as the 'sailor' user with a session named 'clojure'
+# 'entry.sh' starts tmux as the 'sailor' user with a session named 'node'
 ENTRYPOINT ["/sbin/my_init", "--", "/usr/local/bin/entry.sh", "node"]
 CMD [""]
 
