@@ -10,6 +10,7 @@ fuse*
 .repl/
 .vagrant/
 node_modules/
+/site/tex/auto
 texlive-mirror/
 
 .floo
