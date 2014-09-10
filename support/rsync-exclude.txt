@@ -1,0 +1,7 @@
+.git/
+.vagrant/
+
+/docker/latex/support/texlive-mirror/
+/site/tex/auto/
+/site/tex/build/
+/vagrant/
