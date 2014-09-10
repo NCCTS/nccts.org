@@ -10,9 +10,9 @@ fuse*
 .repl/
 .vagrant/
 node_modules/
-/site/build
-/site/tex/auto
-/site/tex/build
+/site/build/
+/site/tex/auto/
+/site/tex/build/
 texlive-mirror/
 
 .floo
