@@ -21,3 +21,5 @@ coreos:
     command: start
   - name: fleet.service
     command: start
+  # update:
+  #   reboot-strategy: 'off'
