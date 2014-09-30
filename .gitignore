@@ -14,6 +14,7 @@ node_modules/
 !/site/build/.gitkeep
 /site/source/tex/auto/
 /site/source/tex/build/
+/support/secgen/base91
 texlive-mirror/
 
 .floo
