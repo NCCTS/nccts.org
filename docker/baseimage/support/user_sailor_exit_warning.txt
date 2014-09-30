@@ -1,6 +1,0 @@
-
-WARNING !!! WATCH OUT !!! VORSICHT !!!
-     Do you really want to exit?
-            `command exit`
-WARNING !!! WATCH OUT !!! VORSICHT !!!
-
