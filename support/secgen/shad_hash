@@ -1,0 +1,10 @@
+#!/bin/bash
+
+OSSL=$(whereis openssl | head -1)
+
+if [ -z "$OSSL" ]; then
+    echo "could not find openssl, exiting..."
+    exit 1
+else
+    $OSSL passwd -salt $1 -1 $2
+fi

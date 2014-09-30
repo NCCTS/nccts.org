@@ -1,0 +1,43 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+SHUF=$(which shuf)
+if [ -z "$SHUF" ]; then
+    SHUF=$(which gshuf)
+fi
+
+strgen() {
+    local lo=$1
+    local hi=$2
+    local lo_not_set=""
+    local hi_not_set=""
+    local lo_default="100"
+    local hi_default="255"
+
+    if [ -z "$lo" ]; then
+        local lo_not_set="true"
+    fi
+
+    if [ -z "$hi" ]; then
+        local hi_not_set="true"
+    fi
+
+    if [ -n "$lo_not_set" -a -n "$hi_not_set" ]; then
+        local lo=$lo_default
+        local hi=$hi_default
+    fi
+
+    if [ -z "$lo_not_set" -a -n "$hi_not_set" ]; then
+        local hi=$lo
+    fi
+
+    echo $(head -n 1000 /dev/random | $DIR/base91 | tr "\\n" "\s" | cut -c 1-$($SHUF -i $lo-$hi -n 1))
+}
+
+if [ -z "$SHUF" ]; then
+    echo "could not find shuf or gshuf, exiting..."
+    exit 1
+else
+    strgen $1 $2
+fi
