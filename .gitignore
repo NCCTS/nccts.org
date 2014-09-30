@@ -15,6 +15,7 @@ node_modules/
 /site/source/tex/auto/
 /site/source/tex/build/
 /support/secgen/base91
+
 texlive-mirror/
 
 .floo
@@ -28,6 +29,7 @@ texlive-mirror/
 *.out
 *.pid
 *.gz
+!/support/secgen/base91-0.6.0.tar.gz
 *.yo-rc.json
 lib-cov
 logs
