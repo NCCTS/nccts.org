@@ -5,7 +5,7 @@ export HOME=/root
 
 # Install packages
 apt-get update
-apt-get -y install autoconf automake dpkg-dev g++ gcc libc6-dev libdb5.3-dev libgdbm-dev libxslt1-dev imagemagick make perl-doc perlmagick software-properties-common zlib1g-dev
+apt-get -y install autoconf automake dpkg-dev g++ gcc imagemagick libc6-dev libdb5.3-dev libgdbm-dev libxslt1-dev make perl-doc perlmagick poppler-utils software-properties-common zlib1g-dev
 
 # Setup LaTeX environment as unprivileged user 'sailor'
 mkdir -p /usr/local/texlive
