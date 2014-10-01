@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+script_path=$(cd $( dirname "${BASH_SOURCE[0]}" ) && pwd)
 
-$DIR/shad_hash $($DIR/rand_str | tr "\\n" "\s") $($DIR/rand_str | tr "\\n" "\s")
+$script_path/shad_hash $($script_path/rand_str | tr "\\n" "\s") $($script_path/rand_str | tr "\\n" "\s")

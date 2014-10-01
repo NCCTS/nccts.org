@@ -1,10 +1,10 @@
 #!/bin/bash
 
-OSSL=$(whereis openssl | head -1)
+openssl_cmd=$(whereis openssl | head -1)
 
-if [ -z "$OSSL" ]; then
+if [ -z "$openssl_cmd" ]; then
     echo "could not find system openssl, exiting..."
     exit 1
 else
-    $OSSL passwd -salt $1 -1 $2
+    $openssl_cmd passwd -salt $1 -1 $2
 fi

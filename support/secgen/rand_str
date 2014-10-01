@@ -1,10 +1,10 @@
 #!/bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+script_path=$(cd $( dirname "${BASH_SOURCE[0]}" ) && pwd)
 
-SHUF=$(which shuf)
-if [ -z "$SHUF" ]; then
-    SHUF=$(which gshuf)
+shuf_cmd=$(which shuf)
+if [ -z "$shuf_cmd" ]; then
+    shuf_cmd=$(which gshuf)
 fi
 
 strgen() {
@@ -32,10 +32,10 @@ strgen() {
         local hi=$lo
     fi
 
-    echo $(head -n 1000 /dev/random | $DIR/base91 | tr "\\n" "\s" | cut -c 1-$($SHUF -i $lo-$hi -n 1))
+    echo $(head -n 1000 /dev/random | $script_path/base91 | tr "\\n" "\s" | cut -c 1-$($shuf_cmd -i $lo-$hi -n 1))
 }
 
-if [ -z "$SHUF" ]; then
+if [ -z "$shuf_cmd" ]; then
     echo "could not find shuf or gshuf, exiting..."
     exit 1
 else
