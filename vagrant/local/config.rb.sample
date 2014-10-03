@@ -53,3 +53,11 @@ end
 #$vb_gui    = false
 #$vb_memory = 1024
 #$vb_cpus   = 1
+
+# For VMware Fusion will need to run first with default options for mem/cpu,
+# then launch the VMware GUI and change the message settings for "hardware
+# version" to whatever is the latest and greatest; then uncomment/set mem/cpu
+# and `vagrant reload` the vm
+
+# In order to easily find the vm, keep in mind shell env variable
+# VAGRANT_VMWARE_CLONE_DIRECTORY
