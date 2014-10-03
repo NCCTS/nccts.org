@@ -74,14 +74,14 @@ Vagrant.configure("2") do |config|
       # ↓ disable nfs sync functionality, as there seems to be a bug (error reported when running `vagrant up`)
       config.nfs.functional = false
 
-      config.vm.synced_folder "../..",
-                              "/home/core/vagrant",
-                              type: "rsync",
-                              rsync__args: ["--verbose", "--archive", "--delete", "-z",
-                                            "--exclude-from", "../../support/rsync-exclude.txt"],
-                              rsync__exclude: [".git/", ".vagrant/"],
-                              rsync__auto: true
-      config.vm.provision :shell, :inline => "chown -R core:core /home/core/vagrant", :privileged => true
+      # config.vm.synced_folder "/some/path/to/sync",
+      #                         "/home/core/synced",
+      #                         type: "rsync",
+      #                         rsync__args: ["--verbose", "--archive", "--delete", "-z",
+      #                                       "--exclude-from", "/some/path/to/excludes.txt"],
+      #                         rsync__exclude: [".git/", ".vagrant/"],
+      #                         rsync__auto: true
+      # config.vm.provision :shell, :inline => "chown -R core:core /home/core/synced", :privileged => true
 
       # config.vm.provision :file, :source => "/some/local/path/file", :destination => "/tmp/some.file"
       # config.vm.provision :shell, :inline => "echo hello > /tmp/world.txt", :privileged => true
