@@ -32,7 +32,7 @@ strgen() {
         local hi=$lo
     fi
 
-    echo $(head -n 1000 /dev/random | $script_path/base91 | tr -d "\\n" | cut -c 1-$($shuf_cmd -i $lo-$hi -n 1))
+    echo $(head -n 1000 /dev/random | base64 | tr -d "\\n" | tr -d "=" | cut -c 1-$($shuf_cmd -i $lo-$hi -n 1))
 }
 
 if [ -z "$shuf_cmd" ]; then
