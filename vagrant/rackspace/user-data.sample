@@ -67,8 +67,9 @@ coreos:
       PartOf=nccts-pull.service
 
       [Service]
+      ExecStartPre=-/root/bin/nccts-http-server-kill.sh ; -/root/bin/nccts-http-server-rm.sh
       ExecStart=/root/bin/nccts-http-server.sh
-      ExecStop=/usr/bin/docker kill http-server
+      ExecStop=-/root/bin/nccts-http-server-kill.sh ; -/root/bin/nccts-http-server-rm.sh
       Type=simple
 write_files:
 - path: /root/bin/nccts-data.sh
@@ -100,12 +101,26 @@ write_files:
   permissions: '0755'
   content: |
     #!/bin/bash
-    _=$(docker inspect http-server 2>/dev/null)
-    if [ "$?" -eq "0" ]; then
-      docker rm http-server
-    fi
     docker run -it --rm --volumes-from data -p 80:8080 --name http-server nccts/node:0.0.9 ' \
       source ./.nvm/nvm.sh && \
       npm install -g http-server && \
       cd nccts.org/site/build && \
       http-server -p 8080 -c-1'
+- path: /root/bin/nccts-http-server-kill.sh
+  owner: root
+  permissions: '0755'
+  content: |
+    #!/bin/bash
+    _=$(docker inspect http-server 2>/dev/null)
+    if [ "$?" -eq "0" ]; then
+      docker kill http-server
+    fi
+- path: /root/bin/nccts-http-server-rm.sh
+  owner: root
+  permissions: '0755'
+  content: |
+    #!/bin/bash
+    _=$(docker inspect http-server 2>/dev/null)
+    if [ "$?" -eq "0" ]; then
+      docker rm http-server
+    fi
