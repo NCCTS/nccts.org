@@ -1,0 +1,9 @@
+[Unit]
+Before=nccts-http-server.service
+Description=Trasnlate nccts.org site-source to site-build
+PartOf=nccts-update.service
+
+[Service]
+ExecStart=/home/core/bin/nccts-build.sh
+RemainAfterExit=yes
+Type=oneshot

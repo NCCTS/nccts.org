@@ -1,0 +1,10 @@
+[Unit]
+Before=nccts-build.service
+Description=Updates the data container for nccts.org components
+PartOf=nccts-data.service
+Wants=nccts-build.service nccts-http-server.service
+
+[Service]
+ExecStart=/home/core/bin/nccts-update.sh
+RemainAfterExit=yes
+Type=oneshot

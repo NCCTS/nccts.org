@@ -1,0 +1,10 @@
+[Unit]
+After=docker.service
+Before=nccts-update.service
+Description=Data container for nccts.org components
+Wants=nccts-update.service
+
+[Service]
+ExecStart=/home/core/bin/nccts-data.sh
+RemainAfterExit=yes
+Type=oneshot
