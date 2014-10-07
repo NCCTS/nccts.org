@@ -13,11 +13,7 @@ node_modules/
 /site/build/*
 !/site/build/.gitkeep
 /site/source/tex/auto/
-/site/source/tex/build/*
-!/site/source/tex/build/*.gitkeep
-!/site/source/tex/build/*.css
-!/site/source/tex/build/*.html
-!/site/source/tex/build/*.pdf
+/site/source/tex/build/
 /support/secgen/base91
 
 texlive-mirror/
