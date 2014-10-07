@@ -99,7 +99,7 @@ Vagrant.configure("2") do |config|
 
       # Uncomment below to enable NFS for sharing the host machine into the coreos-vagrant VM
       config.vm.synced_folder "../../",
-                              "/home/core/vagrant",
+                              "/home/core/repos/nccts.org",
                               id: ($vm_name_prefix + "core"), :nfs => true, :mount_options => ['nolock,vers=3,udp']
 
       # Buggy at this time! see: https://github.com/coreos/coreos-vagrant/issues/159
