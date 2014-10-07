@@ -1,6 +1,7 @@
 [Unit]
 Before=nccts-update.service
 Description=Data container for nccts.org components
+PartOf=nccts-strap.service
 Wants=nccts-update.service
 
 [Service]
