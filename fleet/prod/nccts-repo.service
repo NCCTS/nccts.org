@@ -1,0 +1,9 @@
+[Unit]
+Before=nccts-data.service
+Description=Sets up nccts.org in /home/core/repos
+Wants=nccts-data.service
+
+[Service]
+ExecStart=/home/core/bin/repo_strap.sh nccts.org https://github.com/NCCTS/nccts.org.git
+RemainAfterExit=yes
+Type=oneshot

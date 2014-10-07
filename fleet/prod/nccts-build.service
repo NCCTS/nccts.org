@@ -4,6 +4,6 @@ Description=Trasnlate nccts.org site-source to site-build
 PartOf=nccts-update.service
 
 [Service]
-ExecStart=/home/core/bin/nccts-build.sh
+ExecStart=/home/core/repos/nccts.org/fleet/prod/scripts/nccts-build.sh
 RemainAfterExit=yes
 Type=oneshot

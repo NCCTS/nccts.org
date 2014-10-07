@@ -5,6 +5,6 @@ PartOf=nccts-data.service
 Wants=nccts-build.service nccts-http-server.service
 
 [Service]
-ExecStart=/home/core/bin/nccts-update.sh
+ExecStart=/home/core/repos/nccts.org/fleet/prod/scripts/nccts-update.sh
 RemainAfterExit=yes
 Type=oneshot
