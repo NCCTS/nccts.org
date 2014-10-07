@@ -6,7 +6,7 @@
     fleetctl load nccts-*.service
 
     # -- init -- #
-    fleetctl start nccts-data.service
+    fleetctl start nccts-strap.service
     # -- kick -- #
-    fleetctl stop nccts-data.service
-    fleetctl start nccts-data.service
+    fleetctl stop nccts-strap.service
+    fleetctl start nccts-strap.service
