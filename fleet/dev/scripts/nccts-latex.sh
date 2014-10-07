@@ -11,6 +11,7 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
             --output=/home/sailor/nccts.org/site/source/tex/build/CLCC-Manual.xml \
             /home/sailor/nccts.org/site/source/tex/CLCC-Manual.tex ; \
     watchman -- trigger /home/sailor/nccts.org/site/ xml-to-html "source/tex/build/CLCC-Manual.xml" -- \
-        /usr/local/bin/latexmlpost --destination=/home/sailor/nccts.org/site/source/tex/build/index.html \
-                    --format=html5 /home/sailor/nccts.org/site/source/tex/build/CLCC-Manual.xml ; \
+        /usr/local/bin/latexmlpost \
+            --destination=/home/sailor/nccts.org/site/source/tex/build/index.html \
+            --format=html5 /home/sailor/nccts.org/site/source/tex/build/CLCC-Manual.xml ; \
     bash'
