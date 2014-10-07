@@ -1,0 +1,7 @@
+[Unit]
+Description=Data container for nccts.org components
+
+[Service]
+ExecStart=/home/core/repos/nccts.org/fleet/dev/scripts/nccts-data.sh
+RemainAfterExit=yes
+Type=oneshot
