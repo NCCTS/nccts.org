@@ -11,7 +11,7 @@ if [ -d "./$repo_dir" ]; then
     cd ./$repo_dir
     git checkout master
     git pull
-    latest_tag=$(git describe --tags 2>/dev/null)
+    latest_tag=$(git describe --abbrev=0 2>/dev/null)
     if [ -n "$latest_tag" ]; then
         git checkout $latest_tag
     else
@@ -22,7 +22,7 @@ else
     git clone $repo_url ./$repo_dir
     chown -R core:core ./$repo_dir
     cd ./$repo_dir
-    latest_tag=$(git describe --tags 2>/dev/null)
+    latest_tag=$(git describe --abbrev=0 2>/dev/null)
     if [ -n "$latest_tag" ]; then
         git checkout $latest_tag
     else
