@@ -7,6 +7,11 @@
 
     # -- init -- #
     fleetctl start nccts-strap.service
+
     # -- kick -- #
     fleetctl stop nccts-strap.service
     fleetctl start nccts-strap.service
+
+    # -- wipe -- #
+    fleetctl stop nccts-*.service
+    fleetctl destroy nccts-*.service
