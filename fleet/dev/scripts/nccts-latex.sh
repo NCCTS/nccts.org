@@ -29,6 +29,8 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
             --destination=/home/sailor/nccts.org/site/source/tex/build/clcc/companion/index.html \
             --format=html5 /home/sailor/nccts.org/site/source/tex/build/clcc/CLCC-Companion.xml ; \
 
+    mkdir -p /home/sailor/nccts.org/site/source/tex/build ; \
+
     watchman watch /home/sailor/nccts.org/site/source/tex/build/ ; \
 
     watchman -- trigger /home/sailor/nccts.org/site/source/tex/build/ rsync-latex \
