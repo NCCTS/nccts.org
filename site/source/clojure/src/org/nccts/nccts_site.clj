@@ -4,20 +4,31 @@
             [stasis.core            :as stasis]
             [stencil.core           :as stencil]))
 
-(defn t-slurp [part]
-  (slurp (str "site/source/clojure/templates/" part)))
+(defn slurper
+  [prefix]
+  (fn [part]
+    (slurp (str prefix part))))
+
+(def ct-slurp (slurper "site/source/clojure/templates/"))
+(def lo-slurp (slurper "site/source/tex/build/"))
 
 (def fragments {:header
-                (t-slurp "header.html")
+                (ct-slurp "header.html")
 
                 :footer
-                (t-slurp "footer.html")})
+                (ct-slurp "footer.html")})
 
 (def pages {"/index.html"
-            (t-slurp "index.html")
+            (ct-slurp "index.html")
 
             "/clcc/index.html"
-            (t-slurp "clcc/index.html")})
+            (ct-slurp "clcc/index.html")
+
+            "/clcc/manual/index.html"
+            (lo-slurp "clcc/manual/index.html")
+
+            "/clcc/companion/index.html"
+            (lo-slurp "clcc/companion/index.html")})
 
 (def target-dir "site/source/clojure/build")
 
