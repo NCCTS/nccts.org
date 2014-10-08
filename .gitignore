@@ -16,6 +16,8 @@ node_modules/
 /site/source/tex/build/
 /support/secgen/base91
 
+repl/
+target/
 texlive-mirror/
 
 .floo
