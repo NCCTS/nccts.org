@@ -12,6 +12,7 @@ fuse*
 node_modules/
 /site/build/*
 !/site/build/.gitkeep
+/site/source/clojure/build/
 /site/source/tex/auto/
 /site/source/tex/build/
 /support/secgen/base91
