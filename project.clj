@@ -6,8 +6,11 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :url "https://github.com/NCCTS/nccts.org"
 
-  :dependencies [[org.clojure/clojure "1.7.0-alpha2"]
-                 [stasis "2.2.2"]]
+  :dependencies [[enlive "1.1.5"]
+                 [hiccup "1.0.5"]
+                 [org.clojure/clojure "1.6.0"]
+                 [stasis "2.2.2"]
+                 [stencil "0.3.4"]]
 
   :main org.nccts.nccts-site
 
