@@ -6,7 +6,7 @@ if File.exists?('user-data') && ARGV[0].eql?('up')
   token = open('https://discovery.etcd.io/new').read
 
   def rand_password_hash()
-    %x( ../../support/secgen/rand_hash )
+    %x( ../../../support/secgen/rand_hash )
   end
 
   # no need to retain the randomly generated passwords, since ssh keys will be
