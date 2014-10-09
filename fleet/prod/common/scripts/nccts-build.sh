@@ -12,6 +12,9 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
     export source_tex="/home/sailor/nccts.org/site/source/tex" ; \
     export com_scripts="/home/sailor/nccts.org/fleet/dev/scripts" ; \
 
+    mkdir -p $source_tex/build
+    mkdir -p $source_tex/build/clcc
+
     $com_scripts/tex-build.sh pdf manual ; \
     $com_scripts/tex-build.sh xml manual ; \
     $com_scripts/tex-build.sh html manual ; \
