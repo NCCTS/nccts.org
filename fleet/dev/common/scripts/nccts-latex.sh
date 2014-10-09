@@ -7,6 +7,9 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
     export source_tex="/home/sailor/nccts.org/site/source/tex" ; \
     export dev_scripts="/home/sailor/nccts.org/fleet/dev/scripts" ; \
 
+    mkdir -p $source_tex/build
+    mkdir -p $source_tex/build/clcc
+
     watchman --logfile=/home/sailor/watchman.log watch $source_tex/ ; \
 
     watchman -- trigger $source_tex/ man-tex-to-pdf "clcc-manual.tex" -- \
@@ -22,8 +25,6 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
         $dev_scripts/tex-build.sh xml companion ; \
     watchman -- trigger $source_tex/ com-xml-to-html "build/clcc/clcc-companion.xml" -- \
         $dev_scripts/tex-build.sh html companion ; \
-
-    mkdir -p $source_tex/build ; \
 
     watchman watch $source_tex/build/ ; \
 
