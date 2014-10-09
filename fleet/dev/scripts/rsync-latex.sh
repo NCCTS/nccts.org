@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/usr/bin/rsync -r \
+rsync -r \
     --exclude '*.aux' \
     --exclude '*.log' \
     --exclude '*.xml' \
