@@ -1,40 +1,90 @@
 (ns org.nccts.nccts-site
+  (:import java.io.File
+           org.jsoup.Jsoup)
   (:require [hiccup.core            :as hiccup]
             [net.cgrand.enlive-html :as enlive-html]
             [stasis.core            :as stasis]
             [stencil.core           :as stencil]))
 
-(defn slurper
-  [prefix]
-  (fn [part]
-    (slurp (str prefix part))))
+;; -----------------------------------------------------------------------------
 
-(def ct-slurp (slurper "site/source/clojure/templates/"))
-(def lo-slurp (slurper "site/source/tex/build/"))
+(defmulti prettify
+  (fn [x]
+    (cond
+     (seq? x) :seq
+     (string? x) :str)))
 
-(def fragments {:header
-                (ct-slurp "header.html")
+(defmethod prettify
+  :seq
+  [s]
+  (prettify (apply str s)))
 
-                :footer
-                (ct-slurp "footer.html")})
+(defmethod prettify
+  :str
+  [s]
+  (let [parsed (Jsoup/parse s)]
+    (.indentAmount (.outputSettings parsed) 2)
+    (.html parsed)))
 
-(def pages {"/index.html"
-            (ct-slurp "index.html")
+(def ct "site/source/clojure/templates/")
+(def tb "site/source/tex/build/")
 
-            "/clcc/index.html"
-            (ct-slurp "clcc/index.html")
+(defn html-resource
+  [path]
+  (enlive-html/get-resource
+   (java.io.File. path)
+   net.cgrand.tagsoup/parser))
 
-            "/clcc/manual/index.html"
-            (lo-slurp "clcc/manual/index.html")
+(def head-foot
+  (html-resource (str ct "head-foot.html")))
 
-            "/clcc/companion/index.html"
-            (lo-slurp "clcc/companion/index.html")})
+(defn t1
+  [path]
+  (let [pg (html-resource (str ct path))]
+    (prettify
+     (enlive-html/emit*
+      (enlive-html/at head-foot
+                      [:title]
+                      (enlive-html/substitute
+                       (enlive-html/select pg [:title]))
+
+                      [:div#main]
+                      (enlive-html/substitute
+                       (enlive-html/select pg [:div#main])))))))
+
+(defn t2
+  [path]
+  (let [pg (html-resource (str tb path))]
+    (prettify
+     (enlive-html/emit*
+      (enlive-html/at head-foot
+                      [:title]
+                      (enlive-html/substitute
+                       (enlive-html/select pg [:title]))
+
+                      [:div#main]
+                      (enlive-html/append
+                       (:content (first (enlive-html/select pg [:body])))))))))
+
+(defn pages
+  []
+  {"/index.html"
+   (t1 "index.html")
+
+   "/clcc/index.html"
+   (t1 "clcc/index.html")
+
+   "/clcc/manual/index.html"
+   (t2 "clcc/manual/index.html")
+
+   "/clcc/companion/index.html"
+   (t2 "clcc/companion/index.html")})
 
 (def target-dir "site/source/clojure/build")
 
 (defn export []
   (stasis/empty-directory! target-dir)
-  (stasis/export-pages pages target-dir))
+  (stasis/export-pages (#'pages) target-dir))
 
 (defn -main
   [& args]
