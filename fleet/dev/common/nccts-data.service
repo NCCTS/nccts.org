@@ -4,7 +4,7 @@ Description=Data container for nccts.org components
 [Service]
 ExecStartPre=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh data ; \
              -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh data
-ExecStart=/home/core/repos/nccts.org/fleet/dev/scripts/nccts-data.sh
+ExecStart=/home/core/repos/nccts.org/fleet/dev/common/scripts/nccts-data.sh
 ExecStop=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh data ; \
          -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh data
 RemainAfterExit=yes

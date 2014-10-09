@@ -2,9 +2,9 @@
 Description=Clojure-based content generator nccts.org
 
 [Service]
-ExecStartPre=-/home/core/repos/nccts.org/fleet/dev/scripts/cont-kill.sh generator ; \
-             -/home/core/repos/nccts.org/fleet/dev/scripts/cont-rm.sh generator
-ExecStart=/home/core/repos/nccts.org/fleet/dev/scripts/nccts-generator.sh
-ExecStop=-/home/core/repos/nccts.org/fleet/dev/scripts/cont-kill.sh generator ; \
-         -/home/core/repos/nccts.org/fleet/dev/scripts/cont-rm.sh generator
+ExecStartPre=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh generator ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh generator
+ExecStart=/home/core/repos/nccts.org/fleet/dev/common/scripts/nccts-generator.sh
+ExecStop=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh generator ; \
+         -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh generator
 Type=simple
