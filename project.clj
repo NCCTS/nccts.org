@@ -9,6 +9,7 @@
   :dependencies [[enlive "1.1.5"]
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.6.0"]
+                 [org.jsoup/jsoup "1.8.1"]
                  [stasis "2.2.2"]
                  [stencil "0.3.4"]]
 
