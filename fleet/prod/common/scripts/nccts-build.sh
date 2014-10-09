@@ -10,7 +10,7 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
     export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH ; \
 
     export source_tex="/home/sailor/nccts.org/site/source/tex" ; \
-    export com_scripts="/home/sailor/nccts.org/fleet/dev/scripts" ; \
+    export com_scripts="/home/sailor/nccts.org/fleet/common/scripts" ; \
 
     mkdir -p $source_tex/build
     mkdir -p $source_tex/build/clcc
