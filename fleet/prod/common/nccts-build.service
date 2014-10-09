@@ -4,6 +4,18 @@ Description=Trasnlate nccts.org site-source to site-build
 PartOf=nccts-update.service
 
 [Service]
+ExecStartPre=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh static ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh static ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh latex ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh latex ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh generator ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh generator
 ExecStart=/home/core/repos/nccts.org/fleet/prod/common/scripts/nccts-build.sh
+ExecStop=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh static ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh static ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh latex ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh latex ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh generator ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh generator
 RemainAfterExit=yes
 Type=oneshot
