@@ -5,6 +5,6 @@ PartOf=nccts-strap.service
 Wants=nccts-update.service
 
 [Service]
-ExecStart=/home/core/repos/nccts.org/fleet/prod/scripts/nccts-data.sh
+ExecStart=/home/core/repos/nccts.org/fleet/prod/common/scripts/nccts-data.sh
 RemainAfterExit=yes
 Type=oneshot
