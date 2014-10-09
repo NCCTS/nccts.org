@@ -1,0 +1,14 @@
+[Unit]
+Before=nccts-update.service
+Description=Data container for nccts.org components
+PartOf=nccts-strap.service
+Wants=nccts-update.service
+
+[Service]
+ExecStartPre=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh data ; \
+             -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh data
+ExecStart=/home/core/repos/nccts.org/fleet/prod/rackspace/scripts/nccts-data.sh
+ExecStop=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh data ; \
+         -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh data
+RemainAfterExit=yes
+Type=oneshot
