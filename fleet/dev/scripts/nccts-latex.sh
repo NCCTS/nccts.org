@@ -4,8 +4,8 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
     source /home/sailor/.bashrc ; \
     export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH ; \
 
-    export source_tex="/home/sailor/nccts.org/site/source/tex"
-    export dev_scripts="/home/sailor/nccts.org/fleet/dev/scripts"
+    export source_tex="/home/sailor/nccts.org/site/source/tex" ; \
+    export dev_scripts="/home/sailor/nccts.org/fleet/dev/scripts" ; \
 
     watchman --logfile=/home/sailor/watchman.log watch $source_tex/ ; \
 

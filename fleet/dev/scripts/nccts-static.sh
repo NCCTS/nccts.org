@@ -3,8 +3,8 @@
 docker run -it --rm --volumes-from data --name static nccts/baseimage:latest '\
     source /home/sailor/.bashrc ; \
 
-    export rsync_static="/home/sailor/nccts.org/fleet/dev/scripts/rsync-static.sh"
-    export source_static="/home/sailor/nccts.org/site/source/static"
+    export rsync_static="/home/sailor/nccts.org/fleet/dev/scripts/rsync-static.sh" ; \
+    export source_static="/home/sailor/nccts.org/site/source/static" ; \
 
     $rsync_static ; \
 

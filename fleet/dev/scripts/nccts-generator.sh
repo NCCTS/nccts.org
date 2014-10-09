@@ -3,7 +3,7 @@
 docker run -it --rm --volumes-from data -p 7888:7888 --name generator nccts/clojure:latest '\
     source /home/sailor/.bashrc ; \
 
-    export clojure_build="/home/sailor/nccts.org/site/source/clojure/build"
+    export clojure_build="/home/sailor/nccts.org/site/source/clojure/build" ; \
 
     mkdir -p $clojure_build ; \
 
