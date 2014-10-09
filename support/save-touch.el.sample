@@ -11,7 +11,7 @@
         (deferred:process "ssh"
           "-i"
           "/Users/michael/.vagrant.d/insecure_private_key"
-          "core@172.16.253.184"
+          "user@host"
           (concat "touch /home/core/vagrant/site/"
                   (f-relative (buffer-file-name)
                               "/Users/michael/repos/NCCTS/nccts.org/site/")))))))
