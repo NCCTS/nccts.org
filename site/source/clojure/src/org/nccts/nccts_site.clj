@@ -35,7 +35,8 @@
    (java.io.File. path)
    net.cgrand.tagsoup/parser))
 
-(def head-foot
+(defn head-foot
+  []
   (html-resource (str ct "head-foot.html")))
 
 (defn t1
