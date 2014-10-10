@@ -39,9 +39,9 @@
   []
   (html-resource (str ct "head-foot.html")))
 
-(defn t1
   [path]
   (let [pg (html-resource (str ct path))]
+(defn hf-template-simple
     (prettify
      (enlive-html/emit*
       (enlive-html/at head-foot
@@ -53,9 +53,9 @@
                       (enlive-html/substitute
                        (enlive-html/select pg [:div#main])))))))
 
-(defn t2
   [path]
   (let [pg (html-resource (str tb path))]
+(defn hf-template-tex
     (prettify
      (enlive-html/emit*
       (enlive-html/at head-foot
