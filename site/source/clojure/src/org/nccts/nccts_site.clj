@@ -39,22 +39,29 @@
   []
   (html-resource (str ct "head-foot.html")))
 
-  [path]
-  (let [pg (html-resource (str ct path))]
 (defn hf-template-simple
+  [path-ct]
+  (let [head-foot (head-foot)
+        pg-ct (html-resource (str ct path-ct))]
     (prettify
      (enlive-html/emit*
       (enlive-html/at head-foot
                       [:title]
                       (enlive-html/substitute
-                       (enlive-html/select pg [:title]))
+                       (enlive-html/select pg-ct [:title]))
+
+                      [:head]
+                      (enlive-html/append
+                       (enlive-html/at
+                        (enlive-html/select pg-ct [:head])
+
+                        [:title]
+                        (enlive-html/substitute)))
 
                       [:div#main]
                       (enlive-html/substitute
-                       (enlive-html/select pg [:div#main])))))))
+                       (enlive-html/select pg-ct [:div#main])))))))
 
-  [path]
-  (let [pg (html-resource (str tb path))]
 (defn hf-template-tex
     (prettify
      (enlive-html/emit*
