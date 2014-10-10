@@ -1,40 +1,587 @@
-% This is a small sample LaTeX input file (Version of 10 April 1994)
-%
-% Use this file as a model for making your own LaTeX input file.
-% Everything to the right of a  %  is a remark to you and is ignored by LaTeX.
-
-% The Local Guide tells how to run LaTeX.
+% ------------------------------ sample ----------------------------------------
 
 % WARNING!  Do not type any of the following 10 characters except as directed:
 %                &   $   #   %   _   {   }   ^   ~   \
 
-\documentclass{article}        % Your input file must contain these two lines
-\begin{document}               % plus the \end{document} command at the end.
+% \section{Simple Text}          % This command makes a section title.
 
+% Words are separated by one or more spaces.  Paragraphs are separated by
+% one or more blank lines.  The output is not affected by adding extra
+% spaces or extra blank lines to the input file.
 
-\section{Simple Text}          % This command makes a section title.
+% Double quotes are typed like this: ``quoted text''.
+% Single quotes are typed like this: `single-quoted text'.
 
-Words are separated by one or more spaces.  Paragraphs are separated by
-one or more blank lines.  The output is not affected by adding extra
-spaces or extra blank lines to the input file.
+% Long dashes are typed as three dash characters---like this.
 
-Double quotes are typed like this: ``quoted text''.
-Single quotes are typed like this: `single-quoted text'.
+% Emphasized text is typed like this: \emph{this is emphasized}.
+% Bold       text is typed like this: \textbf{this is bold}.
 
-Long dashes are typed as three dash characters---like this.
+% \subsection{A Warning or Two}  % This command makes a subsection title.
 
-Emphasized text is typed like this: \emph{this is emphasized}.
-Bold       text is typed like this: \textbf{this is bold}.
+% If you get too much space after a mid-sentence period---abbreviations
+% like etc.\ are the common culprits)---then type a backslash followed by
+% a space after the period, as in this sentence.
 
-\subsection{A Warning or Two}  % This command makes a subsection title.
+% Remember, don't type the 10 special characters (such as dollar sign and
+% backslash) except as directed!  The following seven are printed by
+% typing a backslash in front of them:  \$  \&  \#  \%  \_  \{  and  \}.
+% The manual tells how to make other symbols.
 
-If you get too much space after a mid-sentence period---abbreviations
-like etc.\ are the common culprits)---then type a backslash followed by
-a space after the period, as in this sentence.
+% ------------------------------------------------------------------------------
 
-Remember, don't type the 10 special characters (such as dollar sign and
-backslash) except as directed!  The following seven are printed by
-typing a backslash in front of them:  \$  \&  \#  \%  \_  \{  and  \}.
-The manual tells how to make other symbols.
+\documentclass[oneside]{book}
+\usepackage{graphicx}
+\setcounter{secnumdepth}{-1}
 
-\end{document}                 % The input file ends with this command.
+\begin{document}
+\pagestyle{plain}
+
+% ------------------------------------------------------------------------------
+
+\frontmatter
+
+CELEBRATING LIFE AS A CATHOLIC CHRISTIAN
+
+% ------------------------------------------------------------------------------
+
+Nihil Obstat: + Kelvin E. Felix, D.D. Archbishop of Castries Castries,
+St. Lucia, West Indies Imprimatur: + John F. Donoghue, D.D. Archbishop of
+Atlanta October 15, 2004 Celebrating Life as a Catholic Christian Copyright ©
+2010 by Fr. Francis A. Novak, C.Ss.R. St. Clement, Liguori, Missouri, 63057, USA
+www.clcc.info ISBN: 978-0-615-31588-1 The contents of this book are distributed
+under the terms of the Creative Commons license, Attribution- NonCommercial 3.0
+Unported. The full text of the license may be found at the back of the book,
+beginning on page 309.  A summary of the license terms You are free: to share –
+to copy, distribute and transmit the work; to remix – to adapt the work. Under
+the following conditions: attribution – you must attribute the work in the
+manner specified by the author or licensor (but not in any way that suggests
+that they endorse you or your use of the work); noncommercial you may not use
+this work for commercial purposes. With the understanding that: any of the above
+conditions can be waived if you get permission from the copyright holder; public
+domain – where the work or any of its elements is in the public domain under
+applicable law, that status is in no way affected by the license; other rights –
+in no way are any of the following rights affected by the license: your fair
+dealing or fair use rights, or other applicable copyright exceptions and
+limitations; the author’s moral rights; rights other persons may have either in
+the work itself or in how the work is used, such as publicity or privacy rights;
+notice – for any reuse or distribution, you must make clear to others the
+license terms of this work.  Scripture selections, unless otherwise noted, are
+taken from the New American Bible, Copyright © 1991, 1986, 1970 by the
+Confraternity of Christian Doctrine, Inc., Washington, DC. Used with
+permission. All rights reserved. No portion of the New American Bible may be
+reprinted without permission in writings from the copyright holder.  Selections
+from official documents of the Catholic Church are taken from the website of The
+Holy See, wwww.vatican.va. Copyright © Libreria Editrice Vaticana.  Cover design
+by Wendy Barnes, Liguori, Missouri. Artwork and design of the CLCC Centerfold
+found on pages 144-145 by Chris Schwartz Studios, Saint Louis, Missouri.  For
+more information and additional electronic resources, please visit the CLCC
+website.  http://www.clcc.info e-mail: questions@clcc.info National Catholic
+Conference for Total Stewardship 2010
+
+\begin{center}
+\includegraphics[scale=0.6]{by-nc-nd}
+\end{center}
+
+% ------------------------------------------------------------------------------
+
+To teach in order to lead others to the faith is the task of every preacher and
+of every believer.– St. Thomas Aquinas
+
+% ------------------------------------------------------------------------------
+
+The world aflame with Pentecost’s fire, Evangelization, the Good News
+spreading,God’s people true conversion seeking;Enlightened by the Spirit’s
+fire,Enlivened by the Savior’s Body and Blood,Protected under Virgin Mother’s
+care,Entrusted with the Church’s teaching faithfully to live and share.
+
+% ------------------------------------------------------------------------------
+
+To my Father and Mother, and siblings, Sister Elizabeth, Marie, Fr. Henry,
+Philip and Bishop Alfred and to my Redemptorist family and friends
+
+% ------------------------------------------------------------------------------
+
+\title{\textbf{CELEBRATING LIFE} \\ AS A \\ \textbf{CATHOLIC CHRISTIAN}}
+\author{Fr. Francis A. Novak, C.Ss.R.}
+\date{June 2013}
+
+\maketitle
+
+% ------------------------------------------------------------------------------
+
+\chapter{Foreword}
+
+\chapter{Acknowledgments}
+
+\chapter{Primary Sources}
+
+\chapter{Introduction}
+
+\chapter{Putting the CLCC Process to Work}
+
+\chapter{Order for Conducting Formation Sessions in Small Ecclesial Faith Communities}
+
+\tableofcontents
+
+\mainmatter
+
+\part{The Process}
+
+\chapter{Stage One}
+
+This is stage 1 stuff.
+
+\chapter{Stage Two}
+
+This is stage 2 stuff.
+
+\chapter{Stage Three}
+
+This is stage 3 stuff.
+
+\chapter{Stage Four}
+
+This is stage 4 stuff.
+
+\chapter{Stage Five}
+
+This is stage 5 stuff.
+
+\part{Authoritative Sources}
+
+\chapter{Document A}
+
+This is dcoument A stuff.
+
+\chapter{Document B}
+
+This is document B stuff.
+
+\backmatter
+
+\setcounter{secnumdepth}{-2}
+\part{Appendices}
+
+\chapter{Questions and Answers on the CLCC Process}
+
+Q. Why do you call Celebrating Life as a Catholic Christian (CLCC) a process and
+not a program? What's the difference?  A. A process is developmental. It moves
+progressively from one stage to another. It has a beginning but no end. It's
+ongoing. A program, on the other hand, is a succession of actions carried out
+within a structured order that has a beginning and a predefined end.  Q. Is one
+year long enough for carrying out this process?  A. No. In Galilee Jesus took
+three years to form his disciples in his new way of life. Compare this process,
+for example, to capital funds campaigns that are conducted in dioceses and
+parishes. They usually take 3 years or more. Formation in Christ's new way of
+life is also a "capital campaign" requiring a lifetime for becoming a saint and
+serving our neighbor.  Q. Is the pastor involved in this process? If so, how,
+when, where?  A. YES! He together with key people (example, the pastoral
+council) find qualified parishioners who are willing to serve as lay leaders of
+the pro- cess, and other lay persons to begin the establishment of Small
+Ecclesial Faith Communities (SEFCs) throughout the parish. He need not get in-
+volved in details. He gives it leadership, and above all shows interest and
+support.  As often as possible and despite many demands, he should visit the
+different SEFCs once in awhile when they hold their spiritual formation
+301CELEBRATING LIFE AS A CATHOLIC CHRISTIAN sessions, encourage them, pray with
+them, answer their questions, and help them keep their focus.  He is to preach
+on the process with enthusiasm and conviction, as of- ten as he deems it helpful
+to the people. In his remarks he is encouraged to choose some points from the
+stage his parishioners are working through, and which he feels will most benefit
+them. This also applies to the material in Part II, Authoritative Sources. On
+Sunday the people in the pews who are not yet involved have a right to be
+informed about the process and in- vited, in fact urged, to join and participate
+in a SEFC.  Q. How many sessions for spiritual formation can be, or should be,
+drawn from the material presented in each of the 5 stages and in Authoritative
+Sources?  A. As many as there are paragraphs. The material in both parts is so
+abun- dant that it is, relatively speaking, inexhaustible, and of course
+repeatable. What the Matrix 12 and members of SEFCs seek is in-depth not
+superfi- cial formation in faith and holiness. Each of the 5 stages provides
+material for multiple formation sessions, one Stage has 20, another 43 sessions,
+and so on.  Materials for formation sessions in Part II, Authoritative Sources
+are taken entirely from magisterial documents. Under each paragraph or seg- ment
+you will find these letters: R-D-S in bold. They mean Reflection, Development
+and Sharing. Members of SEFCs should follow these three steps as they did in
+Part I.  Q. Does the CLCC process have criteria to measure success or failure as
+it carries out each of the stages?  A. Each of the 5 stages has built-in goals,
+or targets to reach. Criteria for the general goal are: how well or poorly was
+the stage carried out; did it attain what it was supposed to attain? For
+example, in Stage 1, did twelve gifted people respond to the "call" to be
+members of the Matrix, the lay group which leads the parish through the CLCC
+process? Did enough pa- rishioners respond to the invitation to form one, two,
+three or more Small 302 APPENDIX QUESTIONS AND ANSWERS ON THE CLCC PROCESS
+Ecclesial Faith Communities for a start of the process? Not to reach these goals
+the first time around is not failure, but a signal to continue to recruit. Each
+stage also contains intermediate objectives. These are specific actions that are
+carried out as exactly as possible within the formation session so everyone in
+the SEFC gets the full benefit. For example, does the modera- tor start and end
+the session on time; is the reflection issue clear to all; is enough time given
+to quiet time; do all or most participants get a chance to share their insights;
+does the moderator politely cut off long-winded shar- ing; are the hymns,
+prayers and intercessions appropriate? More important- ly, do the participants
+feel they are growing spiritually and gaining better knowledge of the faith?
+Recommended is that each SEFC chooses a recorder to keep track of how well or
+poorly goals and objectives are attained. This record is helpful for review and
+can induce the group to strive for excellence in their forma- tion. It tells
+participants how they are conducting the formation sessions, what needs
+improvement, and how to make the sessions run smoothly to the best advantage of
+all.  Q. What is the connection between the National Catholic Conference for
+Total Stewardship and Celebrating Life as a Catholic Christian?  A. In 1980 the
+National Catholic Conference for Total Stewardship (NCCTS) was founded by
+Francis A. Novak, a Redemptorist priest, with approval of the NCCB, now called
+the United States Conference of Catho- lic Bishops (USCCB). Its purpose is to
+promote the biblical concept of stewardship in its totality. Stewardship has
+been and still is widely used by dioceses and parishes for fund raising,
+increased offertory appeals and cap- ital funds campaigns, under the banner of 3
+Ts: Time, Talent and Treasure.  Fr. Novak and the NCCTS felt compelled to
+explore the deeper impli- cations of stewardship in Sacred Scripture. Under the
+guidance of expert biblical scholars, the NCCTS learned that the Old and New
+Testaments are a fascinating account of how God "practices" holistic stewardship
+in creation through his providential care of the universe and the planet
+earth. The three components of stewardship found in both testaments are the good
+news (Evangelization), holiness of life (Discipleship) and service to the Lord
+and his people (Stewardship). The Bible's three components have 303 CELEBRATING
+LIFE AS A CATHOLIC CHRISTIAN become the template of the NCCTS and its CLCC
+process. They are living terms of a trilogy of transcendent realities that are
+inextricably linked. In 1986 the language chosen to express the three realities
+was Total Steward- ship.  Expressive as the NCCTS thought the new title was,
+response to it was limited but it did stir curiosity in many quarters. In 1990 a
+new language was developed to convey that Total Stewardship has an uplifting
+quality: joy in celebrating Christ as the Way, the Truth and the Life for his
+pil- grim people on earth. The new title was The Christian Celebration of Life
+(CCL). The new title did arouse a wide reception of the process. But some times
+it was mistaken for something else, for a pro-life group and even an offshoot of
+Alcoholics Anonymous. Thus another name change was needed.  The new name for
+this total stewardship process came in 1998: Cel- ebrating Life as a Catholic
+Christian (CLCC). The NCCTS now feels this newly named process expresses not
+only the biblical triad of Evangeliza- tion, Discipleship and Stewardship, but
+also "New Evangelization", "Call to Holiness" and "Communion," goals which the
+Second Vatican Council, Pope John Paul II, the Congregation for the Doctrine of
+the Faith and Benedict XVI have called for repeatedly and passionately for God's
+people in today's world of conflicting cultures.  Q. With the name change were
+any adjustments made to the process: its fo- cus, goals and manner of carrying
+out the Church's mission of New Evan- gelization?  A. The name change seems to
+excite the human spirit. It opens the imagi- nation to new possibilities and
+challenges like "I'm going to grow in holi- ness, me?" and "we'll reach out to
+help lapsed Catholics return to the faith, terrific!" Indeed, the process has
+been given a substantial revision and its content has been expanded. Each stage
+makes formation in holi- ness, in doctrine and in pastoral outreach
+clearer. Readers of this manual will be helped immensely in Celebrating their
+Lives as Catholic Chris- tians.  304 APPENDIX QUESTIONS AND ANSWERS ON THE CLCC
+PROCESS Q. What is the cost for implementing this process in a parish?  A. There
+is no set fee. However, cost is in the purchase of the CLCC books for the
+pastor, the lay leaders and all members of Small Ecclesial Faith
+Communities. Based on experience the best way to go is for the parish to
+purchase the needed number of manuals at a bulk rate, and then request each
+participant to purchase a copy so as reimburse the parish. Without a book in
+hand participants will find it impossible to carry out their forma- tion. The
+idea to buy one or two books and run photocopies each week for the 12 lay
+leaders and members of SEFCs, as an economy measure, has been tried before with
+disastrous results. The end result is not an economy measure - it costs more in
+time and paper. Handout sheets get lost. People need a complete, bound book.
+Having a personal copy allows each person to study from his own book, get an
+idea of the structure of the process and the order of how for- mation sessions
+are carried out, and allows participants to use their free time to quick-read
+the contents before going to the next week's session. Special cost arrangements
+can be negotiated with the National Catholic Conference for Total Stewardship on
+an as needed basis.  Q. The CLCC process, it appears, puts a lot of importance
+on the lay lead- ers called the Matrix 12 and on Small Ecclesial Faith
+Communities. Where can I go to find reliable and official Church teaching on
+these kinds of communities?  A. Go to Stage 2, titled Formation of Disciples and
+Apostles in the CLCC manual. Read section C. Small Ecclesial Faith Communities,
+numbered paragraphs 1 to 10. Here the teaching on Small Ecclesial Faith Commu-
+nities is drawn directly from John Paul II's encyclical Redemptoris Mis- sio and
+from Pope Paul VI's Evangelii Nuntiandi. You can find additional information on
+SEFCs in Part II of this manual, Authoritative Sources. See the first four
+documents treated there.  305 CELEBRATING LIFE AS A CATHOLIC CHRISTIAN Q. Could
+you tell me in one sentence what the CLCC process is?  A. The CLCC process is
+pure, unadulterated biblical stewardship framed in the Second Vatican Council's
+ecclesiology and magisterial teachings, which give solid theological formation
+and mission motivation to faithful believers, enabling them to Celebrate their
+Lives as Catholic Christians in a dechristianized culture.  306
+
+\part{Indexes}
+
+\chapter{Alphabetical}
+
+\chapter{Topical}
+
+\part{License}
+
+CREATIVE COMMONS LICENSE Attribution-NonCommercial 3.0 Unported URI:
+http://creativecommons.org/licenses/by-nc/3.0/legalcode License THE WORK (AS
+DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC
+LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER
+APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE
+OR COPYRIGHT LAW IS PROHIBITED.  BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED
+HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE
+EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
+THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND
+CONDITIONS.  1. Definitions a. "Adaptation" means a work based upon the Work, or
+upon the Work and other pre-existing works, such as a translation, adaptation,
+derivative work, arrangement of music or other alterations of a literary or ar-
+tistic work, or phonogram or performance and includes cinematographic
+adaptations or any other form in which the Work may be recast, transformed, or
+adapted including in any form recognizably derived from the original, except
+that a work that constitutes a Collection will not be considered an Adaptation
+for the purpose of this License. For the avoidance of doubt, where the Work is a
+musical work, performance or phonogram, the synchronization of the Work in
+timed-relation with a moving image ("synching") will be considered an Adaptation
+for the purpose of this License.  b. "Collection" means a collection of literary
+or artistic works, such as encyclopedias and anthologies, or performances,
+phonograms or broadcasts, or other works or subject matter other than works
+listed in Section 1(f) below, which, by reason of the selection and arrangement
+of their contents, constitute intel- lectual creations, in which the Work is
+included in its entirety in unmodified form along with one or more other
+contributions, each constituting separate and independent works in themselves,
+which together are assembled into a collective whole. A work that constitutes a
+Collection will not be considered an Adapta- tion (as defined above) for the
+purposes of this License.  c. "Distribute" means to make available to the public
+the original and copies of the Work or Adaptation, as appropriate, through sale
+or other transfer of ownership.  d. "Licensor" means the individual,
+individuals, entity or entities that offer(s) the Work under the terms of this
+License.  e. "Original Author" means, in the case of a literary or artistic
+work, the individual, individuals, entity or entities who created the Work or if
+no individual or entity can be identified, the publisher; and in addition (i) in
+the case of a performance the actors, singers, musicians, dancers, and other
+persons who act, sing, deliver, declaim, play in, interpret or otherwise perform
+literary or artistic works or expressions of folklore; (ii) in the case of a
+phonogram the producer being the person or legal entity who first fixes the
+sounds of a performance or other sounds; and, (iii) in the case of broadcasts,
+the organization that transmits the broadcast.  f. "Work" means the literary
+and/or artistic work offered under the terms of this License including without
+limitation any production in the literary, scientific and artistic domain,
+whatever may be the mode or form of its expression including digital form, such
+as a book, pamphlet and other writing; a lecture, address, sermon or other work
+of the same nature; a dramatic or dramatico-musical work; a choreographic work
+or entertainment in dumb show; a musical composition with or without words; a
+cinematographic work to which are assimilated works expressed by a process
+analogous to cinematography; a work of drawing, painting, architecture,
+sculpture, engraving or lithography; a photographic work to which are
+assimilated works expressed by a process analogous to photography; a work of
+applied art; an illustration, map, plan, sketch or three-dimensional work
+relative to geography, topography, architecture or science; a perfor- mance; a
+broadcast; a phonogram; a compilation of data to the extent it is protected as a
+copyrightable work; or a work performed by a variety or circus performer to the
+extent it is not otherwise considered a literary or artistic work.
+309CELEBRATING LIFE AS A CATHOLIC CHRISTIAN g. "You" means an individual or
+entity exercising rights under this License who has not previously violated the
+terms of this License with respect to the Work, or who has received express
+permission from the Licensor to exercise rights under this License despite a
+previous violation.  h. "Publicly Perform" means to perform public recitations
+of the Work and to communicate to the public those public recitations, by any
+means or process, including by wire or wireless means or public digital
+performances; to make available to the public Works in such a way that members
+of the public may access these Works from a place and at a place individually
+chosen by them; to perform the Work to the public by any means or process and
+the communication to the public of the performances of the Work, including by
+public digital performance; to broadcast and rebroadcast the Work by any means
+including signs, sounds or images.  i. "Reproduce" means to make copies of the
+Work by any means including without limitation by sound or visual recordings and
+the right of fixation and reproducing fixations of the Work, including storage
+of a protected performance or phonogram in digital form or other electronic
+medium.  2. Fair Dealing Rights.  Nothing in this License is intended to reduce,
+limit, or restrict any uses free from copyright or rights arising from
+limitations or exceptions that are provided for in connection with the copyright
+protection under copyright law or other applicable laws.  3. License Grant.
+Subject to the terms and conditions of this License, Licensor hereby grants You
+a worldwide, royalty-free, non-exclu- sive, perpetual (for the duration of the
+applicable copyright) license to exercise the rights in the Work as stated
+below: a. to Reproduce the Work, to incorporate the Work into one or more
+Collections, and to Reproduce the Work as incorporated in the Collections; b. to
+create and Reproduce Adaptations provided that any such Adaptation, including
+any translation in any medium, takes reasonable steps to clearly label,
+demarcate or otherwise identify that changes were made to the original Work. For
+example, a translation could be marked "The original work was translated from
+English to Spanish," or a modification could indicate "The original work has
+been modified."; c. to Distribute and Publicly Perform the Work including as
+incorporated in Collections; and, d. to Distribute and Publicly Perform
+Adaptations.  The above rights may be exercised in all media and formats whether
+now known or hereafter devised. The above rights include the right to make such
+modifications as are technically necessary to exercise the rights in other media
+and formats. Subject to Section 8(f), all rights not expressly granted by
+Licensor are hereby reserved, including but not limited to the rights set forth
+in Section 4(d).  4. Restrictions.  The license granted in Section 3 above is
+expressly made subject to and limited by the following restrictions: a. You may
+Distribute or Publicly Perform the Work only under the terms of this
+License. You must include a copy of, or the Uniform Resource Identifier (URI)
+for, this License with every copy of the Work You Distribute or Publicly
+Perform. You may not offer or impose any terms on the Work that restrict the
+terms of this License or the ability of the recipient of the Work to exercise
+the rights granted to that recipient under the terms of the License. You may not
+sublicense the Work. You must keep intact all notices that refer to this License
+and to the disclaimer of warranties with every copy of the Work You Distribute
+or Publicly Perform. When You Distribute or Publicly Perform the Work, You may
+not impose any effective technological measures on the Work that restrict the
+ability of a recipient of the Work from You to exer- cise the rights granted to
+that recipient under the terms of the License. This Section 4(a) applies to the
+Work as incorporated in a Collection, but this does not require the Collection
+apart from the Work itself to be made subject to the terms of this License. If
+You create a Collection, upon notice from any Licensor You must, to the extent
+practicable, remove from the Collection any credit as required by Section 4(c),
+as requested. If You create an Adaptation, upon notice from any Licensor You
+must, to the extent practi- cable, remove from the Adaptation any credit as
+required by Section 4(c), as requested.  b. You may not exercise any of the
+rights granted to You in Section 3 above in any manner that is primarily
+intended for or directed toward commercial advantage or private monetary
+compensation. The exchange 310 LICENSE of the Work for other copyrighted works
+by means of digital file-sharing or otherwise shall not be considered to be
+intended for or directed toward commercial advantage or private monetary
+compensa- tion, provided there is no payment of any monetary compensation in
+connection with the exchange of copyrighted works.  c. If You Distribute, or
+Publicly Perform the Work or any Adaptations or Collections, You must, unless a
+request has been made pursuant to Section 4(a), keep intact all copyright
+notices for the Work and provide, reasonable to the medium or means You are
+utilizing: (i) the name of the Original Author (or pseudonym, if applicable) if
+supplied, and/or if the Original Author and/or Licensor designate another party
+or parties (e.g., a sponsor institute, publishing entity, journal) for
+attribution ("Attribution Parties") in Licensor's copyright notice, terms of
+service or by other reasonable means, the name of such party or parties; (ii)
+the title of the Work if supplied; (iii) to the extent reasonably practicable,
+the URI, if any, that Licensor specifies to be associated with the Work, unless
+such URI does not refer to the copyright notice or licensing information for the
+Work; and, (iv) consistent with Section 3(b), in the case of an Adapta- tion, a
+credit identifying the use of the Work in the Adaptation (e.g., "French
+translation of the Work by Original Author," or "Screenplay based on original
+Work by Original Author"). The credit required by this Section 4(c) may be
+implemented in any reasonable manner; provided, however, that in the case of a
+Adaptation or Collection, at a minimum such credit will appear, if a credit for
+all contributing authors of the Adaptation or Collection appears, then as part
+of these credits and in a manner at least as prominent as the credits for the
+other contributing authors. For the avoidance of doubt, You may only use the
+credit required by this Section for the purpose of attribution in the manner set
+out above and, by exercising Your rights under this License, You may not
+implicitly or explicitly assert or imply any connection with, sponsorship or
+endorsement by the Original Author, Licensor and/or Attribution Parties, as
+appropriate, of You or Your use of the Work, without the separate, express prior
+written permission of the Original Author, Licensor and/or Attribution Parties.
+d. For the avoidance of doubt: i. Non-waivable Compulsory License Schemes. In
+those jurisdictions in which the right to collect royalties through any
+statutory or compulsory licensing scheme cannot be waived, the Licensor reserves
+the exclusive right to collect such royalties for any exercise by You of the
+rights granted under this License; ii. Waivable Compulsory License Schemes. In
+those jurisdictions in which the right to collect royalties through any
+statutory or compulsory licensing scheme can be waived, the Licensor reserves
+the exclusive right to collect such royalties for any exercise by You of the
+rights granted under this License if Your exercise of such rights is for a
+purpose or use which is otherwise than noncommercial as permitted under Section
+4(b) and otherwise waives the right to collect royalties through any statutory
+or compulsory licensing scheme; and, iii. Voluntary License Schemes. The
+Licensor reserves the right to collect royalties, whether individually or, in
+the event that the Licensor is a member of a collecting society that administers
+voluntary licensing schemes, via that society, from any exercise by You of the
+rights granted under this License that is for a purpose or use which is
+otherwise than noncommercial as permitted under Section 4(c).  e. Except as
+otherwise agreed in writing by the Licensor or as may be otherwise permitted by
+applicable law, if You Reproduce, Distribute or Publicly Perform the Work either
+by itself or as part of any Adapta- tions or Collections, You must not distort,
+mutilate, modify or take other derogatory action in relation to the Work which
+would be prejudicial to the Original Author's honor or reputation. Licensor
+agrees that in those jurisdictions (e.g. Japan), in which any exercise of the
+right granted in Section 3(b) of this License (the right to make Adaptations)
+would be deemed to be a distortion, mutilation, modification or other de-
+rogatory action prejudicial to the Original Author's honor and reputation, the
+Licensor will waive or not assert, as appropriate, this Section, to the fullest
+extent permitted by the applicable national law, to enable You to reasonably
+exercise Your right under Section 3(b) of this License (right to make
+Adaptations) but not otherwise.  311 CELEBRATING LIFE AS A CATHOLIC CHRISTIAN
+5. Representations, Warranties and Disclaimer UNLESS OTHERWISE MUTUALLY AGREED
+TO BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND MAKES NO
+REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED,
+STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WAR- RANTIES OF TITLE,
+MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE
+ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF
+ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLU-
+SION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
+6. Limitation on Liability.  EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN
+NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL,
+INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS
+LICENSE OR THE USE OF THE WORK, EVEN IF LICEN- SOR HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.  7. Termination a. This License and the rights
+granted hereunder will terminate automatically upon any breach by You of the
+terms of this License. Individuals or entities who have received Adaptations or
+Collections from You under this License, however, will not have their licenses
+terminated provided such individuals or entities remain in full compliance with
+those licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of
+this License.  b. Subject to the above terms and conditions, the license granted
+here is perpetual (for the duration of the applicable copyright in the
+Work). Notwithstanding the above, Licensor reserves the right to release the
+Work under different license terms or to stop distributing the Work at any time;
+provided, however that any such election will not serve to withdraw this License
+(or any other license that has been, or is required to be, granted under the
+terms of this License), and this License will continue in full force and effect
+unless terminated as stated above.  8. Miscellaneous a. Each time You Distribute
+or Publicly Perform the Work or a Collection, the Licensor offers to the
+recipient a license to the Work on the same terms and conditions as the license
+granted to You under this License.  b. Each time You Distribute or Publicly
+Perform an Adaptation, Licensor offers to the recipient a license to the
+original Work on the same terms and conditions as the license granted to You
+under this License.  c. If any provision of this License is invalid or
+unenforceable under applicable law, it shall not affect the validity or
+enforceability of the remainder of the terms of this License, and without
+further action by the parties to this agreement, such provision shall be
+reformed to the minimum extent necessary to make such provision valid and
+enforceable.  d. No term or provision of this License shall be deemed waived and
+no breach consented to unless such waiver or consent shall be in writing and
+signed by the party to be charged with such waiver or consent.  e. This License
+constitutes the entire agreement between the parties with respect to the Work
+licensed here. There are no understandings, agreements or representations with
+respect to the Work not specified here. Licensor shall not be bound by any
+additional provisions that may appear in any communication from You. This
+License may not be modified without the mutual written agreement of the Licensor
+and You.  f. The rights granted under, and the subject matter referenced, in
+this License were drafted utilizing the terminology of the Berne Convention for
+the Protection of Literary and Artistic Works (as amended on September 28,
+1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, the WIPO
+Performances and Phonograms Treaty of 1996 and the Universal Copyright
+Convention (as revised on July 24, 1971). These rights and subject matter take
+effect in the relevant jurisdiction in which the License terms are sought to be
+enforced according to the corresponding provisions of the implementa- tion of
+those treaty provisions in the applicable national law. If the standard suite of
+rights granted under applicable copyright law includes additional rights not
+granted under this License, such additional rights are deemed to be included in
+the License; this License is not intended to restrict the license of any rights
+under applicable law.  312 LICENSE Creative Commons Notice Creative Commons is
+not a party to this License, and makes no warranty whatsoever in connection with
+the Work. Creative Commons will not be liable to You or any party on any legal
+theory for any damages whatsoever, including without limitation any general,
+special, incidental or consequential damages arising in connection to this
+license. Notwithstanding the foregoing two (2) sentences, if Creative Commons
+has expressly identified itself as the Licensor hereunder, it shall have all
+rights and obligations of Licensor.  Except for the limited purpose of
+indicating to the public that the Work is licensed under the CCPL, Creative Com-
+mons does not authorize the use by either party of the trademark "Creative
+Commons" or any related trademark or logo of Creative Commons without the prior
+written consent of Creative Commons. Any permitted use will be in compliance
+with Creative Commons' then-current trademark usage guidelines, as may be
+published on its website or otherwise made available upon request from time to
+time. For the avoidance of doubt, this trademark restriction does not form part
+of the License.  Creative Commons may be contacted at
+http://creativecommons.org/
+
+\part{CLCC Prayer}
+
+Most loving Lord, You said, "I am the way, the truth and the life." Source of
+every good, fill us with your Holy Spirit. Inspire us to celebrate our lives as
+Catholic Christians. Show us the way to bring Celebrating Life as a Catholic
+Christian, a faith formation process, to your people in parishes. Thank you for
+entrusting this apostolate to us, and choosing us to live it, spread it, and
+teach it in your Church.  Through the power of your Spirit enlighten our
+minds. Open our hearts to value the CLCC process as your special gift to your
+Church. For this mission, form us in holiness. Set us on fire to promote the
+CLCC process not only to those in your Church but to those outside of it.  Help
+us to form Small Ecclesial Faith Communities and bond with each other in sincere
+"communion." Through your grace move us to repent of our faults and weaknesses
+that may be lingering in our hearts.  Awaken in us a hunger "to be evangelized
+[in order to] evangelize." Give us courage to reach out to family and friends
+who have left the Church, and to millions of "unchurched" Catholics gravely in
+need of salvation.  Mary, Mother of Jesus, our Lady of Good Counsel, Seat of
+Wisdom, and Mother of Perpetual Help, supreme model of Celebrating Life as a
+Catholic Christian, lead us to deep conversion, growth in holiness and
+self-giving in service to your Son, Jesus, for building up "the Church as
+Communion" like the Blessed Trinity. We ask this of you Father, Son and Holy
+Spirit. Amen.
+
+% ------------------------------------------------------------------------------
+
+\end{document}
