@@ -13,6 +13,8 @@ node_modules/
 /site/build/*
 !/site/build/.gitkeep
 /site/source/clojure/build/
+/site/source/tex/_*.tex
+/site/source/tex/*to.pdf
 /site/source/tex/auto/
 /site/source/tex/build/
 /support/save-touch.el
