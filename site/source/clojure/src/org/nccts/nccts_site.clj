@@ -81,7 +81,6 @@
        [:head]
        (enlive-html/append
         (concat
-
          ;; from template
          (enlive-html/at
           (enlive-html/select pg-ct [:head])
@@ -103,9 +102,6 @@
        (enlive-html/append
         (enlive-html/at
          (enlive-html/select pg-tb [:body])
-
-         [#{:span.ltx_tag_section :span.ltx_tag_subsection}]
-         (enlive-html/substitute)
 
          [:footer.ltx_page_footer]
          (enlive-html/substitute)
