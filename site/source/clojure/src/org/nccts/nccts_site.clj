@@ -63,16 +63,48 @@
                        (enlive-html/select pg-ct [:div#main])))))))
 
 (defn hf-template-tex
+  [path-ct path-tb]
+  (let [head-foot (head-foot)
+        pg-ct (html-resource (str ct path-ct))
+        pg-tb (html-resource (str tb path-tb))]
     (prettify
      (enlive-html/emit*
       (enlive-html/at head-foot
                       [:title]
                       (enlive-html/substitute
-                       (enlive-html/select pg [:title]))
+                       (enlive-html/select pg-ct [:title]))
+
+                      [:head]
+                      (enlive-html/append
+                       (concat
+
+                        ;; from template
+                        (enlive-html/at
+                         (enlive-html/select pg-ct [:head])
+
+                         [:title]
+                         (enlive-html/substitute))
+
+                        ;; from tex output
+                        (enlive-html/at
+                         (enlive-html/select pg-tb [:head])
+
+                         [enlive-html/any-node]
+                         (fn [node] (when-not (= :comment (:type node)) node))
+
+                         [#{:title :meta}]
+                         (enlive-html/substitute))))
 
                       [:div#main]
                       (enlive-html/append
-                       (:content (first (enlive-html/select pg [:body])))))))))
+                       (enlive-html/at
+                        (enlive-html/select pg-tb [:body])
+
+                        [:footer.ltx_page_footer]
+                        (enlive-html/substitute)
+
+                        [:body]
+                        enlive-html/unwrap)))))))
 
 (defn pages
   []
