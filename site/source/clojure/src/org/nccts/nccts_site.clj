@@ -45,22 +45,24 @@
         pg-ct (html-resource (str ct path-ct))]
     (prettify
      (enlive-html/emit*
-      (enlive-html/at head-foot
-                      [:title]
-                      (enlive-html/substitute
-                       (enlive-html/select pg-ct [:title]))
+      (enlive-html/at
+       head-foot
 
-                      [:head]
-                      (enlive-html/append
-                       (enlive-html/at
-                        (enlive-html/select pg-ct [:head])
+       [:title]
+       (enlive-html/substitute
+        (enlive-html/select pg-ct [:title]))
 
-                        [:title]
-                        (enlive-html/substitute)))
+       [:head]
+       (enlive-html/append
+        (enlive-html/at
+         (enlive-html/select pg-ct [:head])
 
-                      [:div#main]
-                      (enlive-html/substitute
-                       (enlive-html/select pg-ct [:div#main])))))))
+         [:title]
+         (enlive-html/substitute)))
+
+       [:div#main]
+       (enlive-html/substitute
+        (enlive-html/select pg-ct [:div#main])))))))
 
 (defn hf-template-tex
   [path-ct path-tb]
@@ -69,47 +71,51 @@
         pg-tb (html-resource (str tb path-tb))]
     (prettify
      (enlive-html/emit*
-      (enlive-html/at head-foot
-                      [:title]
-                      (enlive-html/substitute
-                       (enlive-html/select pg-ct [:title]))
+      (enlive-html/at
+       head-foot
 
-                      [:head]
-                      (enlive-html/append
-                       (concat
+       [:title]
+       (enlive-html/substitute
+        (enlive-html/select pg-ct [:title]))
 
-                        ;; from template
-                        (enlive-html/at
-                         (enlive-html/select pg-ct [:head])
+       [:head]
+       (enlive-html/append
+        (concat
 
-                         [:title]
-                         (enlive-html/substitute))
+         ;; from template
+         (enlive-html/at
+          (enlive-html/select pg-ct [:head])
 
-                        ;; from tex output
-                        (enlive-html/at
-                         (enlive-html/select pg-tb [:head])
+          [:title]
+          (enlive-html/substitute))
 
-                         [enlive-html/any-node]
-                         (fn [node] (when-not (= :comment (:type node)) node))
+         ;; from tex output
+         (enlive-html/at
+          (enlive-html/select pg-tb [:head])
 
-                         [#{:title :meta}]
-                         (enlive-html/substitute))))
+          [enlive-html/any-node]
+          (fn [node] (when-not (= :comment (:type node)) node))
 
-                      [:div#main]
-                      (enlive-html/append
-                       (enlive-html/at
-                        (enlive-html/select pg-tb [:body])
+          [#{:title :meta}]
+          (enlive-html/substitute))))
 
-                        [:footer.ltx_page_footer]
-                        (enlive-html/substitute)
+       [:div#main]
+       (enlive-html/append
+        (enlive-html/at
+         (enlive-html/select pg-tb [:body])
 
-                        [:body]
-                        enlive-html/unwrap)))))))
+         [#{:span.ltx_tag_section :span.ltx_tag_subsection}]
+         (enlive-html/substitute)
+
+         [:footer.ltx_page_footer]
+         (enlive-html/substitute)
+
+         [:body]
+         enlive-html/unwrap)))))))
 
 (defn pages
   []
   (merge
-
    {"/index.html"
     (hf-template-simple
      "index.html")
@@ -128,9 +134,7 @@
      "clcc/companion/index.html"
      "clcc/companion/index.html")}
 
-   (stasis/slurp-directory tb #"\.css")
-
-   ))
+   (stasis/slurp-directory tb #"\.css")))
 
 (def target-dir "site/source/clojure/build")
 
