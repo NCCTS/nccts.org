@@ -108,17 +108,29 @@
 
 (defn pages
   []
-  {"/index.html"
-   (t1 "index.html")
+  (merge
 
-   "/clcc/index.html"
-   (t1 "clcc/index.html")
+   {"/index.html"
+    (hf-template-simple
+     "index.html")
 
-   "/clcc/manual/index.html"
-   (t2 "clcc/manual/index.html")
+    "/clcc/index.html"
+    (hf-template-simple
+     "clcc/index.html")
 
-   "/clcc/companion/index.html"
-   (t2 "clcc/companion/index.html")})
+    "/clcc/manual/index.html"
+    (hf-template-tex
+     "clcc/manual/index.html"
+     "clcc/manual/index.html")
+
+    "/clcc/companion/index.html"
+    (hf-template-tex
+     "clcc/companion/index.html"
+     "clcc/companion/index.html")}
+
+   (stasis/slurp-directory tb #"\.css")
+
+   ))
 
 (def target-dir "site/source/clojure/build")
 
