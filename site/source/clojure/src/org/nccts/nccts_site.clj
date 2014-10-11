@@ -128,9 +128,7 @@
     "/clcc/companion/index.html"
     (hf-template-tex
      "clcc/companion/index.html"
-     "clcc/companion/index.html")}
-
-   (stasis/slurp-directory tb #"\.css")))
+     "clcc/companion/index.html")}))
 
 (def target-dir "site/source/clojure/build")
 
