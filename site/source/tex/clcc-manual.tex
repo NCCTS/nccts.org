@@ -32,10 +32,20 @@
 
 \documentclass[oneside]{book}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
 \usepackage{lxRDFa}
+\usepackage[explicit]{titlesec}
+\usepackage{tocloft}
 
 \title{\textbf{CELEBRATING LIFE} \\ AS A \\ \textbf{CATHOLIC CHRISTIAN}}
 \author{Fr. Francis A. Novak, C.Ss.R.}  \date{June 2013}
+
+\newcommand*\Hide{%
+\titleformat{\part}
+  {}{}{0pt}{}
+}
+
 \begin{document}
 \pagestyle{plain}
 
@@ -50,55 +60,80 @@ CELEBRATING LIFE AS A CATHOLIC CHRISTIAN
 
 % ------------------------------------------------------------------------------
 
-Nihil Obstat: + Kelvin E. Felix, D.D. Archbishop of Castries Castries,
-St. Lucia, West Indies Imprimatur: + John F. Donoghue, D.D. Archbishop of
-Atlanta October 15, 2004 Celebrating Life as a Catholic Christian Copyright
-2010 by Fr. Francis A. Novak, C.Ss.R. St. Clement, Liguori, Missouri, 63057, USA
-www.clcc.info ISBN: 978-0-615-31588-1 The contents of this book are distributed
-under the terms of the Creative Commons license, Attribution- NonCommercial 3.0
-Unported. The full text of the license may be found at the back of the book,
-beginning on page 309.  A summary of the license terms You are free: to share
-to copy, distribute and transmit the work; to remix  to adapt the work. Under
-the following conditions: attribution  you must attribute the work in the manner
-specified by the author or licensor (but not in any way that suggests that they
-endorse you or your use of the work); noncommercial you may not use this work
-for commercial purposes. With the understanding that: any of the above
-conditions can be waived if you get permission from the copyright holder; public
-domain  where the work or any of its elements is in the public domain under
-applicable law, that status is in no way affected by the license; other rights
-in no way are any of the following rights affected by the license: your fair
-dealing or fair use rights, or other applicable copyright exceptions and
-limitations; the authors moral rights; rights other persons may have either in
-the work itself or in how the work is used, such as publicity or privacy rights;
-notice  for any reuse or distribution, you must make clear to others the license
-terms of this work.  Scripture selections, unless otherwise noted, are taken
-from the New American Bible, Copyright  1991, 1986, 1970 by the Confraternity of
-Christian Doctrine, Inc., Washington, DC. Used with permission. All rights
-reserved. No portion of the New American Bible may be reprinted without
-permission in writings from the copyright holder.  Selections from official
-documents of the Catholic Church are taken from the website of The Holy See,
-wwww.vatican.va. Copyright Libreria Editrice Vaticana.  Cover design by Wendy
-Barnes, Liguori, Missouri. Artwork and design of the CLCC Centerfold found on
-pages 144-145 by Chris Schwartz Studios, Saint Louis, Missouri.  For more
-information and additional electronic resources, please visit the CLCC website.
-http://www.clcc.info e-mail: questions@clcc.info National Catholic Conference
-for Total Stewardship 2010
+Nihil Obstat: + Kelvin E. Felix, D.D.  Archbishop of Castries Castries,
+St. Lucia, West Indies
 
-\begin{center} \lxRDFa{property=cc-lic-graphic,resource={cc-lic}}
-\includegraphics[scale=0.6]{by-nc-nd}
+Imprimatur: + John F. Donoghue, D.D.  Archbishop of Atlanta October 15, 2004
+
+Celebrating Life as a Catholic Christian Copyright 2010 by Fr. Francis A. Novak,
+C.Ss.R.  St. Clement, Liguori, Missouri, 63057, USA www.clcc.info
+
+ISBN: 978-0-615-31588-1
+
+The contents of this book are distributed under the terms of the Creative
+Commons license, Attribution-NonCommercial 3.0 Unported. The full text of the
+license may be found at the back of the book, beginning on page 309.
+
+A summary of the license terms You are free: to share to copy, distribute and
+transmit the work; to remix to adapt the work. Under the following conditions:
+attribution you must attribute the work in the manner specified by the author or
+licensor (but not in any way that suggests that they endorse you or your use of
+the work); noncommercial you may not use this work for commercial purposes. With
+the understanding that: any of the above conditions can be waived if you get
+permission from the copyright holder; public domain where the work or any of its
+elements is in the public domain under applicable law, that status is in no way
+affected by the license; other rights in no way are any of the following rights
+affected by the license: your fair dealing or fair use rights, or other
+applicable copyright exceptions and limitations; the authors moral rights;
+rights other persons may have either in the work itself or in how the work is
+used, such as publicity or privacy rights; notice for any reuse or distribution,
+you must make clear to others the license terms of this work.
+
+Scripture selections, unless otherwise noted, are taken from the New American
+Bible, Copyright 1991, 1986, 1970 by the Confraternity of Christian Doctrine,
+Inc., Washington, DC. Used with permission. All rights reserved. No portion of
+the New American Bible may be reprinted without permission in writings from the
+copyright holder.
+
+Selections from official documents of the Catholic Church are taken from the
+website of The Holy See, wwww.vatican.va. Copyright Libreria Editrice Vaticana.
+
+Cover design by Wendy Barnes, Liguori, Missouri. Artwork and design of the CLCC
+Centerfold found on pages 144-145 by Chris Schwartz Studios, Saint Louis,
+Missouri.
+
+For more information and additional electronic resources, please visit the CLCC
+website.  http://www.clcc.info e-mail: questions@clcc.info
+
+National Catholic Conference for Total Stewardship 2010
+
+\section*{} \lxRDFa{property=cc-lic-section,resource={cc-lic}}
+
+\begin{center}
+
+This work is distributed under the terms of the Creative Commons license,
+\emph{\href{https://creativecommons.org/licenses/by-nc/3.0/us/legalcode}{
+Attribution-NonCommercial 3.0 Unported}}.
+
+\href{https://creativecommons.org/licenses/by-nc/3.0/us/}{
+  \includegraphics[scale=0.4]{by-nc-nd}
+\lxRDFa{property=cc-lic-graphic,resource={cc-lic}}}
+
 \end{center}
 
 % ------------------------------------------------------------------------------
 
 To teach in order to lead others to the faith is the task of every preacher and
-of every believer. St. Thomas Aquinas
+of every believer.
+
+--- St. Thomas Aquinas
 
 % ------------------------------------------------------------------------------
 
-The world aflame with Pentecosts fire, Evangelization, the Good News
-spreading,Gods people true conversion seeking;Enlightened by the Spirits
-fire,Enlivened by the Saviors Body and Blood,Protected under Virgin Mothers
-care,Entrusted with the Churchs teaching faithfully to live and share.
+The world aflame with Pentecosts fire, Evangelization, the Good News spreading,
+Gods people true conversion seeking; Enlightened by the Spirits fire, Enlivened
+by the Saviors Body and Blood, Protected under Virgin Mothers care, Entrusted
+with the Churchs teaching faithfully to live and share.
 
 % ------------------------------------------------------------------------------
 
@@ -111,71 +146,1264 @@ Philip and Bishop Alfred and to my Redemptorist family and friends
 
 % ------------------------------------------------------------------------------
 
+Celebrating Life as a Catholic Christian is a proven and efficacious tool for
+the New Evangelization, that is, the teaching and celebrating and living of our
+Catholic faith with the enthusiasm and engagement of the first Christians and
+the first missionaries to every part of the world.  In small communities formed
+by the parish, Catholics are helped to deepen their own knowledge and love of
+Christ, so that they can give an account of their faith to others, especially
+those who do not know Christ or have drifted from His friendship.  The small
+communities are particularly effective in carrying out the catechesis of those
+who are new members of the Church.  The deepening of faith is secured by the
+study of the authoritative sources of the Church's Magisterium, Her official
+teachings, which are presented in a most accessible manner.  Through the
+discussion of the texts of recent Papal Magisterium, members of the small
+communities, under the pastoral guidance of the Vicar of Christ on earth, are
+prepared in the best manner possible to be effective heralds and agents of the
+New Evangelization.
+
+Raymond Leo Cardinal Burke
+Archbishop Emeritus of Saint Louis
+Prefect, Supreme Tribunal of the Apostolic Signatura
+
+% ------------------------------------------------------------------------------
+
 \chapter{Foreword}
+
+In 1980 Father Francis A. Novak, C.Ss.R., founded the National Catholic
+Conference for Total Stewardship (NCCTS) with approval of the National
+Conference of Catholic Bishops (NCCB) now renamed the United States Conference
+of Catholic Bishops (USCCB).  His intention was to carry the concept of
+stewardship far beyond the appeals for monetary giving to which it is so often
+restricted in many dioceses and parishes.  To this end the NCCTS in 1985
+developed a comprehensive process called the Christian Celebration of Life (CCL)
+for the formation of laity and clergy in Vatican Council II documents and
+magisterial teachings. The aim of the process was to deepen spirituality and
+generate wider participation among the laity for doing more meaningful ministry
+in the Church and in the world.  In many parishes in the U.S., in the Diocese of
+Grand Falls, Newfoundland, and in the Archdiocese of St. Lucia in the Caribbean,
+the CCL process, where correctly implemented, was resoundingly successful.
+Observing the process unfold in dioceses and parishes, it became clear that some
+changes in the process would be useful. Also gracious and positive feedback from
+clergy and laity prompted some changes. A few users of the CCL felt that the
+process ought to be made more contemporary to counter the aggressive
+secularization of culture. In 1998 changes were made, the most obvious change
+was in the title, Celebrating Life as a Catholic Christian (CLCC). The new title
+was chosen to suggest the tensions Catholics have and will increasingly have in
+their struggle to live authentic Christian lives in a culture hell-bent on its
+de-Christianization.  Unfortunately in 1995, Fr. Novak contracted a staph
+infection during a knee replacement operation. This event greatly curtailed and
+slowed down the promotion of the newly named and improved CLCC process. Six
+years and nineteen surgeries later, the continuing infection necessitated
+removal of his right leg above the knee on Tuesday of Holy Week, April 10, 2001.
+Functioning on a prosthetic leg, Fr. Novak is back in action, though with some
+limitations. This book, Celebrating Life as a Catholic Christian, is written for
+priests and lay leaders in parishes strongly drawn to bring Gods people to a
+deeper knowledge of the Catholic faith, growth in holiness and commitment to
+evangelize ones family, the parish community and world, with special focus on
+helping lapsed Catholics return to the Church.
+
+G. William Sefton Chairman of NCCTS Board of Directors
 
 % ------------------------------------------------------------------------------
 
 \chapter{Acknowledgments}
 
+Some thirty years ago a seminal idea about a faith formation process was planted
+in my psyche. I prayed it fell on good soil. Half way through the stretch of
+nurturing, a title for the process came to me: Celebrating Life as a Catholic
+Christian (CLCC). By no means was the laborious move from idea to reality a
+one-man project. The Lord provided a partnership of talented people to help me
+advance the project, namely Mr. Bill Sefton, first chairman of the National
+Catholic Conference for Total Stewardship (NCCTS). He was a man of exceptional
+commitment to the CLCC apostolate, and a friend of nearly five decades. Our two
+episcopal moderators, Archbishop John F. Donoghue, now emeritus, of Atlanta and
+Archbishop Kelvin E. Felix, formerly of St. Lucia in the Caribbean and now in
+Grand Bay, Roseau, Dominica, provided their friendly presence faithfully and
+their input has always been positive. I thank also all other original donors of
+their time and gifts to help define the nucleus of a much-needed renewal
+apostolate in the Church, the CLCC process.  The CLCC faith formation process
+has incalculable potential and requires strong participant commitment. Inspiring
+and exemplary commitment has been given by a small group eager to grow
+personally in the faith, and eager to spread it by reaching out to
+non-practicing, lapsed Catholics. According to the latest survey, the number of
+non-church-going Catholics in the U.S. stands at a staggering 45
+million. Helping these millions return to Christ and his Church is the CLCCs
+apostolic outreach. Groups formed in parishes that carry out the CLCC process
+are known as Small Ecclesial Faith Communities (SEFC). Members of one such group
+have met faithfully on Tuesday evenings without interruption for 4 years in over
+200 consecutive ninety-minute Faith Formation Sessions. Their commitment to the
+CLCC process is not only transparent, but their growth in knowledge of the faith
+and in their spiritual life has been a climb of the mountain. Lay leaders in
+this group, noted for their extraordinary dedication and perseverance, are Rob
+Winkler, Adelaide Herrell and Kimberly Dowd.
+
+The CLCC process, we feel confident, is the work of the Holy Spirit. How else
+explain the following occurrence? Out of the masses emerged mysteriously a
+Michael Bradley, the right man at the right time, a computer professional. He
+came to help us put the CLCC faith formation Manual into final form for
+publication. To Michael Bradley very special and sincere thanks for the amount
+of selfless time he has generously donated to the CLCC process, even taking six
+weeks off from work. Thanks also to Fr. Brian Van Hove, S.J., Board member of
+the NCCTS, for introducing Michael Bradley to us to become part of this
+mission. Finally, warm thanks to family and many dear friends, who by their
+daily prayers, were in large and small ways instrumental in making the CLCC
+faith formation process a successful journey from idea to reality.
+
 % ------------------------------------------------------------------------------
 
+\pagebreak
 \tableofcontents
 
 % ------------------------------------------------------------------------------
 
 \chapter{Primary Sources}
 
+Citations in this manual are selected from the following list of official Church
+documents: Vatican II documents, encyclicals, apostolic exhortations and papal
+pronouncements. They are listed here in the order in which they appear in this
+manual, not alphabetically. Also listed is nomenclature proper to the CLCC
+process.
+
+CL Christifideles Laici, The Lay Faithful of Christ Apostolic Letter, John Paul
+II, 1988 CCC Catechism of the Catholic Church Libreria Editrice Vaticana, Second
+Edition, 1997 PDV Pastores Dabo Vobis, I Will Give You Shepherds Apostolic
+Exhortation, John Paul II, 1991 NMI Novo Millennio Ineunte, Beginning of the New
+Millennium Apostolic Letter, John Paul II, 2001 LG Lumen Gentium, Light of the
+Nations, Dogmatic Constitution of the Church Second Vatican Council, 1964 EN
+Evangelii Nuntiandi, On Evangelization in the Modern World Apostolic
+Exhortation, Paul VI, 1975 RMiss Redemptoris Missio, Mission of the Redeemer
+Encyclical Letter, John Paul II, 1990 PO Presbyterorum Ordinis, Decree on the
+Ministry and Life of Priests Second Vatican Council, 1965 CD Christus Dominus,
+Decree on the Bishops Pastoral Office in the Church Second Vatican Council, 1965
+AA Apostolicam Auctuositatem, Decree on the Apostolate of the Laity Second
+Vatican Council, 1965
+
+DV Dei Verbum, Dogmatic Constitution on Divine Revelation Second Vatican
+Council, 1965 CT Catechesi Tradendae, Catechesis in Our Time Apostolic
+Exhortation, John Paul II, 1979 GS Gaudium et Spes, Pastoral Constitution of the
+Church in the Modern World Second Vatican Council, 1965 EE Ecclesia de
+Eucharistia, Church of the Eucharist Encyclical Letter, John Paul II, 2003 SC
+Sacrosanctum Concilium, Constitution on the Sacred Liturgy Second Vatican
+Council, 1963 DI Dominus Iesus, On the Unicity and Unity of Christs Church
+Declaration, Congregation for the Doctrine of the Faith, 2000 EV Evangelium
+vitae, The Gospel of Life Encyclical Letter, John Paul II, 1995 DD Dies Domini,
+Day of the Lord Apostolic Letter, John Paul II, 1998 DeV Dominum et
+vivificantem, The Holy Spirit in the Life of the Church and the World Encyclical
+Letter, John Paul II, 1986 Did Didascalia, Teaching of the 12 Apostles and
+Disciples of Our Savior Catechetical text of the 3rd century DC Deus Caritas
+Est, God is Love Encyclical Letter, Benedict XVI, 2005 SC Sacramentum Caritatis,
+The sacrament of charity Apostolic Exhortation, Benedict XVI, 2007 SD Salvifici
+Doloris, The Christian Meaning of Human Suffering Apostolic Letter, John Paul
+II, 1984 CV Caritas in veritate, Charity in Truth Encyclical Letter, Benedict
+XVI, 2009
+
+CLCC Celebrating Life as a Catholic Christian SEFC Small Ecclesial Faith
+Communities TS Total Stewardship
+
 % ------------------------------------------------------------------------------
 
 \chapter{Introduction}
+
+This is introduction stuff.1. Celebrating Life as a Catholic Christian (CLCC) is
+a process by which lay Catholics are formed in spirituality within Small
+Ecclesial Faith Communities (SEFC) which are established in and by the
+parish. In addition to becoming better formed in the faith, the CLCC process
+prepares SEFC members to carry out the critically needed apostolate of reaching
+out to lapsed, non-practicing Catholics with the aim of helping them return to
+the Church. For those who are willing to join a SEFC for re-introduction to the
+faith, the faith community then acts as the staging ground for their re-entry
+into the Church. Fundamental to this process is Saint James astounding and
+unequivocal teaching faith of itself, if it does not have works, is dead
+... [F]aith without works is useless. (cf. Jas 2:17,20; cf. CCC 1815) Obviously
+the goal of this process is to develop faith more deeply in the People of God,
+and its apostolic outreach is conversion of fallen-away Catholics for building
+up the kingdom of God.  Recently a saddened father confided to me that five of
+his six adult children do not go to Mass on Sunday. All were educated in the
+best of Catholic schools from the elementary level to college. All were trained
+in the faith. They dont deny the faith, he said, they just ignore it, or try to
+justify their troubled conscience by saying they dont buy it all.
+
+2. This book will show why Pope John Paul II has stressed the need of formation
+in holiness and the need of New Evangelization that he describes in several
+apostolic letters and exhortations issued during his pontificate. For example in
+the apostolic exhortation, Christifideles Laici, The Lay Faithful of Christ, he
+states that between God who offers his gifts, and the person who receives them,
+that person is called to exercise responsibility, indeed the necessity, of a
+total and ongoing formation. Quoting the Synod Fathers (1988), the Holy Father
+writes, Christian formation (is) a continual process [emphasis added] of
+maturation in faith and a likening to Christ in the individual, according to the
+will of the Father, under the guidance of the Holy Spirit. The Holy Father
+emphasizes that formation of the lay faithful must be placed among the
+priorities of a diocese. It ought to be so placed within the plan of pastoral
+action that the efforts of the whole community (clergy, lay faithful and
+religious) converge on this goal. (cf. CL 57)
+
+3. The plan of action which the Pope has in mind is embodied in this
+process. Because Catholics for two or more generations have been minimally
+catechized and therefore minimally formed in the faith, the need of sound,
+orthodox catechesis is not only imperative but may not be delayed. The RCIA
+boasts of newcomers and returnees to the faith in the tens of thousands each
+year. But in not a few cases because they feel unanchored to the Church many
+drift way.
+
+4. Unique to Small Ecclesial Faith Communities in the CLCC process is that not
+only do fallen-away Catholics have a welcome place to come to, but also new
+Catholics, graduates of the RCIA who have the glow of their Easter Vigil
+sacramental experience, have a haven to come to for bonding, support, prayer
+life, ongoing formation in doctrine and maturation in the faith.
+
+5. Many conscientious parents express concern when they see in their adolescent
+and college age children a faith crisis. Their concern is selection, to which
+Catholic school should we send them, since some Catholic schools are Catholic in
+name only. They see the faith crisis in their own parish: low Mass attendance,
+often irreverent liturgies, and certain sex education programs in their schools
+which instead of promoting and preserving chastity destroy the childrens
+innocence.
+
+6. The growing priest shortage in both diocesan and religious orders is finally
+hitting home. Where will they go for Mass? Hard to believe but true, the priest
+shortage began some forty years ago when an admission policy to seminaries was
+adopted which has been tabbed as artificial and contrived. This means that
+screening of applicants favored those who were liberal, open and modern. Men
+found to be traditional, obedient and prayerful were believed to be rigid and
+therefore not accepted. The fruits of this policy are being reaped today. We
+ought never to feel that God is not calling men to the priesthood. He is. For
+reasons too numerous to mention here, young men are not responding, but in time
+they will. Moreover, the new priests ordained in a given year are far too few to
+replace old and ill priests who retire from ministry or die, increasing the
+number of priestless parishes.
+
+7. Hope should be our trademark. The SEFC is an ideal environment for a young
+man to experience Church and discern his vocation to serve it. Members will help
+him follow his vocation quest, pray for him, support him and see him to
+ordination. The duty of fostering vocations falls on the whole Christian
+community, stated Pope John Paul II, and they should discharge it principally by
+living full Christian lives. (cf. PD 41)
+
+8. Do something is the outcry today. A Spirit-filled laity is emerging to do
+something about the crisis of faith they see around them. No longer do they feel
+comfortable shifting problems to Father or the Bishop. The Holy Spirit is
+working in their lives and in families awakening them to the powers that
+Baptism, Confirmation and Eucharist impart, especially awareness of their right
+and duty to participate in the saving mission of the Church. They learn that to
+share in the mission of the Church does not give them license to act
+independently of the local pastor or of the bishop or pope. Rather they strive
+to share responsibility in the Churchs apostolates in friendly communion with
+the pastor, the designated head and shepherd of the flock.  Part I of this book
+presents the CLCC process in its 5 stages. Part II, titled Authoritative Sources
+consists of passages taken from 20 key teachings of the Church. Both Part I and
+II present almost inexhaustible material for faith formation, preaching and the
+apostolate to the lapsed.
 
 % ------------------------------------------------------------------------------
 
 \chapter{Putting the CLCC Process to Work}
 
+The Process 1. Celebrating Life as a Catholic Christian (CLCC) is a process
+which systematically evangelizes Gods people in spirituality. At the same time
+it stimulates them to carry out their missionary duties, the major one, helping
+lapsed, non-church going Catholics return to the Church. In addition to citing
+many official Church teachings, this process incorporates a number of the new
+initiatives that Pope John Paul II calls for in his apostolic letter, Novo
+Millennio Ineunte, On Entering the New Millennium, for spreading the Gospel in
+the new century.  This process confronts the faith and cultural crisis that
+currently plagues millions of Catholics, many of whom seem blissfully unaware of
+the gravity of their situation.  By means of New Evangelization and a catechesis
+for holiness, the CLCC process aims to give Gods people a bold Catholic
+identity, a way to live and a way to help other people live genuinely Christian
+lives not succumbing to the pressures of secular society nor to the corrosive
+influences of anti-Christian and atheistic forces that are corrupting the
+culture. In opposition to these forces is this thoroughly Christ-centered CLCC
+faith formation process. It presents Jesus public ministry in Galilee in five
+stages, while at the parish level the CLCC process enacts Jesus Galilean
+ministry in five parallel stages.
+
+Key People 2. Key people who endorse the process are the priest, pastoral
+council and heads of parish organizations. They make a united decision to
+undertake the CLCC process in the parish and commit to support it.  Their first
+job is to select 12 men and women, after the 12 apostles, called the
+Matrix. These 12 become the core group of lay persons who lead the process. They
+agree to lead the process through its 5 Stages. Their first responsibility is to
+learn the process in a general way. As the process unfolds they learn the
+specific responsibilities relative to each stage.
+
+Small Ecclesial Faith Communities 3. The Matrix 12, the core lay leadership
+group, is the first of many Small Ecclesial Faith Communities (SEFC) formed in
+the parish. Many more Small Ecclesial Faith Communities will follow. Indeed
+small communities of different kinds already exist in parishes. However, it is
+advised and highly useful for parish community building (communion) that
+existing groups be willing to be part of the CLCC process. The following and all
+others are invited and urged to join: existing bible study groups, prayer
+groups, religious education instructors, parish school teachers, the liturgy
+committee, choir members, the youth group, young adults, music ministers, the
+married, single, widowed, the pro-life group, St. Vincent de Paul Society,
+ushers, greeters, collection counters, the finance committee, sports directors,
+maintenance people, all. There is no one in the parish not in need of further
+spiritual growth and updating in his faith. After Jesus called the 12 Apostles
+(cf. Mt 4:18,21; 10:1-4), and appointed 72 disciples (cf. Lk 10:1; Mk 3:16),
+they followed Jesus to learn his way of life. They grew in the blessedness Jesus
+proclaimed and exemplified. Jesus formed the first small faith
+community. Through the centuries thousands of small faith communities have grown
+into communions, called dioceses and parishes, which constitute the
+infrastructure of the Church, the Body of Christ.
+
+CLCC is not a Quick-Fix 4. The CLCC is decidedly a process, and not a program! A
+program has a beginning and an end, whereas a process is developmental. Through
+a series of small steps taken within several stages it advances toward certain
+desired goals. Unlike programs, the CLCC process is ongoing. Its
+open-ended. Being a process of formation in holiness and in knowledge of the
+faith, usually a radical change in lifestyle begins. The CLCC process is,
+therefore, not a quick-fix. Saints are not made overnight. Time is needed for
+lay leaders and parishioners to get the process underway. People need time to
+understand the process and act on it, especially the astounding prospect of
+becoming holy. True spiritual warriors who do battle with Satan to save lapsed
+Catholics need time for solid spiritual formation. Thus, the CLCC process may
+not be hurried or short-circuited. Every temptation to get it over must be
+banished. Time is the soul of the CLCC process. Time will show that the process
+achieves hoped for and measurable results. Personal holiness and zeal for
+recovering lost and lapsed Catholics cannot be bought online by credit card.
+
+How to Start the CLCC Process 5. Parishes have a choice of three ways to start
+the CLCC process.
+
+A five day mission, Sunday to Thursday, with preaching centered on the meaning
+and need of the process and an explanation of the 5 stages, one stage explained
+each evening.  A three, four or five day traditional mission on the eternal
+truths: need of salvation, the reality of death, judgment, Gods loving mercy,
+the need of making a good, integral confession, heaven or hell, and the Blessed
+Mother.  The parish priest announces the process over several weekends,
+explaining what it is, and the absolute usefulness of everyone entering in and
+belonging to a Small Ecclesial Faith Community. He emphasizes its twofold focus:
+catechetical formation in the faith and in holiness, and outreach to recover
+lapsed Catholics who have strayed from the faith. He points out the glory that
+will be given to the Lord when all Catholics in the parish, active and
+alienated, will begin Celebrating Life as Catholic Christians.
+
+Holding a mission prior to initiating the process has its advantages, but a
+mission is optional. A mission can bring the people to a spiritual high. But to
+implant a faith formation process in the parish like the CLCC as a follow-up to
+a mission is a perfect way to build on the missions high and its momentum. In
+other words, strike while the iron is hot! In any case the parish priests
+preaching on the process has value that ought not be underestimated. Hearing him
+parishioners will know immediately that he and the lay leaders alike are making
+the CLCC a top parish priority.
+
+Like advertising on TV, parish leaders have a sell job that is non-stop. Those
+slow to buy into the process will eventually come around. However parishioners
+who for reasons of health, age, handicap or other good reasons cannot join a
+SEFC are encouraged to take up the spiritual formation process privately. They
+are also urged to pray for the success of the CLCC process, for example, praying
+the rosary daily or doing some good work, invoking Gods blessing on all those
+entering the process and for a great spiritual awakening in the parish.
+
+Importance and Necessity of Prayer 6. Jesus said solemnly and emphatically,
+Whoever remains in me and I in him will bear much fruit. (cf. Jn 15:5) Prayer
+unites us to the Lord. Prayer creates a bond between Christ and the person who
+prays. For where two or three are gathered together in my name, there am I in
+the midst of them. (Mt 18:20) In prayer we come to him, and he comes to
+us. Through prayer good things happen, and good things are given us as Jesus
+promised. Thus, to begin the CLCC process is one thing. To have the CLCC process
+bear much fruit is another. The fruit is a new level of holiness in all parish
+members who participate in the formation process. Holiness is brought about
+through the experience of planting, pruning, cultivation and reaping of New
+Evangelization, orthodox catechetical formation, holiness, conversion of the
+lapsed and the return of many to Christ.  Why the emphasis on remaining united
+to the Lord through prayer? Jesus gives this straight reply, because without me
+you can do nothing.Jesus analogy of the vine and branches applies to the
+importance and necessity of prayer. He said, I am the vine, you are the
+branches. He exhorts, Remain in me, as I remain in you. He warns, Just as a
+branch cannot bear fruit on its own unless it remains on the vine, so neither
+can you unless you remain in me. (Jn 15:4-5) In sum, the CLCC process cannot
+bear fruit in the parish unless all persons involved are united to the Lord
+through the grace-filled power of prayer.
+
+Desired Results of the Process 7. What are some of them? When parishioners show
+greater faith and fervor in their worship at Mass; when growing numbers of
+parishioners, by Gods grace, show real earnestness about living their lives as
+Catholic Christians; when after a period of time a detectable air of humility
+and holiness wafts through the parish; when a new and fresh spirit of
+involvement and cooperation become evident among the People of God.  Evidence of
+progress in holiness will also be seen when Catholics who have been away from
+the sacraments for many years seek reconciliation with the Church through the
+sacrament of penance; when new faces begin to appear at Sunday Mass alongside
+the regulars, thus increasing Mass attendance; when liturgical celebration
+becomes more transcendent and less banal; when people ask for public adoration
+of the Blessed Sacrament and come faithfully to make a personal hour of
+adoration; when marriage becomes esteemed as a sacred life-long covenant; when
+spouses become more forgiving and compatible; when family life becomes more
+peaceful and stable and children are parent-directed, rather than parents being
+directed by children.  As holiness grows among the actives in SEFCs, so interest
+in missionary activities will grow. Awakened will be a sense of responsibility
+to reach out to Catholics who are religiously comatose and critically in need of
+New Evangelization. The agent of this responsibility is Gods grace. The Holy
+Spirit impels them to seek out and help lapsed brothers and sisters to join a
+SEFC for return to the Church. The grace-filled actives recover the lost. They
+are builders of communion in the Church. They help bring the Body of Christ to
+full stature.
+
+Lay Leaders and Small Ecclesial Faith Communities Organization 8. Lay leaders of
+the CLCC process are chosen for having shown some organizational and management
+skills. More importantly they possess a strong desire to grow in personal
+holiness and in knowledge of the faith and want to help fellow parishioners do
+likewise. Recognizing their own hunger for truth and holiness, they feel certain
+others experience the same hungers but have not diagnosed their condition as
+primarily spiritual rather than psychological, social, marital or material. Thus
+leaders are willing to learn and lead a spiritual conversion process, the CLCC,
+which is of utmost importance for soul, mind, heart and body.  Lay leaders first
+organize themselves. They form the first Small Ecclesial Faith Community
+(SEFC). Their main function is to hold weekly spiritual formation sessions for
+themselves. In them they learn how to conduct a spiritual formation session, how
+to use the material in the 5 Stages starting with Stage 1, and later going into
+Part II, titled Authoritative Sources. Formation consists of internalizing the
+content of each paragraph in each stage following the order for proper conduct
+of a session.
+
+9. Lay leaders in the first SEFC, also called the Matrix 12 after the 12
+Apostles, choose from among themselves a Moderator and an Associate
+Moderator. They are advised not to hire an outside facilitator. Educated,
+qualified and motivated people that they are, they can and will become expert
+facilitators themselves. Should questions arise, you are welcome to e-mail the
+NCCTS at anytime: questions@clcc.info.  Lay leaders are also responsible for
+initiating in the parish other Small Ecclesial Faith Communities (SEFC). Like
+the Matrix 12, SEFCs should ideally have 12 members. They may have 10 but ought
+not to go below 7. There is no limit to the number of SEFCs that can be formed
+in a parish, the more the better. They should dot every area within the parish
+boundaries. Like the Matrix 12, members of SEFCs moderate themselves, choosing
+persons within the group whom they feel are best qualified to lead.
+
+Functions 10. Moderators call and conduct the sessions. They follow strictly the
+Order for Conducting Spiritual Formation Sessions (see the next chapter). All
+members should be willing and given a chance to take turns moderating a
+session. Sessions may be held in peoples homes or in parish
+facilities. Experience shows that preference tilts to peoples homes. A private
+home is less institutional and less threatening to returnees to the faith than a
+church meeting hall.  Most important is that the moderator keeps the session on
+track without deviation, that is, he stays strictly to the content of the
+paragraph under consideration. Allowing participants to wander off track,
+letting some members dominate the discussion, to air personal gripes and
+distract the group from its spiritual focus -- these are sure ways to kill the
+group and destroy the process.  Moderators are to begin the session at the
+agreed upon time, giving each member a chance to briefly share (without
+coercion) their spiritual insight or experience with the group. The session must
+conclude exactly at the agreed upon time. To go overtime, no matter how lively
+the discussion, is also a sure way to kill the formation process and the groups
+commitment to it.  If some members choose to continue the sessions discussion,
+they are free to do so after it concludes. The moderator must conclude the
+formation session in 90 minutes in consideration of those who have other
+obligations.
+
+The weekly session is 90 minutes, 45 minutes for the first half, Interior
+Formation, then 45 minutes for the second half, Exterior Action and Conclusion.
+
 % ------------------------------------------------------------------------------
 
-\chapter{Order for Conducting Formation Sessions in Small Ecclesial Faith
-Communities}
+\chapter{Order for Conducting Formation Sessions}
+
+Hymn Select an appropriate religious song familiar to all missalette, hymn book
+or CD.
+
+Time Frame 90 minutes Start on time; end on time; do not go overtime.
+
+Opening Prayer Suggestion, use a liturgical prayer in accord with Churchs
+season.
+
+Source Part I, material as given in 5 stages.  Part II, material in
+Authoritative Sources.
+
+Subject Matter Each stage contains many short and long paragraphs. For example,
+Stage 1 has about 45 paragraphs, enough material for 45 formation sessions. Read
+aloud only one paragraph per session, and from it choose a sentence, phrase or
+short excerpt that strikes you. That choice is your subject matter; every person
+in the SEFC makes a similar choice from the same paragraph.
+
+Interior Spiritual Formation 45 minutes All spend a short time in quiet,
+prayerful reflection, each member opening himself to the Holy Spirit to receive
+insights for spiritual development. After a short time members of the SEFC share
+their insights (gifts) with the full group. Stay with the subject matter of the
+paragraph; do not wander off to other paragraphs, as this will distract you and
+confuse the group. Strive for togetherness, bonding, and the all-important
+communion in spirit and truth that links the People of God in SEFCs.
+
+Exterior Action 45 minutes, includes Action Resolution and Conclusion In
+personal, quiet time all reflect briefly on an action the Holy Spirit
+suggests. The action centers always on how you or the group can advance the CLCC
+process. Invoke the Holy Spirit for light and Mary, Mother of the Church, for
+heavenly assistance. Share with your group the action you choose to do either
+alone or with the group; try to reach consensus on the best action to take.
+
+Action Resolution Deciding on a personal or group action has unlimited
+possibilities. Example: help make the formation sessions run smoothly so that
+all members learn and get used to the Order given here; make interior formation
+prayerful and holy; respect everyones right to speak; start thinking of
+parishioners to invite into your SEFC to bring the number up to ten or twelve;
+begin making a list of lapsed, non-church going Catholics who need to be visited
+and brought into your SEFC. Exterior action includes, if possible, going to
+weekday Mass, making a visit to the adoration chapel and praying for the
+conversion of lapsed Catholics.
+
+Conclusion Prayers of intercession come next led by the moderator or a group
+member. Such prayers may be printed, pre-prepared or spontaneous. Always include
+a petition that ALL parishioners enter into the CLCC formation process.
+
+Closing Prayer Selected from the Churchs liturgical prayers for the previous
+Sunday, the current feast or memorial, etc.
+
+Hymn From the missalette, hymn book or CD.  Total session time should not exceed
+90 minutes.
 
 % ------------------------------------------------------------------------------
 
 \mainmatter
+\addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{The Process}
+\addtocontents{toc}{\cftpagenumberson{part}}
 
 % ------------------------------------------------------------------------------
 
 \chapter{Stage 1.\ Call of Apostles and Disciples}
 
-This is stage 1 stuff.
+\section*{} \lxRDFa{property=stage-main-content,resource={manual}}
+
+Important note: Before beginning Stage One, you are asked, please, not to
+quick-read this book as you may read a novel or the newspaper. This is a study
+manual of deep content that aims to help Catholics rise to higher levels of
+formation in the faith for growth in personal holiness. The Small Ecclesial
+Faith Community (SEFC) is the best suited environment for implanting in
+participants minds, hearts and souls some of the great truths taught by Christ
+and his Church. So that everyone is on the same page, please go to the front
+pages of this manual and reread Putting the CLCC Process to Work. Like a three
+dimensional image you will see clearly the two specifics of the CLCC process:
+formation of Gods people in personal holiness, and motivating them for mission:
+to reach out to and help lapsed and alienated Catholics return to Christ and his
+Church.
+
+The first action in a CLCC formation session is the leaders reading aloud a
+segment, a paragraph or group of paragraphs, from the manual to the SEFC. At the
+bottom of the segments stand the letters RDS. R stands for Reflection: quiet
+time given to understand the content of the section. D stands for Discussion:
+personal prayer time directed to the Holy Spirit asking him for light,
+dialoguing with him within oneself and ordering the received insights. S stands
+for Sharing: each participant contributes to the group the insights he or she
+has received and wants to share. Alongside RDS is given a page number to turn to
+for aiding the groups Reflection, Discussion and Sharing.
+
+
+Introduction 1. Jesus three-year public ministry in Galilee was a divinely
+planned process of salvation for the whole human race. It is divided into five
+stages, each stage is distinguishable from the other, yet each stage is
+connected to the other. Celebrating Life as a Catholic Christian (CLCC) is a
+five-stage faith formation process modeled on Jesus public ministry in
+Galilee. It is designed for implementation in parishes of the local Church.
+RDS, page \#
+
+2. Jesus ministry has two goals: giving his disciples a new way of life in
+faith, the other is missionary outreach. The two goals of the CLCC go together:
+interior spiritual formation conjoined to an exterior action.
+
+The first goal focuses on personal and communal spiritual growth that gives the
+believer a deeper knowledge of Christ and his Church, and on improving his or
+her prayer life. To do this believers enter a small faith group to experience
+bonding with like-minded people for community building. These goals help Gods
+people answer Christs call, Come, follow me, (Lk 18:22) and his command, Love
+one another. (Jn 13:34)
+
+The second goal focuses on a particular exterior missionary action, reaching out
+to lapsed, non-church going Catholics, estimated at 45 million in the US, with a
+view to helping them return to Christ for reconciliation and salvation, thus
+building up the kingdom of God on earth, the Church.  RDS, page \#
+
+For better understanding and results-producing pastoral use of the CLCC process,
+each of the five stages has essentially two parts: A. What Jesus did in Galilee
+and B. Enacting in the Parish What Jesus did in Galilee.
+
+A. What Jesus Did in Galilee 1. The first thing Jesus did in his public ministry
+in Galilee was to gather followers and from among them he called and selected 12
+apostles. They were select witnesses of his teachings, his miracles, his way of
+life and his communion with the Father in prayer. Through his Passion, Death,
+Resurrection and Pentecost, Christ founded his Church, the kingdom of Gods
+people on earth as designed by the Father, a kingdom that will last till the end
+of time through the sustaining presence and power of the Holy Spirit. In
+founding his Church on earth Jesus guaranteed its continuity and triumph despite
+the fierce powers of hell raging against it. (cf. Mt 16:18) RDS, page \#
+
+2. The terms Christian and Catholic were unknown in Jesus day. (cf. Acts 11:26)
+Yet what Jesus was teaching and sharing with his Apostles and disciples was
+Celebrating Life as Catholic Christians (CLCC). With their own eyes and ears
+they saw and heard the primacy Jesus gave to Commandments of love of God and
+love of neighbor. Daily he showed this love by his self-giving to everyone to
+the point of exhaustion. They saw the compassion he showed toward repentant
+sinners and his rebuke to those who exalted themselves; how he detested
+hypocrisy, religiosity, pseudo-piety and false worship. In the many different
+ways that Jesus dealt with people his followers were to imitate him.  RDS, page
+\#
+
+3. Catholics and other people are immersed in the present-day culture of
+secularism and neo-paganism. They need a defense against the barrage of
+anti-Christian influences that surround them. They must be armed to deal with
+the growing, overt hostility against Christianity, the Catholic Church in
+particular, at themselves and the values they live by. Thus, an empowerment
+process like Celebrating Life as Catholic Christians becomes imperative, and
+should be classed among the leading parish apostolates. Gods people under siege
+need guidance, group support and grace to live authentic Catholic lives, gifts
+God gives through the CLCC formation process.  RDS, page \#
+
+4. Call of the 12 Apostles and 72 Disciples Biblical texts
+
+Mt 4:18-22 As Jesus was walking by the Sea of Galilee, he saw two brothers,
+Simon whom he called Peter, and his brother Andrew casting a net into the sea;
+they were fishermen. He said to them, Come after me, and I will make you fishers
+of men. At once they left their nets and followed him. Walking a little farther
+he saw other brothers, James and John, Zebedees sons, and he called them and
+immediately they left their boat and their father and followed him.
+
+Mt 9:9-10 He also called Levi, named Matthew, who was sitting in his customs
+post collecting taxes. He said to him, Follow me. And he got up and followed
+him. While he was at table in his house, many tax collectors and sinners came
+and sat with Jesus and his disciples.
+
+Lk 6:12-13 In those days he departed to the mountain to pray, and he spent the
+night in prayer to God. When day came, he called his disciples to himself, and
+from them he chose Twelve, whom he named apostles.
+
+Mt 10:1-4 The names of the twelve apostles are: first, Simon called Peter, and
+his brother Andrew, James, son of Zebedee and his brother John; Philip and
+Bartholomew, Thomas and Matthew, the tax collector; James, son of Alpheus, and
+Thaddeus, Simon the Cananean and Judas Iscariot who betrayed him.  RDS, page \#
+
+5. Mission of the Apostles and Disciples Biblical Texts
+
+Lk 9:1-2,6 He summoned the Twelve and gave them power and authority over all
+demons and to cure diseases, and he sent them to proclaim the kingdom of God and
+to heal [the sick]. Then they set out and went from village to village
+proclaiming the good news and curing diseases everywhere.
+
+Lk 10:1-3 After this the Lord appointed seventy [two] others whom he sent ahead
+of him in pairs to every town and village he intended to visit. He said to them,
+The harvest is abundant but the laborers are few; so ask the master of the
+harvest to send laborers for his harvest. Go on your way; behold, I am sending
+you like lambs among wolves. RDS, page \#
+
+6. Catechism of the Catholic Church The following quotations give a concise
+summary of the Churchs teaching on the Mission of the Apostles.
+
+CCC 75 Christ the Lord, in whom the entire Revelation of the most high God is
+summed up, commanded the apostles to preach the Gospel, which had been promised
+beforehand by the prophets, and which he fulfilled in his own person and
+promulgated with his own lips. In preaching the Gospel, they were to communicate
+the gifts of God to all men. This Gospel was to be the source of all saving
+truth and moral discipline.
+
+CCC 1575 Christ himself chose the apostles and gave them a share in his mission
+and authority. Raised to the Fathers right hand, he has not forsaken his flock
+but keeps it under his constant protection through the apostles, and guides it
+still through these same pastors who continue his work today. Thus, it is Christ
+whose gift it is that some be apostles and others pastors. He continues to act
+through the bishops.  RDS, page \#
+
+
+B. Enacting What Jesus Did in Galilee in the Parish 1. Leadership of the Priest
+Jesus chose 12 apostles to assist him in his mission and provided for their
+continuing his mission. Likewise the parish priest must find lay persons to
+assist him in his mission, an important one, of launching the CLCC process. Pope
+John Paul II states that the parish priest is configured to Christ, the good
+shepherd. (cf. PD 22) It is the pastor who goes out among the sheep and lambs of
+his parish. He scans the flock, selects and calls 12 men and women of all age
+groups, young, middle aged and older, who can help him carry out the CLCC
+process in the parish. They become the lay leaders of the CLCC process. They are
+called the Matrix 12.
+
+The priest informs the people in the pews about the CLCC process, explains what
+it is, and asks for their participation in it. The mission of the lay leadership
+group, the Matrix 12, is to learn the process and guide it through its 5 stages,
+receiving throughout support and encouragement from the priest and cooperation
+from fellow parishioners. For its success the priests initiative and active
+involvement in the process cannot be emphasized enough. Strongly recommended is
+that this process becomes a parish priority, taking precedence over less urgent
+ministries and parish activities.
+
+In order to select the right people for carrying out the process, the priest
+should pray, as Christ did, and greatly depend on the light of the Holy Spirit
+for the gift of discernment to ensure he chooses the right parishioners to
+become the Matrix 12. He should also pray to be open to the Holy Spirits
+bidding, that he chooses other gifted parishioners to form SEFCs, and resist the
+temptation to select never say no workers, favorites or super-involved people
+often already over-burdened with parish projects.
+
+The priest must always keep in mind the fundamental purposes of the CLCC
+process.The first purpose of the CLCC process is to help people attain new
+levels of personal and communal holiness in preparation for doing effective
+evangelization. The second purpose is missionary, to find and help save the
+wayward sheep, lapsed Catholics. Recall the gospel parable of the lost
+sheep. What man among you having a hundred sheep and losing one of them would
+not leave the ninety nine in the desert and go after the lost one until he finds
+it? When he does find it he calls together his friends and neighbors Rejoice
+with me because I have found my lost sheep in just the same way there will be
+more joy in heaven over one sinner who repents than over ninety-nine righteous
+people who have no need of repentence. (cf. Lk 15:4-7) RDS, page \#
+
+2. Teachings of Vatican Council II Just as the Son was sent by the Father, so
+too he sent apostles. (cf. Jn 20:21) The Church has received from the apostles
+the task to be Christs witnesses and proclaim his saving truth even to the ends
+of the earth. (cf. Acts 1:8) Hence she makes the words of the Apostle her own:
+Woe to me, if I do not preach the gospel (cf. 1 Cor 9:16), and unceasingly sends
+heralds of the gospel [to] carry on the work of evangelizing. The Church is
+compelled by the Holy Spirit to do her part towards the full realization of the
+will of God, who has established Christ as the source of salvation for the whole
+world. By proclamation of the gospel, she prepares her hearers to receive and
+profess the faith, disposes them for baptism, snatches them from the slavery of
+error, and incorporates them into Christ so that through charity they may grow
+up into full maturity in Christ The obligation of spreading the faith is imposed
+on every disciple of Christ according to his ability. [emphasis added] (cf. LG
+17) RDS, page \#
+
+3. Apostles and Disciples, the First Small Faith Community!  During his
+three-year public ministry Jesus not only chose 12 apostles and 72 disciples,
+but also formed the 12 into a small, close-knit community, the first of its
+kind. They were not men who merely followed Jesus passively. Jesus called them,
+formed them and appointed them by divine design to become active co-workers with
+him. They were the first to come to know the purpose of his mission: to be
+evangelized [in order to] evangelize, words of Blessed John Paul II.
+
+He appointed 72 others whom he sent ahead of him in pairs to every town and
+place he intended to visit. (Lk 10:1). They were witnesses to Christ. He
+empowered them to cure the sick in whatever town they entered and welcomed them,
+and to say, The kingdom of God is at hand for you. (cf. Lk 1:5,8-9)
+
+The community of apostles and disciples in Galilee has become a model for the
+establishment of Small Ecclesial Faith Communities (SEFCs) in parishes and
+dioceses. The importance of SEFCs cannot be measured, for they implant in Gods
+people a good that is at once spiritual, personal and communal. They strive to
+achieve an in depth sense of community, which is most needed in todays secular
+and individualized culture. Fostering community among Gods people is imperative
+for families, for parishes and dioceses, and above all in the secular work
+places of the laity.  RDS, page \#
+
+4. Models of Leadership in the Old Testament Words like call, chosen, mandated,
+sent, and mission were central in Christs ministry. Consider some of the leading
+figures in the Old Testament who were also specially called by God and formed to
+carry out a mission. They were models for Christs disciples and are models for
+our formation and mission.
+
+Examples Samuel, when only a boy, was called by God (1 Sam 3:3b-19); became a
+great seer (prophet) and judge (ruler) of the 12 tribes of Israel (1 Sam
+7:12,15-17).
+
+Jonah, a prophet, was sent on mission to the city of Nineveh to predict
+destruction for its evil ways. In sackcloth the king and people turned away from
+their sins and God preserved them and their city (cf. Jon 3:1-5,10).
+
+What about Abraham, his call (cf. Gen 12:1-3), the spiritual seed (Gen 15), and
+the test of his faith? (Gen 22)
+
+Joseph, son of Jacob, born of Rachel (Gen 30:24), a shepherd boy (Gen 37:2-3),
+sold to slavery in Egypt only to rise to be steward of Pharaohs vast country
+(Gen 41:41).
+
+Moses who was called (Ex 3:2-10), led Israel out of Egypt across the Red Sea (Ex
+13-14), and to whom God gave the 10 Commandments on Mt. Sinai (Ex 19-20).
+
+Who can forget the courageous Esther, a Jewess, who by divine plotting became
+queen to King Ahasuerus of Persia where Jews were targeted for extermination by
+order of the king, but who by her brave intervention with him and admission she
+was Jewish saved her people from massacre? (Esth 1-9; cf. also Dictionary of the
+Bible, John L. McKenzie, S.J., Bruce Publishing Co., 1965, p. 247)
+
+To appreciate how God in his grand plan of salvation called, chose and
+dispatched certain people to carry out his will, it is useful to look up the
+above texts in your bible. Many more models could be added.  RDS, page \#
+
+5. Small Ecclesial Faith Communities, Why Are They Needed?  Most parishes,
+large, medium-sized and small have a sizable number of persons who call
+themselves Catholic, but are in fact lapsed, alienated, non-practicing
+Catholics. Many are weak in their knowledge of the faith, and in numerous cases
+almost totally ignorant of even the fundamentals of the Catholic Faith.
+
+Some who dissent from the faith nurse a bias against certain truths of the faith
+they dont like, for example, artificial contraception, cohabitation, same sex
+marriage, etc. Some reject outright various teachings of the Church, and justify
+their rejection by appealing to the principle of religious freedom. They claim
+their conscience is at peace. Not a few in name only Catholics are graduates of
+Catholic colleges. They enrolled in the school with shaky faith and not
+infrequently left the school with freedom not to practice the faith.
+
+Catholics such as these need to be reached, befriended and won back to the
+Church. Some may be looking for a way back into the fold. Others may be
+closed-minded and resist any invitation to return to the Church. The power of
+Gods grace can never be under-estimated. For some, the RCIA program fills their
+faith gap. Others, really the majority, need to be brought to a more lively
+practice of the Faith through the slower-moving, more in-depth dynamics of Small
+Ecclesial Faith Communities where welcome is warm and camaraderie
+long-term. Within them results are more predictably measurable.Two outstanding
+Pontiffs have explicitly endorsed and promoted small faith communities in their
+teachings (cf. Evangelii Nuntiandi, EN, Paul VI, 1975, 58, 60; Redemptoris
+Missio, RM, John Paul II, 1990, 51). In faith communities, Church-going
+Catholics advance admirably to higher levels of knowledge of their Churchs
+teachings and in holiness. Alienated, lapsed and Christmas and Easter Catholics
+who accept invitations to come into such a community will first experience
+bonding with the members; then, by association with them in study, prayer and
+sharing, and by the power of Gods grace, they will become disposed to return to
+the Church.  RDS, page \#
+
+6. Blessed Trinity, Archetype of Small Ecclesial Faith Communities Under the
+heading THE PERSON AND SOCIETY, the Catechism of the Catholic Church includes
+this sub-heading, The Communal Character of the Human Vocation, and makes this
+statement, All men are called to the same end: God himself. There is a certain
+resemblance between the unity of the three divine persons and the fraternity
+that men are to establish among themselves in truth and love. Love of neighbor
+is inseparable from love of God. (CCC 1878) It goes on to say that each
+community is defined not only by its purpose and consequently obeys specific
+rules; but the human person is and ought to be the principle, the subject and
+the end of all social institutions. (CCC 1881)
+
+Singled out as first is the communal family, followed by the state, voluntary
+associations and institutions on both national and international levels various
+professions, economic, cultural and recreational, including sports.  (cf. Mater
+et Magistra, John XXIII, 1961, 60; cf. also CCC 1882)
+
+In his encyclical, Peace on Earth, Blessed John XXIII wrote: Human society must
+primarily be considered something pertaining to the spiritual. Through it, in
+the bright light of truth, men should share their knowledge, be able to exercise
+their rights and fulfill their obligations, be inspired to seek spiritual values
+and eagerly strive to make their own the spiritual achievements of others.
+(Pacem in Terris, PT, 1963, 36; cf. also CCC 1886)
+
+Addressing the issue of authority, Blessed John XXIII stated: Human society can
+be neither well-ordered nor prosperous unless it has some people invested with
+legitimate authority to preserve its institutions and to devote themselves as
+far as is necessary to the work and care for the good of all. (PT 46; cf. also
+CCC 1897) Authority is exercised legitimately only when it seeks the common good
+of the group concerned, and if it employs morally licit means to attain it,
+[otherwise it is] not binding in conscience. (PT 51; cf. also CCC 1903) RDS,
+page \#
+
+7. SEFCs, Front Doors for Lapsed Catholics to Come Home to the Church Small
+Ecclesial Faith Communities (SEFCs) are front doors with welcome mats out where
+Catholics away from the Church can enter the house of the Lord and begin to feel
+accepted and and be enkindled with love of the Catholic faith.
+
+Every Catholic, including the lapsed, on entering a Small Ecclesial Faith
+Community, begins a process of change. SEFCs are established for the specific
+purpose of change. Within them members become notably better formed in the
+faith, strive to develop a deep love for Christ from the truths they learn about
+him and his Church, and grow spiritually. Invigorated by the power of truth,
+many then are inspired to tell others about their conversion experience
+(evangelization). They want to evangelize others.
+
+The second purpose of an SEFC is for its members to reach out to and invite
+lapsed Catholics to join their community. Having entered the group, the lapsed,
+by association with practicing Catholics and exposed to the communitys formation
+and prayer life, are re-introduced to Gods saving grace. They set foot on the
+road that leads to a great change of heart. They leave their former life of
+separation from the Church. They begin Celebrating Life as Catholic Christians.
+
+As the group bonds together, practicing Catholics must be on their toes to give
+good example in Christian living. They celebrate the Christian life not for
+show, but from conviction that they are Christs disciples, genuinely committed
+to Jesus way of life in spite of the influences of a secular, anti-Christian
+world. On the other hand, newcomers to the group become witnesses of this
+counter-cultural way of life. Through gradual formation in the faith and by the
+outpouring of grace received from the Holy Spirit, they move toward re-entry
+into the larger community of Christ the One, Holy, Catholic and Apostolic
+Church.  RDS, page \#
+
+8. Priests Mission is To Beget Vatican Council IIs Decree on the Ministry and
+Life of Priests, states Acknowledging Christs desire and inspired by the Holy
+Spirit, the apostles considered it their duty to select ministers who shall be
+competent in turn to teach others. (2 Tim 2:2) This duty then to beget is part
+of the priestly mission by which every priest is made a partaker in the care of
+the whole Church, so that workers may never be lacking for the People of God on
+earth. (PO 11). This statement applies to bishops, successors of the apostles,
+and to priests who aid their bishops in the offices of teaching, sanctifying and
+governing. Stated here are the basic principles of shared responsibility.
+
+In their mission priests also share responsibility with the laity, particularly
+in the role of teaching: priests teach truth from the pulpit, teachers of
+religion form children in the faith in Catholic schools, in the religious
+education programs, in the Rite of Christian Initiation of Adults, in
+preparation for the Sacraments of Baptism and Confirmation, and in the
+consultative body called the parish pastoral council. Vatican Council IIs
+statement about church leaders, bishops, having the duty to select ministers who
+shall be competent to teach others, points first to priests. Part of the priests
+mission is to select competent laypersons to help teach eternal truths in
+pastoral work such as in the CLCC process. Theirs is an educational, formational
+and spiritual responsibility shared with the bishop.The Decree sums up shared
+responsibility in these words, This duty then is a part of the priestly mission
+by which every priest is made a partaker in the care of the whole Church, so
+that workers may never be lacking for the People of God on earth.(cf. also LG
+34-37; CCC 783; RH 19)
+
+Thus, the meaning to beget: Jesus, the God-Man came to earth to save all
+mankind. He is the one and only Savior. There is no other. (cf. DI 13) To Peter
+and the 12 Apostles he entrusted the great responsibility to carry out his plan
+of salvation in the whole world. (cf. Mt 28:18-20; also 16:18) Through the
+apostles successors, bishops, their helpers, priests, and lay persons, Christ
+continues his work, by their preaching the good news, administering the
+sacraments to his people, and sharing responsibility with the laity who can
+contribute much to the development and spread of the faith of Christs Church
+throughout the world.  RDS, page \#
+
+9. Formation in and Functions of Small Ecclesial Faith Communities The primary
+goal of every person who belongs to an SEFC is to strive to advance in personal
+holiness through the CLCC faith formation process as given in this study
+manual. Formation in holiness of life is based on Jesus teachings during his
+public ministry, as recorded in the Bible. Members of SEFCs are also formed in
+official Church teachings, many of which may relatively unknown to them
+(cf. Part II, Authoritative Sources). Jesus teachings recorded in the gospels
+and the Churchs official teachings interlink. Each participant in an SEFC should
+be open to be evangelized [in order to] evangelize in his or her parish; that
+is, willing, if possible, to do mission outreach to lapsed, alienated,
+non-regular church goers, befriend them and invite them to join a Small
+Ecclesial Faith Community for conversion to Christ and his Church.  RDS, page \#
+
+10. Catechetical Instruction Holds Primacy of Place Jesus assures us, Where two
+or three are gathered together in my name, there am I in the midst of them. (Mt
+18:20) Moreover he dispenses his graces generously to those who ask. It is in
+the close-knit Small Ecclesial Faith Community where good will and fraternity
+exist, and where training in the faith and motivation to reach out to
+non-regular Church-going Catholics takes place.
+
+In the lapsed who join one of the SEFCs a change of heart begins. Enkindled by
+Christs love they begin to have a positive feeling for return to the
+Church. Through Gods grace Small Ecclesial Faith Communities are the rich soil
+that produce(s) a hundred or sixty or thirtyfold. (cf. Mt 13:8) Lapsed Catholics
+are like the harvest [that] is abundant but the laborers are few; so [as Jesus
+urged] ask the master of the harvest to send out laborers for the
+harvest. (cf. Mt 9:37-38) To gather in the abundant harvest, laborers for the
+harvest are needed. Thus, SEFCs are a must where laborers are schooled both in
+personal holiness and for gathering the harvest.  RDS, page \#
+
+Summary Stage One of the CLCC process is summed up by this statement from
+Vatican IIs Decree on the Bishops Pastoral Office in the Church, Catechetical
+training is intended to make mens faith living, conscious and active through the
+light of instruction. This instruction is based on Sacred Scripture, tradition,
+the liturgy, the teaching authority and life of the Church. (CD 14) This
+statement is directed to the bishops. However, various forms of catechetical
+training, as stated above, are the primary ministry of most priests with
+assistance from laity.
+
+Good preaching by clergy and formation of laity through catechesis given in
+Small Ecclesial Faith Communities by, through and with competent laypersons
+holds primacy of place in the process called Celebrating Life as a Catholic
+Christian.
+
+The first thing Christ did was call 12 Apostles and 72 disciples. After being
+with him awhile he declared them fishers of men. He then sent them into the
+villages and towns around Lake Genesareth to announce the Good News about his
+coming as Messiah and to cure the sick. People who accepted their words become
+followers of Jesus.
+
+Enacting in a parish what Jesus did in Galilee consists of establishing Small
+Ecclesial Faith Communities (SEFCs) modeled on Jesus small faith community of
+the apostles and disciples. SEFCs are composed of regular church-going
+Catholics. The focus of SEFCs is to provide, through the CLCC process, formation
+of the members in Catholic doctrine and Church teachings for growth in personal
+holiness. The CLCC faith formation process can be summed up in the famous words
+of Blessed John Paul II, be evangelized in order to evangelize.
+
+To evangelize includes seeking out lapsed and alienated Catholics, befriending
+them and winning them over to join one of the SEFCs in the parish. Moved by the
+Holy Spirit and by association with exemplary practicing Catholics, they begin
+their journey back to full union with Christ and his Church.  RDS, page \#
+
+% ------------------------------------------------------------------------------
+
+\section{Reflection and Discussion}
+\lxRDFa{property=stage-rd-content,resource={manual}}
+
+Note: for obtaining the most value from the CLCC faith formation process, please
+read again Putting the CLCC Process to Work found in the introductory pages of
+this manual; also look again at Order for Conducting Formation Sessions.  The
+aids and insights given in this Reflection and Discussion section correspond to
+paragraphs in the main text of Stage One.
+
+
+Introduction 1. The first paragraphs contain two issues for reflection and
+formation. Choose one issue, one that appeals to you most. Reflect on it
+prayerfully under the guidance of the Holy Spirit. Be open to his insights. He
+is helping you make your first tiny step in the CLCC faith formation process.
+
+Also open your manual to the centerfold and study the graphic. Note the five
+stages of Jesus ministry in Galilee (left side) and the parallel five-stage
+structure of the CLCC process for SEFCs (right side). Reflect how you and your
+fellow parishioners can become more Christlike by carrying out this process.
+
+2. In his public ministry Jesus had two goals: to give his people a new way of
+life, and do missionary outreach to the lapsed and lost. For us, his new way of
+life means first answering the call to holiness. In silence, reflect on his two
+greatest commandments and his call to us to become holy. Share your insights
+with your SEFC group.
+
+Missionary outreach can be done in different ways. In the CLCC process, outreach
+means contacting and helping an estimated 45 million lapsed and fallen-away
+Catholics return to Christ and his Church. On a scale of 1 to 10 how important
+and urgent do you rate this outreach in your family and parish. Reflect: how do
+we help the lapsed return to Christ and his Church?
+
+A. What Jesus Did in Galilee 1. Choosing apostles and disciples was a major step
+in Jesus great divine plan of founding his Church on earth. Reflect prayerfully
+on the two reasons Jesus chose these men as stated in the main text. Reflect how
+you fit into Jesus divine plan and how you can benefit spiritually from it. Be
+open to the insights the Holy Spirit gives you.
+
+2. To Celebrate Life as a Catholic Christian means to imitate Christ in the ways
+he has shown us. Grade yourself. Choose one of the ways given here and reflect
+how you live it: well, sort of, need improvement, news to me.
+
+3. What you know of the CLCC process to this point, do you feel it can empower
+you and other Catholics to live more authentic Christian lives in our current
+anti-Christian culture? Reflect on the area of empowerment you feel will bring
+about the most change in your life. Reread the paragraph. Share.
+
+4. Call of the 12 Apostles and 72 Disciples The two texts taken from
+St. Matthews gospel have action words such as walking, casting, followed and so
+forth. Find a few more. Reflect how these actions can apply to your relationship
+with Jesus. St. Lukes gospel states, Jesus prayed a whole night before choosing
+the 12. This action shows us the importance and necessity of praying prior to
+making major choices or decisions.
+
+Before Jesus time and even in his day people were filled with great expectation
+of the promised Messiah. When Jesus came and called certain men, they were drawn
+to his extraordinary persona. They may also have been dissatisfied with the work
+they were doing, e.g. fishing, tax collecting. God respects the free will with
+which he endowed every human being. What teaching does Jesus call suggest to you
+about vocations that people respond to for different states of life: single,
+married, religious, priestly? Each individual is free to accept or reject Gods
+invitation. He forces no one. Choose up to three action words. Prayerfully
+reflect on them. Call on the Holy Spirit for light. What meaning do they have
+for you? Share.
+
+5. Mission of the Apostles and Disciples The two texts from St. Lukes gospel are
+Jesus mission statements for the 12 apostles and 72 disciples. Choose an action
+that Jesus gave them to do and reflect on it prayerfully. Ask yourself, how can
+it apply to me? Listen to the Holy Spirit. Try to think of some comparable
+action you can do. Share.
+
+6. Catechism of the Catholic Church The first of the two paragraphs taken from
+the Catechism of the Catholic Church (CCC 75), centers on Jesus command to his
+apostles to preach the gospel, the source of truth and moral discipline. The
+second paragraph (CCC 1575) states how Jesus protects his flock through the
+apostles and their successors, bishops, who are pastors. Reflect on how these
+statements complement each other. Tell Jesus how safe you feel believing it is
+he who cares for us, his Church, through these responsible shepherds. Share your
+insights.
+
+B. Enacting in the Parish What Jesus Did in Galilee
+
+Note: Under Leadership of the Priest are four paragraphs. They describe the
+priests all-essential role in getting the CLCC process underway in the
+parish. The priest, whether resident and full-time, part-time, itinerant or a
+once a month priest to his people, should take on the process with great
+enthusiasm especially since the laity in SEFCs share the greater responsibility
+for carrying it out. Like Christ, the priest should take the lead in choosing
+and calling apostles and disciples, lay leaders from among the parishioners. He
+helps them launch the process. To assure its progress and growth he oversees it
+as best he can and preaches about it as often as he deems it necessary to make
+the fire burn brightly.
+
+1. Leadership of the Priest The priests initiative for successful launching of
+the CLCC process is imperative. What about parishes with only one priest who is
+overwhelmed with work? Do you feel lay leaders should enact it counting on only
+limited oversight from the priest? What about getting help from a deacon? Recall
+the two purposes of the CLCC process! Neither are take it or leave it options.
+The call to holiness is mandated by Jesus: Be perfect as your heavenly Father is
+perfect (cf. Mt 5:48; also CCC 2013) and the Dogmatic Constitution of the
+Church, Light of the Nations (Lumen gentium, LG, 39-42). The second purpose is
+missionary, to reach out to and help save the wayward sheep (Lk 15:4-6). The two
+purposes are complimentary to each other. Choose a question above. Call on the
+Holy Spirit for light. Reflect in quiet. Share your inmost thoughts.
+
+2. Teachings of Vatican Council II The two teachings are power-packed mandates
+deriving from Christ and the apostles. Ask yourself: how do these mandates
+pertain to me? How obligated am I to do what they say?  Humbly be open to the
+Holy Spirit. Be inspired. Share your insights with your SEFC.
+
+3. Small Ecclesial Faith Communities (SEFCs) This paragraph contains phrases and
+words that show how Jesus formed his first community. They are community, faith,
+small, by design, co-workers, and model. Asking the Holy Spirit for light, what
+meaning do these words have for you, for your growth in holiness and mission
+outreach to lapsed fellow Catholics? Reflect quietly in prayer. Share.
+
+4. Models of Leadership in the Old Testament The models given here are ordinary
+people whom God called to do extraordinary things in his great plan of
+salvation. Select one model. Open your Bible to the texts that describe the
+model you chose. In prayer to the Holy Spirit reflect on this person specially
+chosen to work with God on behalf of his people. Reflect on how you, also
+special to God, are to carry out his plan of salvation within your family,
+parish and work place through the CLCC process.
+
+5. Small Ecclesial Faith Communities, Why Are They Needed?  In the three
+paragraphs given here, identify the reason for establishing SEFCs, the faith
+problems that many Catholics have, and by what means they can be brought back to
+the faith. Reflect.
+
+If the cited documents are accessible, you may want to read what Popes Paul VI
+and Blessed John Paul II have said about small faith communities. Both Pontiffs
+gave them strong endorsement. Marginal Catholics has reached astronomic
+numbers. An estimated 45 million Catholics do not go to Church regularly or not
+at all. They need to be reached and won back to the Church. Try to recall some
+of the ways you know or have heard to win wayward Catholics back into the
+Church. What you know of the CLCC and SEFCs, do you feel this non-intimidating,
+sensitive formation process will in the long run be the most effective
+conversion method? Prayerfully reflect. Share.
+
+6. Blessed Trinity, Archetype of Small Ecclesial Faith Communities The following
+sentence taken from the Catechism (CCC 1878) identifies the source, character
+and the links that connect Small Ecclesial Faith Communities: There is a certain
+resemblance between the unity of the three divine persons [source, God] and the
+fraternity (character of SEFCs) that men are to establish among themselves in
+truth and love [connecting links].
+
+What should this sentence mean to you in the CLCC formation process? (a) The
+Blessed Trinity, the source, is certainly a community of Father, Son and Holy
+Spirit, the source of life, redemption and agent of salvation; (b) the character
+of SEFCs consists of Christian brotherhood, neighborly fellowship and solidarity
+among its members; (c) the connecting links between the Trinity and SEFCs are
+truth and love. Christ said, I am the truth (Jn 14:6) and God is defined as love
+(1 Jn 4:8). Clearly SEFCs have their foundation in and flow from the Triune God.
+
+Central to this reflection is the human person, also the close-knit society of
+persons, the communal family, each having a spiritual life. Their rights and
+obligations, their spiritual values and spiritual achievements must be
+respected, as taught by Blessed John XXIII (cf. MM 60; PT 36) Having supreme
+authority over all creation and man, God also set up civil authority which must
+be morally licit to further the common good and maintain good order.
+
+Prayerfully reflect on these fundamental truths. Choose one, preferably the
+first one. Make the connection between the Blessed Trinity and the CLCC
+process. See how the CLCC process flows radically from the Blessed
+Trinity. Invoke the Holy Spirit. Share your insights.
+
+7. SEFCs, Front Doors for Lapsed Catholics to Come Home to the Church The four
+paragraphs here give the reasons for the existence (raison detre) of SEFCs, what
+they do, and why they are valuable in pastoral ministry. Lapsed Catholics have
+reached astronomic numbers. An estimated 45 million Catholics do not go to
+Church regularly in the United States. They need to be reached and won back to
+the Church. Try to recall some of the ways you know or have heard to win wayward
+Catholics back into the Church. What you know of the CLCC to this point, do you
+feel this non-intimidating, formative process is an effective apostolate for
+helping people grow in holiness and reaching out to help save the lapsed?  In
+quiet time, pray and reflect on at least one or two of these key words and
+phrases: welcome mat, re-introduce, change of heart, association, good example,
+witness, grace of the Holy Spirit. What impact do these key words or phrases
+have on you? Pray for light. Share your God-given thoughts.
+
+8. Priests Mission in the CLCC Process is To Beget To beget means the duty to
+propagate the kingdom of God for ones own salvation and the salvation of
+others. Jesus mission was to beget. He called apostles first, who chose
+successors (bishops), who then selected priests to share their care of the
+Church, and priests in turn seek out lay persons (workers), so that the people
+of God are adequately cared for. The pastoral term for duties is shared
+responsibility. The laitys duty is to share responsibility, helping the priest
+by exercising primarily their prophetic role of teaching and formation of Gods
+people in the faith. The CLCC is in fact a process of begetting. Participants
+train in personal holiness, a quality that helps them deliver lapsed Catholics
+into the arms of Mother Church.  Pray to the Holy Spirit to get the impact of
+these truths. Reflect in quiet. Share with your SEFC how you see the CLCC as a
+begetter of higher levels of holiness and of conversion in your parish.
+
+9. Formation in SEFCs Consists of Two Functions They are: (a) growth in personal
+holiness of the groups members, and (b) reaching out to help lapsed Catholics to
+return to the Church.  The two functions are inter-linked to ensure good
+results. Reflect why and how formation in personal holiness is a vital
+prerequisite for doing successful outreach evangelization to those in need of
+conversion. Pray to the Holy Spirit for his gifts. For productive
+evangelization, all seven gifts of the Holy Spirit need to be active within you:
+wisdom, council, knowledge, understanding, fortitude, piety and fear of the Lord
+(CCC 1831). Invoke the Lord to energize the Holy Spirits gifts in you. Share the
+light you receive.
+
+10. Catechetical Instruction Holds Primacy of Place in SEFCs Small Ecclesial
+Faith Communites are invaluable for parishes. Parishioners in great part are in
+need of a booster shot of truth. Too often, they are strangers to each other,
+having time only for a quick Hi as they rush to the parking lot after Sunday
+Mass. SEFCs have two purposes. First to invite, draw and convince Hi Catholics
+that SEFCs are also for them. Systematic formation in the faith is necessary for
+them, and for their own growth in personal holiness perhaps a stunning
+surprise. The second purpose is that members of SEFCs do not stop with interior
+formation. They are expected to follow up with an exterior action, to reach out
+to and help save lapsed Catholics return to the Church. This was Jesus mode of
+operation in Galilee. He called apostles, formed them in his truths by his
+preaching (interior formation), then sent them out two by two (exterior action)
+to towns and villages to teach, preach, convert and drive out demons. The CLCC
+process is modeled on Jesus method of evangelizing. See the centerfold, page
+\#. Invoke the Holy Spirit for light. Reflect in quiet on the remarkable
+parallel between Jesus form of evangelizing in Galilee and the CLCCs
+corresponding form of evangelizing in the parish. Share the insights the Holy
+Spirit gives you.
+
+Summary In Stage One, the main text of the CLCC process is summed up by a single
+authoritative statement from Vatican Council IIs Decree on the Bishops Pastoral
+Office in the Church (Christus Dominus, CD, 14). Please reread it. In this one
+sentence do you see the CLCC in outline? Do you feel this sentence gives a
+glimpse of the CLCC process, highlighting its main points? Prayerfully
+reflect. Share.
 
 % ------------------------------------------------------------------------------
 
 \chapter{Stage 2.\ Formation of Disciples and Apostles}
 
+\section*{} \lxRDFa{property=stage-main-content,resource={manual}}
+
 This is stage 2 stuff.
+
+% ------------------------------------------------------------------------------
+
+\section{Reflection and Discussion}
+\lxRDFa{property=stage-rd-content,resource={manual}}
+
+This is stage 2 RD stuff.
 
 % ------------------------------------------------------------------------------
 
 \chapter{Stage 3.\ Stewardship of Our Gifts}
 
+\section*{} \lxRDFa{property=stage-main-content,resource={manual}}
+
 This is stage 3 stuff.
+
+% ------------------------------------------------------------------------------
+
+\section{Reflection and Discussion}
+\lxRDFa{property=stage-rd-content,resource={manual}}
+
+This is stage 3 RD stuff.
 
 % ------------------------------------------------------------------------------
 
 \chapter{Stage 4.\ Home Visitation and Evangelization}
 
+\section*{} \lxRDFa{property=stage-main-content,resource={manual}}
+
 This is stage 4 stuff.
+
+% ------------------------------------------------------------------------------
+
+\section{Reflection and Discussion}
+\lxRDFa{property=stage-rd-content,resource={manual}}
+
+This is stage 4 RD stuff.
 
 % ------------------------------------------------------------------------------
 
 \chapter{Stage 5.\ Stewards of the Eucharist}
 
+\section*{} \lxRDFa{property=stage-main-content,resource={manual}}
+
 This is stage 5 stuff.
 
 % ------------------------------------------------------------------------------
 
+\section{Reflection and Discussion}
+\lxRDFa{property=stage-rd-content,resource={manual}}
+
+This is stage 5 RD stuff.
+
+% ------------------------------------------------------------------------------
+
+\addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{Authoritative Sources}
+\addtocontents{toc}{\cftpagenumberson{part}}
 
 % ------------------------------------------------------------------------------
 
@@ -185,381 +1413,452 @@ Some introductory stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{On Evangelization in the Modern World}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Redeemer of Man}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{Mission of the Redeemer}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Lay Faithful of Christ}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Gospel of Life}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{Letter to Families}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{On the Regulation of Births}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{God is Love}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{Saved in Hope}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{I Will Give You Shepherds}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{Charity in Truth}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{Observing the Day of the Lord}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Splendor of Truth}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Holy Spirit in the Life of the Church and the World}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Lord Jesus, One and Only Savior}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Christian Meaning of Human Suffering}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Church of the Eucharist}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{The Authentic Liturgy}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{That All May Be One}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Document XYZ}
+\chapter{Mother of the Redeemer}
 
 Some document stuff.
 
 % ------------------------------------------------------------------------------
 
 \appendix \setcounter{secnumdepth}{-2}
+{
+\Hide  
+\addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{Appendices}
+\addtocontents{toc}{\cftpagenumberson{part}}
+}
 
 % ------------------------------------------------------------------------------
 
-\chapter{Questions and Answers on the CLCC Process}
+\chapter{Questions and Answers}
 
 Q. Why do you call Celebrating Life as a Catholic Christian (CLCC) a process and
-not a program? What's the difference?  A. A process is developmental. It moves
-progressively from one stage to another. It has a beginning but no end. It's
-ongoing. A program, on the other hand, is a succession of actions carried out
-within a structured order that has a beginning and a predefined end.  Q. Is one
-year long enough for carrying out this process?  A. No. In Galilee Jesus took
-three years to form his disciples in his new way of life. Compare this process,
-for example, to capital funds campaigns that are conducted in dioceses and
-parishes. They usually take 3 years or more. Formation in Christ's new way of
-life is also a "capital campaign" requiring a lifetime for becoming a saint and
-serving our neighbor.  Q. Is the pastor involved in this process? If so, how,
-when, where?  A. YES! He together with key people (example, the pastoral
-council) find qualified parishioners who are willing to serve as lay leaders of
-the pro- cess, and other lay persons to begin the establishment of Small
-Ecclesial Faith Communities (SEFCs) throughout the parish. He need not get in-
-volved in details. He gives it leadership, and above all shows interest and
-support.  As often as possible and despite many demands, he should visit the
-different SEFCs once in awhile when they hold their spiritual formation
-301CELEBRATING LIFE AS A CATHOLIC CHRISTIAN sessions, encourage them, pray with
-them, answer their questions, and help them keep their focus.  He is to preach
-on the process with enthusiasm and conviction, as of- ten as he deems it helpful
-to the people. In his remarks he is encouraged to choose some points from the
-stage his parishioners are working through, and which he feels will most benefit
-them. This also applies to the material in Part II, Authoritative Sources. On
-Sunday the people in the pews who are not yet involved have a right to be
-informed about the process and in- vited, in fact urged, to join and participate
-in a SEFC.  Q. How many sessions for spiritual formation can be, or should be,
-drawn from the material presented in each of the 5 stages and in Authoritative
-Sources?  A. As many as there are paragraphs. The material in both parts is so
-abun- dant that it is, relatively speaking, inexhaustible, and of course
-repeatable. What the Matrix 12 and members of SEFCs seek is in-depth not
-superfi- cial formation in faith and holiness. Each of the 5 stages provides
-material for multiple formation sessions, one Stage has 20, another 43 sessions,
-and so on.  Materials for formation sessions in Part II, Authoritative Sources
-are taken entirely from magisterial documents. Under each paragraph or seg- ment
-you will find these letters: R-D-S in bold. They mean Reflection, Development
-and Sharing. Members of SEFCs should follow these three steps as they did in
-Part I.  Q. Does the CLCC process have criteria to measure success or failure as
-it carries out each of the stages?  A. Each of the 5 stages has built-in goals,
-or targets to reach. Criteria for the general goal are: how well or poorly was
-the stage carried out; did it attain what it was supposed to attain? For
-example, in Stage 1, did twelve gifted people respond to the "call" to be
-members of the Matrix, the lay group which leads the parish through the CLCC
-process? Did enough pa- rishioners respond to the invitation to form one, two,
-three or more Small 302 APPENDIX QUESTIONS AND ANSWERS ON THE CLCC PROCESS
-Ecclesial Faith Communities for a start of the process? Not to reach these goals
-the first time around is not failure, but a signal to continue to recruit. Each
-stage also contains intermediate objectives. These are specific actions that are
-carried out as exactly as possible within the formation session so everyone in
-the SEFC gets the full benefit. For example, does the modera- tor start and end
-the session on time; is the reflection issue clear to all; is enough time given
-to quiet time; do all or most participants get a chance to share their insights;
-does the moderator politely cut off long-winded shar- ing; are the hymns,
-prayers and intercessions appropriate? More important- ly, do the participants
-feel they are growing spiritually and gaining better knowledge of the faith?
-Recommended is that each SEFC chooses a recorder to keep track of how well or
-poorly goals and objectives are attained. This record is helpful for review and
-can induce the group to strive for excellence in their forma- tion. It tells
-participants how they are conducting the formation sessions, what needs
-improvement, and how to make the sessions run smoothly to the best advantage of
-all.  Q. What is the connection between the National Catholic Conference for
-Total Stewardship and Celebrating Life as a Catholic Christian?  A. In 1980 the
-National Catholic Conference for Total Stewardship (NCCTS) was founded by
-Francis A. Novak, a Redemptorist priest, with approval of the NCCB, now called
-the United States Conference of Catho- lic Bishops (USCCB). Its purpose is to
-promote the biblical concept of stewardship in its totality. Stewardship has
-been and still is widely used by dioceses and parishes for fund raising,
-increased offertory appeals and cap- ital funds campaigns, under the banner of 3
+not a program? Whats the difference?
+
+A. A process is developmental. It moves progressively from one stage to
+another. It has a beginning but no end. Its ongoing. A program, on the other
+hand, is a succession of actions carried out within a structured order that has
+a beginning and a predefined end.
+
+
+Q. Is one year long enough for carrying out this process?
+
+A. No. In Galilee Jesus took three years to form his disciples in his new way of
+life. Compare this process, for example, to capital funds campaigns that are
+conducted in dioceses and parishes. They usually take 3 years or more. Formation
+in Christs new way of life is also a capital campaign requiring a lifetime for
+becoming a saint and serving our neighbor.
+
+
+Q. Is the pastor involved in this process? If so, how, when, where?
+
+A. YES! He together with key people (example, the pastoral council) find
+qualified parishioners who are willing to serve as lay leaders of the process,
+and other lay persons to begin the establishment of Small Ecclesial Faith
+Communities (SEFCs) throughout the parish. He need not get involved in
+details. He gives it leadership, and above all shows interest and support.  As
+often as possible and despite many demands, he should visit the different SEFCs
+once in awhile when they hold their spiritual formation sessions, encourage
+them, pray with them, answer their questions, and help them keep their focus.
+He is to preach on the process with enthusiasm and conviction, as often as he
+deems it helpful to the people. In his remarks he is encouraged to choose some
+points from the stage his parishioners are working through, and which he feels
+will most benefit them. This also applies to the material in Part II,
+Authoritative Sources. On Sunday the people in the pews who are not yet involved
+have a right to be informed about the process and invited, in fact urged, to
+join and participate in a SEFC.
+
+
+Q. How many sessions for spiritual formation can be, or should be, drawn from
+the material presented in each of the 5 stages and in Authoritative Sources?
+
+A. As many as there are paragraphs. The material in both parts is so abundant
+that it is, relatively speaking, inexhaustible, and of course repeatable. What
+the Matrix 12 and members of SEFCs seek is in-depth not superficial formation in
+faith and holiness. Each of the 5 stages provides material for multiple
+formation sessions, one Stage has 20, another 43 sessions, and so on.  Materials
+for formation sessions in Part II, Authoritative Sources are taken entirely from
+magisterial documents. Under each paragraph or segment you will find these
+letters: R-D-S in bold. They mean Reflection, Development and Sharing. Members
+of SEFCs should follow these three steps as they did in Part I.
+
+
+Q. Does the CLCC process have criteria to measure success or failure as it
+carries out each of the stages?
+
+A. Each of the 5 stages has built-in goals, or targets to reach. Criteria for
+the general goal are: how well or poorly was the stage carried out; did it
+attain what it was supposed to attain? For example, in Stage 1, did twelve
+gifted people respond to the call to be members of the Matrix, the lay group
+which leads the parish through the CLCC process? Did enough parishioners respond
+to the invitation to form one, two, three or more Small Ecclesial Faith
+Communities for a start of the process? Not to reach these goals the first time
+around is not failure, but a signal to continue to recruit.  Each stage also
+contains intermediate objectives. These are specific actions that are carried
+out as exactly as possible within the formation session so everyone in the SEFC
+gets the full benefit. For example, does the moderator start and end the session
+on time; is the reflection issue clear to all; is enough time given to quiet
+time; do all or most participants get a chance to share their insights; does the
+moderator politely cut off long-winded sharing; are the hymns, prayers and
+intercessions appropriate? More importantly, do the participants feel they are
+growing spiritually and gaining better knowledge of the faith?  Recommended is
+that each SEFC chooses a recorder to keep track of how well or poorly goals and
+objectives are attained. This record is helpful for review and can induce the
+group to strive for excellence in their formation. It tells participants how
+they are conducting the formation sessions, what needs improvement, and how to
+make the sessions run smoothly to the best advantage of all.
+
+
+Q. What is the connection between the National Catholic Conference for Total
+Stewardship and Celebrating Life as a Catholic Christian?
+
+A. In 1980 the National Catholic Conference for Total Stewardship (NCCTS) was
+founded by Francis A. Novak, a Redemptorist priest, with approval of the NCCB,
+now called the United States Conference of Catholic Bishops (USCCB). Its purpose
+is to promote the biblical concept of stewardship in its totality. Stewardship
+has been and still is widely used by dioceses and parishes for fund raising,
+increased offertory appeals and capital funds campaigns, under the banner of 3
 Ts: Time, Talent and Treasure.  Fr. Novak and the NCCTS felt compelled to
-explore the deeper impli- cations of stewardship in Sacred Scripture. Under the
+explore the deeper implications of stewardship in Sacred Scripture. Under the
 guidance of expert biblical scholars, the NCCTS learned that the Old and New
-Testaments are a fascinating account of how God "practices" holistic stewardship
+Testaments are a fascinating account of how God practices holistic stewardship
 in creation through his providential care of the universe and the planet
 earth. The three components of stewardship found in both testaments are the good
 news (Evangelization), holiness of life (Discipleship) and service to the Lord
-and his people (Stewardship). The Bible's three components have 303 CELEBRATING
-LIFE AS A CATHOLIC CHRISTIAN become the template of the NCCTS and its CLCC
-process. They are living terms of a trilogy of transcendent realities that are
-inextricably linked. In 1986 the language chosen to express the three realities
-was Total Steward- ship.  Expressive as the NCCTS thought the new title was,
-response to it was limited but it did stir curiosity in many quarters. In 1990 a
-new language was developed to convey that Total Stewardship has an uplifting
-quality: joy in celebrating Christ as the Way, the Truth and the Life for his
-pil- grim people on earth. The new title was The Christian Celebration of Life
-(CCL). The new title did arouse a wide reception of the process. But some times
-it was mistaken for something else, for a pro-life group and even an offshoot of
-Alcoholics Anonymous. Thus another name change was needed.  The new name for
-this total stewardship process came in 1998: Cel- ebrating Life as a Catholic
-Christian (CLCC). The NCCTS now feels this newly named process expresses not
-only the biblical triad of Evangeliza- tion, Discipleship and Stewardship, but
-also "New Evangelization", "Call to Holiness" and "Communion," goals which the
-Second Vatican Council, Pope John Paul II, the Congregation for the Doctrine of
-the Faith and Benedict XVI have called for repeatedly and passionately for God's
-people in today's world of conflicting cultures.  Q. With the name change were
-any adjustments made to the process: its fo- cus, goals and manner of carrying
-out the Church's mission of New Evan- gelization?  A. The name change seems to
-excite the human spirit. It opens the imagi- nation to new possibilities and
-challenges like "I'm going to grow in holi- ness, me?" and "we'll reach out to
-help lapsed Catholics return to the faith, terrific!" Indeed, the process has
-been given a substantial revision and its content has been expanded. Each stage
-makes formation in holi- ness, in doctrine and in pastoral outreach
-clearer. Readers of this manual will be helped immensely in Celebrating their
-Lives as Catholic Chris- tians.  304 APPENDIX QUESTIONS AND ANSWERS ON THE CLCC
-PROCESS Q. What is the cost for implementing this process in a parish?  A. There
-is no set fee. However, cost is in the purchase of the CLCC books for the
-pastor, the lay leaders and all members of Small Ecclesial Faith
+and his people (Stewardship). The Bibles three components have become the
+template of the NCCTS and its CLCC process. They are living terms of a trilogy
+of transcendent realities that are inextricably linked. In 1986 the language
+chosen to express the three realities was Total Stewardship.  Expressive as the
+NCCTS thought the new title was, response to it was limited but it did stir
+curiosity in many quarters. In 1990 a new language was developed to convey that
+Total Stewardship has an uplifting quality: joy in celebrating Christ as the
+Way, the Truth and the Life for his pilgrim people on earth. The new title was
+The Christian Celebration of Life (CCL). The new title did arouse a wide
+reception of the process. But some times it was mistaken for something else, for
+a pro-life group and even an offshoot of Alcoholics Anonymous. Thus another name
+change was needed.  The new name for this total stewardship process came in
+1998: Celebrating Life as a Catholic Christian (CLCC). The NCCTS now feels this
+newly named process expresses not only the biblical triad of Evangelization,
+Discipleship and Stewardship, but also New Evangelization, Call to Holiness and
+Communion, goals which the Second Vatican Council, Pope John Paul II, the
+Congregation for the Doctrine of the Faith and Benedict XVI have called for
+repeatedly and passionately for Gods people in todays world of conflicting
+cultures.
+
+
+Q. With the name change were any adjustments made to the process: its focus,
+goals and manner of carrying out the Churchs mission of New Evangelization?
+
+A. The name change seems to excite the human spirit. It opens the imagination to
+new possibilities and challenges like Im going to grow in holiness, me? and well
+reach out to help lapsed Catholics return to the faith, terrific! Indeed, the
+process has been given a substantial revision and its content has been
+expanded. Each stage makes formation in holiness, in doctrine and in pastoral
+outreach clearer. Readers of this manual will be helped immensely in Celebrating
+their Lives as Catholic Christians.
+
+
+
+Q. What is the cost for implementing this process in a parish?
+
+A. There is no set fee. However, cost is in the purchase of the CLCC books for
+the pastor, the lay leaders and all members of Small Ecclesial Faith
 Communities. Based on experience the best way to go is for the parish to
 purchase the needed number of manuals at a bulk rate, and then request each
 participant to purchase a copy so as reimburse the parish. Without a book in
-hand participants will find it impossible to carry out their forma- tion. The
-idea to buy one or two books and run photocopies each week for the 12 lay
-leaders and members of SEFCs, as an economy measure, has been tried before with
-disastrous results. The end result is not an economy measure - it costs more in
-time and paper. Handout sheets get lost. People need a complete, bound book.
-Having a personal copy allows each person to study from his own book, get an
-idea of the structure of the process and the order of how for- mation sessions
-are carried out, and allows participants to use their free time to quick-read
-the contents before going to the next week's session. Special cost arrangements
-can be negotiated with the National Catholic Conference for Total Stewardship on
-an as needed basis.  Q. The CLCC process, it appears, puts a lot of importance
-on the lay lead- ers called the Matrix 12 and on Small Ecclesial Faith
-Communities. Where can I go to find reliable and official Church teaching on
-these kinds of communities?  A. Go to Stage 2, titled Formation of Disciples and
-Apostles in the CLCC manual. Read section C. Small Ecclesial Faith Communities,
-numbered paragraphs 1 to 10. Here the teaching on Small Ecclesial Faith Commu-
-nities is drawn directly from John Paul II's encyclical Redemptoris Mis- sio and
-from Pope Paul VI's Evangelii Nuntiandi. You can find additional information on
-SEFCs in Part II of this manual, Authoritative Sources. See the first four
-documents treated there.  305 CELEBRATING LIFE AS A CATHOLIC CHRISTIAN Q. Could
-you tell me in one sentence what the CLCC process is?  A. The CLCC process is
-pure, unadulterated biblical stewardship framed in the Second Vatican Council's
-ecclesiology and magisterial teachings, which give solid theological formation
-and mission motivation to faithful believers, enabling them to Celebrate their
-Lives as Catholic Christians in a dechristianized culture.  306
+hand participants will find it impossible to carry out their formation. The idea
+to buy one or two books and run photocopies each week for the 12 lay leaders and
+members of SEFCs, as an economy measure, has been tried before with disastrous
+results. The end result is not an economy measure - it costs more in time and
+paper. Handout sheets get lost. People need a complete, bound book.  Having a
+personal copy allows each person to study from his own book, get an idea of the
+structure of the process and the order of how formation sessions are carried
+out, and allows participants to use their free time to quick-read the contents
+before going to the next weeks session.  Special cost arrangements can be
+negotiated with the National Catholic Conference for Total Stewardship on an as
+needed basis.
+
+
+Q. The CLCC process, it appears, puts a lot of importance on the lay leaders
+called the Matrix 12 and on Small Ecclesial Faith Communities. Where can I go to
+find reliable and official Church teaching on these kinds of communities?
+
+A. Go to Stage 2, titled Formation of Disciples and Apostles in the CLCC
+manual. Read section C. Small Ecclesial Faith Communities, numbered paragraphs 1
+to 10. Here the teaching on Small Ecclesial Faith Communities is drawn directly
+from John Paul IIs encyclical Redemptoris Missio and from Pope Paul VIs
+Evangelii Nuntiandi. You can find additional information on SEFCs in Part II of
+this manual, Authoritative Sources. See the first four documents treated there.
+
+
+
+
+Q. Could you tell me in one sentence what the CLCC process is?
+
+A. The CLCC process is pure, unadulterated biblical stewardship framed in the
+Second Vatican Councils ecclesiology and magisterial teachings, which give solid
+theological formation and mission motivation to faithful believers, enabling
+them to Celebrate their Lives as Catholic Christians in a dechristianized
+culture.
+
+% ------------------------------------------------------------------------------
+
+\chapter{Glossary}
+
+Glossary entries.
 
 % ------------------------------------------------------------------------------
 
 \backmatter
+{
+\Hide  
+\addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{Indexes}
+\addtocontents{toc}{\cftpagenumberson{part}}
+}
 
 % ------------------------------------------------------------------------------
 
-\chapter{Alphabetical}
+\chapter{Alphabetical Index}
+
+Some index entries.
 
 % ------------------------------------------------------------------------------
 
-\chapter{Topical}
+\chapter{Topical Index}
+
+Some index entries.
 
 % ------------------------------------------------------------------------------
 
-\part{License}
+{
+\Hide  
+\addtocontents{toc}{\cftpagenumbersoff{part}}
+\part{}
+\addtocontents{toc}{\cftpagenumberson{part}}
+}
 
-CREATIVE COMMONS LICENSE Attribution-NonCommercial 3.0 Unported URI:
-http://creativecommons.org/licenses/by-nc/3.0/legalcode License THE WORK (AS
-DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC
-LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER
-APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE
-OR COPYRIGHT LAW IS PROHIBITED.  BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED
-HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE
-EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
-THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND
-CONDITIONS.  1. Definitions a. "Adaptation" means a work based upon the Work, or
-upon the Work and other pre-existing works, such as a translation, adaptation,
-derivative work, arrangement of music or other alterations of a literary or ar-
-tistic work, or phonogram or performance and includes cinematographic
-adaptations or any other form in which the Work may be recast, transformed, or
-adapted including in any form recognizably derived from the original, except
-that a work that constitutes a Collection will not be considered an Adaptation
-for the purpose of this License. For the avoidance of doubt, where the Work is a
-musical work, performance or phonogram, the synchronization of the Work in
-timed-relation with a moving image ("synching") will be considered an Adaptation
-for the purpose of this License.  b. "Collection" means a collection of literary
-or artistic works, such as encyclopedias and anthologies, or performances,
-phonograms or broadcasts, or other works or subject matter other than works
-listed in Section 1(f) below, which, by reason of the selection and arrangement
-of their contents, constitute intel- lectual creations, in which the Work is
-included in its entirety in unmodified form along with one or more other
-contributions, each constituting separate and independent works in themselves,
-which together are assembled into a collective whole. A work that constitutes a
-Collection will not be considered an Adapta- tion (as defined above) for the
-purposes of this License.  c. "Distribute" means to make available to the public
-the original and copies of the Work or Adaptation, as appropriate, through sale
-or other transfer of ownership.  d. "Licensor" means the individual,
-individuals, entity or entities that offer(s) the Work under the terms of this
-License.  e. "Original Author" means, in the case of a literary or artistic
-work, the individual, individuals, entity or entities who created the Work or if
-no individual or entity can be identified, the publisher; and in addition (i) in
-the case of a performance the actors, singers, musicians, dancers, and other
-persons who act, sing, deliver, declaim, play in, interpret or otherwise perform
-literary or artistic works or expressions of folklore; (ii) in the case of a
-phonogram the producer being the person or legal entity who first fixes the
-sounds of a performance or other sounds; and, (iii) in the case of broadcasts,
-the organization that transmits the broadcast.  f. "Work" means the literary
-and/or artistic work offered under the terms of this License including without
-limitation any production in the literary, scientific and artistic domain,
-whatever may be the mode or form of its expression including digital form, such
-as a book, pamphlet and other writing; a lecture, address, sermon or other work
-of the same nature; a dramatic or dramatico-musical work; a choreographic work
-or entertainment in dumb show; a musical composition with or without words; a
-cinematographic work to which are assimilated works expressed by a process
-analogous to cinematography; a work of drawing, painting, architecture,
-sculpture, engraving or lithography; a photographic work to which are
-assimilated works expressed by a process analogous to photography; a work of
-applied art; an illustration, map, plan, sketch or three-dimensional work
-relative to geography, topography, architecture or science; a perfor- mance; a
-broadcast; a phonogram; a compilation of data to the extent it is protected as a
-copyrightable work; or a work performed by a variety or circus performer to the
-extent it is not otherwise considered a literary or artistic work.
-309CELEBRATING LIFE AS A CATHOLIC CHRISTIAN g. "You" means an individual or
-entity exercising rights under this License who has not previously violated the
-terms of this License with respect to the Work, or who has received express
-permission from the Licensor to exercise rights under this License despite a
-previous violation.  h. "Publicly Perform" means to perform public recitations
-of the Work and to communicate to the public those public recitations, by any
-means or process, including by wire or wireless means or public digital
-performances; to make available to the public Works in such a way that members
-of the public may access these Works from a place and at a place individually
-chosen by them; to perform the Work to the public by any means or process and
-the communication to the public of the performances of the Work, including by
-public digital performance; to broadcast and rebroadcast the Work by any means
-including signs, sounds or images.  i. "Reproduce" means to make copies of the
-Work by any means including without limitation by sound or visual recordings and
-the right of fixation and reproducing fixations of the Work, including storage
-of a protected performance or phonogram in digital form or other electronic
-medium.  2. Fair Dealing Rights.  Nothing in this License is intended to reduce,
-limit, or restrict any uses free from copyright or rights arising from
-limitations or exceptions that are provided for in connection with the copyright
-protection under copyright law or other applicable laws.  3. License Grant.
-Subject to the terms and conditions of this License, Licensor hereby grants You
-a worldwide, royalty-free, non-exclu- sive, perpetual (for the duration of the
-applicable copyright) license to exercise the rights in the Work as stated
-below: a. to Reproduce the Work, to incorporate the Work into one or more
-Collections, and to Reproduce the Work as incorporated in the Collections; b. to
-create and Reproduce Adaptations provided that any such Adaptation, including
-any translation in any medium, takes reasonable steps to clearly label,
-demarcate or otherwise identify that changes were made to the original Work. For
-example, a translation could be marked "The original work was translated from
-English to Spanish," or a modification could indicate "The original work has
-been modified."; c. to Distribute and Publicly Perform the Work including as
-incorporated in Collections; and, d. to Distribute and Publicly Perform
-Adaptations.  The above rights may be exercised in all media and formats whether
-now known or hereafter devised. The above rights include the right to make such
-modifications as are technically necessary to exercise the rights in other media
-and formats. Subject to Section 8(f), all rights not expressly granted by
-Licensor are hereby reserved, including but not limited to the rights set forth
-in Section 4(d).  4. Restrictions.  The license granted in Section 3 above is
-expressly made subject to and limited by the following restrictions: a. You may
-Distribute or Publicly Perform the Work only under the terms of this
+% ------------------------------------------------------------------------------
+
+\chapter{Creative Commons License}
+
+Attribution-NonCommercial 3.0 Unported
+
+URI: http://creativecommons.org/licenses/by-nc/3.0/legalcode
+
+
+License THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
+COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT
+AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER
+THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+
+BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE
+BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED
+TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN
+CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.  1. Definitions
+"Adaptation" means a work based upon the Work, or upon the Work and other
+pre-existing works, such as a translation, adaptation, derivative work,
+arrangement of music or other alterations of a literary or artistic work, or
+phonogram or performance and includes cinematographic adaptations or any other
+form in which the Work may be recast, transformed, or adapted including in any
+form recognizably derived from the original, except that a work that constitutes
+a Collection will not be considered an Adaptation for the purpose of this
+License. For the avoidance of doubt, where the Work is a musical work,
+performance or phonogram, the synchronization of the Work in timed-relation with
+a moving image ("synching") will be considered an Adaptation for the purpose of
+this License.  "Collection" means a collection of literary or artistic works,
+such as encyclopedias and anthologies, or performances, phonograms or
+broadcasts, or other works or subject matter other than works listed in Section
+1(f) below, which, by reason of the selection and arrangement of their contents,
+constitute intellectual creations, in which the Work is included in its entirety
+in unmodified form along with one or more other contributions, each constituting
+separate and independent works in themselves, which together are assembled into
+a collective whole. A work that constitutes a Collection will not be considered
+an Adaptation (as defined above) for the purposes of this License.  "Distribute"
+means to make available to the public the original and copies of the Work or
+Adaptation, as appropriate, through sale or other transfer of ownership.
+"Licensor" means the individual, individuals, entity or entities that offer(s)
+the Work under the terms of this License.  "Original Author" means, in the case
+of a literary or artistic work, the individual, individuals, entity or entities
+who created the Work or if no individual or entity can be identified, the
+publisher; and in addition (i) in the case of a performance the actors, singers,
+musicians, dancers, and other persons who act, sing, deliver, declaim, play in,
+interpret or otherwise perform literary or artistic works or expressions of
+folklore; (ii) in the case of a phonogram the producer being the person or legal
+entity who first fixes the sounds of a performance or other sounds; and, (iii)
+in the case of broadcasts, the organization that transmits the broadcast.
+"Work" means the literary and/or artistic work offered under the terms of this
+License including without limitation any production in the literary, scientific
+and artistic domain, whatever may be the mode or form of its expression
+including digital form, such as a book, pamphlet and other writing; a lecture,
+address, sermon or other work of the same nature; a dramatic or
+dramatico-musical work; a choreographic work or entertainment in dumb show; a
+musical composition with or without words; a cinematographic work to which are
+assimilated works expressed by a process analogous to cinematography; a work of
+drawing, painting, architecture, sculpture, engraving or lithography; a
+photographic work to which are assimilated works expressed by a process
+analogous to photography; a work of applied art; an illustration, map, plan,
+sketch or three-dimensional work relative to geography, topography, architecture
+or science; a performance; a broadcast; a phonogram; a compilation of data to
+the extent it is protected as a copyrightable work; or a work performed by a
+variety or circus performer to the extent it is not otherwise considered a
+literary or artistic work.  "You" means an individual or entity exercising
+rights under this License who has not previously violated the terms of this
+License with respect to the Work, or who has received express permission from
+the Licensor to exercise rights under this License despite a previous violation.
+"Publicly Perform" means to perform public recitations of the Work and to
+communicate to the public those public recitations, by any means or process,
+including by wire or wireless means or public digital performances; to make
+available to the public Works in such a way that members of the public may
+access these Works from a place and at a place individually chosen by them; to
+perform the Work to the public by any means or process and the communication to
+the public of the performances of the Work, including by public digital
+performance; to broadcast and rebroadcast the Work by any means including signs,
+sounds or images.  "Reproduce" means to make copies of the Work by any means
+including without limitation by sound or visual recordings and the right of
+fixation and reproducing fixations of the Work, including storage of a protected
+performance or phonogram in digital form or other electronic medium.  2. Fair
+Dealing Rights.  Nothing in this License is intended to reduce, limit, or
+restrict any uses free from copyright or rights arising from limitations or
+exceptions that are provided for in connection with the copyright protection
+under copyright law or other applicable laws.  3. License Grant.  Subject to the
+terms and conditions of this License, Licensor hereby grants You a worldwide,
+royalty-free, non-exclusive, perpetual (for the duration of the applicable
+copyright) license to exercise the rights in the Work as stated below:
+
+to Reproduce the Work, to incorporate the Work into one or more Collections, and
+to Reproduce the Work as incorporated in the Collections; to create and
+Reproduce Adaptations provided that any such Adaptation, including any
+translation in any medium, takes reasonable steps to clearly label, demarcate or
+otherwise identify that changes were made to the original Work. For example, a
+translation could be marked "The original work was translated from English to
+Spanish," or a modification could indicate "The original work has been
+modified."; to Distribute and Publicly Perform the Work including as
+incorporated in Collections; and, to Distribute and Publicly Perform
+Adaptations.
+
+The above rights may be exercised in all media and formats whether now known or
+hereafter devised. The above rights include the right to make such modifications
+as are technically necessary to exercise the rights in other media and
+formats. Subject to Section 8(f), all rights not expressly granted by Licensor
+are hereby reserved, including but not limited to the rights set forth in
+Section 4(d).  4. Restrictions.  The license granted in Section 3 above is
+expressly made subject to and limited by the following restrictions:
+
+You may Distribute or Publicly Perform the Work only under the terms of this
 License. You must include a copy of, or the Uniform Resource Identifier (URI)
 for, this License with every copy of the Work You Distribute or Publicly
 Perform. You may not offer or impose any terms on the Work that restrict the
@@ -569,176 +1868,208 @@ sublicense the Work. You must keep intact all notices that refer to this License
 and to the disclaimer of warranties with every copy of the Work You Distribute
 or Publicly Perform. When You Distribute or Publicly Perform the Work, You may
 not impose any effective technological measures on the Work that restrict the
-ability of a recipient of the Work from You to exer- cise the rights granted to
+ability of a recipient of the Work from You to exercise the rights granted to
 that recipient under the terms of the License. This Section 4(a) applies to the
 Work as incorporated in a Collection, but this does not require the Collection
 apart from the Work itself to be made subject to the terms of this License. If
 You create a Collection, upon notice from any Licensor You must, to the extent
 practicable, remove from the Collection any credit as required by Section 4(c),
 as requested. If You create an Adaptation, upon notice from any Licensor You
-must, to the extent practi- cable, remove from the Adaptation any credit as
-required by Section 4(c), as requested.  b. You may not exercise any of the
-rights granted to You in Section 3 above in any manner that is primarily
-intended for or directed toward commercial advantage or private monetary
-compensation. The exchange 310 LICENSE of the Work for other copyrighted works
-by means of digital file-sharing or otherwise shall not be considered to be
-intended for or directed toward commercial advantage or private monetary
-compensa- tion, provided there is no payment of any monetary compensation in
-connection with the exchange of copyrighted works.  c. If You Distribute, or
-Publicly Perform the Work or any Adaptations or Collections, You must, unless a
-request has been made pursuant to Section 4(a), keep intact all copyright
-notices for the Work and provide, reasonable to the medium or means You are
-utilizing: (i) the name of the Original Author (or pseudonym, if applicable) if
-supplied, and/or if the Original Author and/or Licensor designate another party
-or parties (e.g., a sponsor institute, publishing entity, journal) for
-attribution ("Attribution Parties") in Licensor's copyright notice, terms of
-service or by other reasonable means, the name of such party or parties; (ii)
-the title of the Work if supplied; (iii) to the extent reasonably practicable,
-the URI, if any, that Licensor specifies to be associated with the Work, unless
-such URI does not refer to the copyright notice or licensing information for the
-Work; and, (iv) consistent with Section 3(b), in the case of an Adapta- tion, a
-credit identifying the use of the Work in the Adaptation (e.g., "French
-translation of the Work by Original Author," or "Screenplay based on original
-Work by Original Author"). The credit required by this Section 4(c) may be
-implemented in any reasonable manner; provided, however, that in the case of a
-Adaptation or Collection, at a minimum such credit will appear, if a credit for
-all contributing authors of the Adaptation or Collection appears, then as part
-of these credits and in a manner at least as prominent as the credits for the
-other contributing authors. For the avoidance of doubt, You may only use the
-credit required by this Section for the purpose of attribution in the manner set
-out above and, by exercising Your rights under this License, You may not
-implicitly or explicitly assert or imply any connection with, sponsorship or
-endorsement by the Original Author, Licensor and/or Attribution Parties, as
-appropriate, of You or Your use of the Work, without the separate, express prior
-written permission of the Original Author, Licensor and/or Attribution Parties.
-d. For the avoidance of doubt: i. Non-waivable Compulsory License Schemes. In
-those jurisdictions in which the right to collect royalties through any
-statutory or compulsory licensing scheme cannot be waived, the Licensor reserves
-the exclusive right to collect such royalties for any exercise by You of the
-rights granted under this License; ii. Waivable Compulsory License Schemes. In
-those jurisdictions in which the right to collect royalties through any
-statutory or compulsory licensing scheme can be waived, the Licensor reserves
-the exclusive right to collect such royalties for any exercise by You of the
-rights granted under this License if Your exercise of such rights is for a
-purpose or use which is otherwise than noncommercial as permitted under Section
-4(b) and otherwise waives the right to collect royalties through any statutory
-or compulsory licensing scheme; and, iii. Voluntary License Schemes. The
-Licensor reserves the right to collect royalties, whether individually or, in
-the event that the Licensor is a member of a collecting society that administers
-voluntary licensing schemes, via that society, from any exercise by You of the
-rights granted under this License that is for a purpose or use which is
-otherwise than noncommercial as permitted under Section 4(c).  e. Except as
-otherwise agreed in writing by the Licensor or as may be otherwise permitted by
-applicable law, if You Reproduce, Distribute or Publicly Perform the Work either
-by itself or as part of any Adapta- tions or Collections, You must not distort,
-mutilate, modify or take other derogatory action in relation to the Work which
-would be prejudicial to the Original Author's honor or reputation. Licensor
-agrees that in those jurisdictions (e.g. Japan), in which any exercise of the
-right granted in Section 3(b) of this License (the right to make Adaptations)
-would be deemed to be a distortion, mutilation, modification or other de-
-rogatory action prejudicial to the Original Author's honor and reputation, the
-Licensor will waive or not assert, as appropriate, this Section, to the fullest
-extent permitted by the applicable national law, to enable You to reasonably
-exercise Your right under Section 3(b) of this License (right to make
-Adaptations) but not otherwise.  311 CELEBRATING LIFE AS A CATHOLIC CHRISTIAN
+must, to the extent practicable, remove from the Adaptation any credit as
+required by Section 4(c), as requested.  You may not exercise any of the rights
+granted to You in Section 3 above in any manner that is primarily intended for
+or directed toward commercial advantage or private monetary compensation. The
+exchange of the Work for other copyrighted works by means of digital
+file-sharing or otherwise shall not be considered to be intended for or directed
+toward commercial advantage or private monetary compensation, provided there is
+no payment of any monetary compensation in connection with the exchange of
+copyrighted works.  If You Distribute, or Publicly Perform the Work or any
+Adaptations or Collections, You must, unless a request has been made pursuant to
+Section 4(a), keep intact all copyright notices for the Work and provide,
+reasonable to the medium or means You are utilizing: (i) the name of the
+Original Author (or pseudonym, if applicable) if supplied, and/or if the
+Original Author and/or Licensor designate another party or parties (e.g., a
+sponsor institute, publishing entity, journal) for attribution ("Attribution
+Parties") in Licensor's copyright notice, terms of service or by other
+reasonable means, the name of such party or parties; (ii) the title of the Work
+if supplied; (iii) to the extent reasonably practicable, the URI, if any, that
+Licensor specifies to be associated with the Work, unless such URI does not
+refer to the copyright notice or licensing information for the Work; and, (iv)
+consistent with Section 3(b), in the case of an Adaptation, a credit identifying
+the use of the Work in the Adaptation (e.g., "French translation of the Work by
+Original Author," or "Screenplay based on original Work by Original
+Author"). The credit required by this Section 4(c) may be implemented in any
+reasonable manner; provided, however, that in the case of a Adaptation or
+Collection, at a minimum such credit will appear, if a credit for all
+contributing authors of the Adaptation or Collection appears, then as part of
+these credits and in a manner at least as prominent as the credits for the other
+contributing authors. For the avoidance of doubt, You may only use the credit
+required by this Section for the purpose of attribution in the manner set out
+above and, by exercising Your rights under this License, You may not implicitly
+or explicitly assert or imply any connection with, sponsorship or endorsement by
+the Original Author, Licensor and/or Attribution Parties, as appropriate, of You
+or Your use of the Work, without the separate, express prior written permission
+of the Original Author, Licensor and/or Attribution Parties.  For the avoidance
+of doubt: i.  Non-waivable Compulsory License Schemes. In those jurisdictions in
+which the right to collect royalties through any statutory or compulsory
+licensing scheme cannot be waived, the Licensor reserves the exclusive right to
+collect such royalties for any exercise by You of the rights granted under this
+License;
+
+ii.  Waivable Compulsory License Schemes. In those jurisdictions in which the
+right to collect royalties through any statutory or compulsory licensing scheme
+can be waived, the Licensor reserves the exclusive right to collect such
+royalties for any exercise by You of the rights granted under this License if
+Your exercise of such rights is for a purpose or use which is otherwise than
+noncommercial as permitted under Section 4(b) and otherwise waives the right to
+collect royalties through any statutory or compulsory licensing scheme; and,
+
+iii.  Voluntary License Schemes. The Licensor reserves the right to collect
+royalties, whether individually or, in the event that the Licensor is a member
+of a collecting society that administers voluntary licensing schemes, via that
+society, from any exercise by You of the rights granted under this License that
+is for a purpose or use which is otherwise than noncommercial as permitted under
+Section 4(c).
+
+Except as otherwise agreed in writing by the Licensor or as may be otherwise
+permitted by applicable law, if You Reproduce, Distribute or Publicly Perform
+the Work either by itself or as part of any Adaptations or Collections, You must
+not distort, mutilate, modify or take other derogatory action in relation to the
+Work which would be prejudicial to the Original Author's honor or
+reputation. Licensor agrees that in those jurisdictions (e.g. Japan), in which
+any exercise of the right granted in Section 3(b) of this License (the right to
+make Adaptations) would be deemed to be a distortion, mutilation, modification
+or other derogatory action prejudicial to the Original Author's honor and
+reputation, the Licensor will waive or not assert, as appropriate, this Section,
+to the fullest extent permitted by the applicable national law, to enable You to
+reasonably exercise Your right under Section 3(b) of this License (right to make
+Adaptations) but not otherwise.
+
+
 5. Representations, Warranties and Disclaimer UNLESS OTHERWISE MUTUALLY AGREED
 TO BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND MAKES NO
 REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED,
-STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WAR- RANTIES OF TITLE,
+STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE,
 MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE
 ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF
-ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLU-
-SION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
+ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE
+EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
 6. Limitation on Liability.  EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN
 NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL,
 INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS
-LICENSE OR THE USE OF THE WORK, EVEN IF LICEN- SOR HAS BEEN ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGES.  7. Termination a. This License and the rights
-granted hereunder will terminate automatically upon any breach by You of the
-terms of this License. Individuals or entities who have received Adaptations or
+LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.  7. Termination This License and the rights granted
+hereunder will terminate automatically upon any breach by You of the terms of
+this License. Individuals or entities who have received Adaptations or
 Collections from You under this License, however, will not have their licenses
 terminated provided such individuals or entities remain in full compliance with
 those licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of
-this License.  b. Subject to the above terms and conditions, the license granted
+this License.  Subject to the above terms and conditions, the license granted
 here is perpetual (for the duration of the applicable copyright in the
 Work). Notwithstanding the above, Licensor reserves the right to release the
 Work under different license terms or to stop distributing the Work at any time;
 provided, however that any such election will not serve to withdraw this License
 (or any other license that has been, or is required to be, granted under the
 terms of this License), and this License will continue in full force and effect
-unless terminated as stated above.  8. Miscellaneous a. Each time You Distribute
-or Publicly Perform the Work or a Collection, the Licensor offers to the
-recipient a license to the Work on the same terms and conditions as the license
-granted to You under this License.  b. Each time You Distribute or Publicly
-Perform an Adaptation, Licensor offers to the recipient a license to the
-original Work on the same terms and conditions as the license granted to You
-under this License.  c. If any provision of this License is invalid or
-unenforceable under applicable law, it shall not affect the validity or
-enforceability of the remainder of the terms of this License, and without
-further action by the parties to this agreement, such provision shall be
-reformed to the minimum extent necessary to make such provision valid and
-enforceable.  d. No term or provision of this License shall be deemed waived and
-no breach consented to unless such waiver or consent shall be in writing and
-signed by the party to be charged with such waiver or consent.  e. This License
-constitutes the entire agreement between the parties with respect to the Work
-licensed here. There are no understandings, agreements or representations with
-respect to the Work not specified here. Licensor shall not be bound by any
-additional provisions that may appear in any communication from You. This
-License may not be modified without the mutual written agreement of the Licensor
-and You.  f. The rights granted under, and the subject matter referenced, in
-this License were drafted utilizing the terminology of the Berne Convention for
-the Protection of Literary and Artistic Works (as amended on September 28,
-1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, the WIPO
-Performances and Phonograms Treaty of 1996 and the Universal Copyright
-Convention (as revised on July 24, 1971). These rights and subject matter take
-effect in the relevant jurisdiction in which the License terms are sought to be
-enforced according to the corresponding provisions of the implementa- tion of
-those treaty provisions in the applicable national law. If the standard suite of
-rights granted under applicable copyright law includes additional rights not
-granted under this License, such additional rights are deemed to be included in
-the License; this License is not intended to restrict the license of any rights
-under applicable law.  312 LICENSE Creative Commons Notice Creative Commons is
-not a party to this License, and makes no warranty whatsoever in connection with
-the Work. Creative Commons will not be liable to You or any party on any legal
-theory for any damages whatsoever, including without limitation any general,
-special, incidental or consequential damages arising in connection to this
-license. Notwithstanding the foregoing two (2) sentences, if Creative Commons
-has expressly identified itself as the Licensor hereunder, it shall have all
-rights and obligations of Licensor.  Except for the limited purpose of
-indicating to the public that the Work is licensed under the CCPL, Creative Com-
-mons does not authorize the use by either party of the trademark "Creative
-Commons" or any related trademark or logo of Creative Commons without the prior
-written consent of Creative Commons. Any permitted use will be in compliance
-with Creative Commons' then-current trademark usage guidelines, as may be
-published on its website or otherwise made available upon request from time to
-time. For the avoidance of doubt, this trademark restriction does not form part
-of the License.  Creative Commons may be contacted at
-http://creativecommons.org/
+unless terminated as stated above.  8. Miscellaneous Each time You Distribute or
+Publicly Perform the Work or a Collection, the Licensor offers to the recipient
+a license to the Work on the same terms and conditions as the license granted to
+You under this License.  Each time You Distribute or Publicly Perform an
+Adaptation, Licensor offers to the recipient a license to the original Work on
+the same terms and conditions as the license granted to You under this License.
+If any provision of this License is invalid or unenforceable under applicable
+law, it shall not affect the validity or enforceability of the remainder of the
+terms of this License, and without further action by the parties to this
+agreement, such provision shall be reformed to the minimum extent necessary to
+make such provision valid and enforceable.  No term or provision of this License
+shall be deemed waived and no breach consented to unless such waiver or consent
+shall be in writing and signed by the party to be charged with such waiver or
+consent.  This License constitutes the entire agreement between the parties with
+respect to the Work licensed here. There are no understandings, agreements or
+representations with respect to the Work not specified here. Licensor shall not
+be bound by any additional provisions that may appear in any communication from
+You. This License may not be modified without the mutual written agreement of
+the Licensor and You.  The rights granted under, and the subject matter
+referenced, in this License were drafted utilizing the terminology of the Berne
+Convention for the Protection of Literary and Artistic Works (as amended on
+September 28, 1979), the Rome Convention of 1961, the WIPO Copyright Treaty of
+1996, the WIPO Performances and Phonograms Treaty of 1996 and the Universal
+Copyright Convention (as revised on July 24, 1971). These rights and subject
+matter take effect in the relevant jurisdiction in which the License terms are
+sought to be enforced according to the corresponding provisions of the
+implementation of those treaty provisions in the applicable national law. If the
+standard suite of rights granted under applicable copyright law includes
+additional rights not granted under this License, such additional rights are
+deemed to be included in the License; this License is not intended to restrict
+the license of any rights under applicable law.  Creative Commons Notice
+Creative Commons is not a party to this License, and makes no warranty
+whatsoever in connection with the Work. Creative Commons will not be liable to
+You or any party on any legal theory for any damages whatsoever, including
+without limitation any general, special, incidental or consequential damages
+arising in connection to this license. Notwithstanding the foregoing two (2)
+sentences, if Creative Commons has expressly identified itself as the Licensor
+hereunder, it shall have all rights and obligations of Licensor.
+
+Except for the limited purpose of indicating to the public that the Work is
+licensed under the CCPL, Creative Commons does not authorize the use by either
+party of the trademark "Creative Commons" or any related trademark or logo of
+Creative Commons without the prior written consent of Creative Commons. Any
+permitted use will be in compliance with Creative Commons' then-current
+trademark usage guidelines, as may be published on its website or otherwise made
+available upon request from time to time. For the avoidance of doubt, this
+trademark restriction does not form part of the License.
+
+Creative Commons may be contacted at http://creativecommons.org/
 
 % ------------------------------------------------------------------------------
 
-\part{CLCC Prayer}
+\chapter{CLCC Prayer}
 
-Most loving Lord, You said, "I am the way, the truth and the life." Source of
-every good, fill us with your Holy Spirit. Inspire us to celebrate our lives as
-Catholic Christians. Show us the way to bring Celebrating Life as a Catholic
+Most loving Lord, You said, ``I am the way, the truth and the life.''  Source of
+every good, fill us with your Holy Spirit.  Inspire us to celebrate our lives as
+Catholic Christians.  Show us the way to bring Celebrating Life as a Catholic
 Christian, a faith formation process, to your people in parishes. Thank you for
 entrusting this apostolate to us, and choosing us to live it, spread it, and
-teach it in your Church.  Through the power of your Spirit enlighten our
-minds. Open our hearts to value the CLCC process as your special gift to your
-Church. For this mission, form us in holiness. Set us on fire to promote the
-CLCC process not only to those in your Church but to those outside of it.  Help
-us to form Small Ecclesial Faith Communities and bond with each other in sincere
-"communion." Through your grace move us to repent of our faults and weaknesses
-that may be lingering in our hearts.  Awaken in us a hunger "to be evangelized
-[in order to] evangelize." Give us courage to reach out to family and friends
-who have left the Church, and to millions of "unchurched" Catholics gravely in
-need of salvation.  Mary, Mother of Jesus, our Lady of Good Counsel, Seat of
-Wisdom, and Mother of Perpetual Help, supreme model of Celebrating Life as a
-Catholic Christian, lead us to deep conversion, growth in holiness and
-self-giving in service to your Son, Jesus, for building up "the Church as
-Communion" like the Blessed Trinity. We ask this of you Father, Son and Holy
-Spirit. Amen.
+teach it in your Church.
+
+Through the power of your Spirit enlighten our minds.  Open our hearts to value
+the CLCC process as your special gift to your Church. For this mission, form us
+in holiness. Set us on fire to promote the CLCC process not only to those in
+your Church but to those outside of it.
+
+Help us to form Small Ecclesial Faith Communities and bond with each other in
+sincere ``communion.''  Through your grace move us to repent of our faults and
+weaknesses that may be lingering in our hearts.
+
+Awaken in us a hunger ``to be evangelized [in order to] evangelize.'' Give us
+courage to reach out to family and friends who have left the Church, and to
+millions of ``unchurched'' Catholics gravely in need of salvation.
+
+Mary, Mother of Jesus, our Lady of Good Counsel, Seat of Wisdom, and Mother of
+Perpetual Help, supreme model of Celebrating Life as a Catholic Christian, lead
+us to deep conversion, growth in holiness and self-giving in service to your
+Son, Jesus, for building up ``the Church as Communion'' like the Blessed
+Trinity. We ask this of you Father, Son and Holy Spirit. Amen.
+
+% ------------------------------------------------------------------------------
+
+\chapter{About the Author}
+
+Francis A. Novak, a Redemptorist priest, is a nationally recognized authority
+and promoter of Total Stewardship. Earlier he had been a missionary, retreat
+director, manager of promotion for Liguori Publications on the East Coast,
+pastor and director of development and pastoral councils in the Diocese of Grand
+Rapids. In 1974 he was made the first full-time executive director of the
+National Catholic Stewardship Council in Washington, DC, and currently is
+president of the National Catholic Conference for Total Stewardship. Over the
+past 30 years he has developed Celebrating Life as a Catholic Christian, a
+pastoral program of Total Stewardship for dioceses and parishes. This integrated
+process provides comprehensive and systematic formation of the lay faithful in
+Church teaching, spirituality and the apostolate of reaching out to lapsed
+Catholics, thus furthering the Church's goal of New Evangelization. Author of
+several publications treating Total Stewardship, he holds a Masters degree in
+Liturgical Studies and a Doctorate in Ministry. He currently resides at
+St. Clement in Liguori, Missouri, 63057.
 
 % ------------------------------------------------------------------------------
 
