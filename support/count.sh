@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# shell commands to get a sorted count of unique words in this document, assuming gnu coreutils:
+# shell commands to get a sorted count of unique words in a plain text document, assuming gnu coreutils:
 # ----------------------------------------------------------------------------------------------------------
 export tab=$(echo | tr '\n' '\t')
 cat $1                                               `# load the tex file from disk`                     \
