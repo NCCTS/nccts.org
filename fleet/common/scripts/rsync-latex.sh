@@ -3,6 +3,7 @@
 rsync -r \
     --exclude '*.aux' \
     --exclude '*.log' \
+    --exclude '*.out' \
     --exclude '*.xml' \
     --exclude 'companion/*.cache' \
     --exclude 'manual/*.cache' \
