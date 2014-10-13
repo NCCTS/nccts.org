@@ -5,6 +5,6 @@ PartOf=nccts-strap.service
 Wants=nccts-data.service
 
 [Service]
-ExecStart=/home/core/bin/repo_strap.sh nccts.org https://github.com/NCCTS/nccts.org.git
+ExecStart=/home/core/bin/repo_strap.sh nccts.org https://github.com/NCCTS/nccts.org.git tagged
 RemainAfterExit=yes
 Type=oneshot
