@@ -9,7 +9,7 @@ ExecStart=/usr/bin/mkdir -p /home/core/bin ; \
           /usr/bin/chown core:core /home/core/bin ; \
           /usr/bin/chmod 0755 /home/core/bin ; \
           /usr/bin/curl -L \
-              https://raw.githubusercontent.com/NCCTS/nccts.org/repo_strap/fleet/prod/common/scripts/repo_strap.sh \
+              https://raw.githubusercontent.com/NCCTS/nccts.org/master/fleet/prod/common/scripts/repo_strap.sh \
               -o /home/core/bin/repo_strap.sh ; \
           /usr/bin/chown core:core /home/core/bin/repo_strap.sh ; \
           /usr/bin/chmod 0755 /home/core/bin/repo_strap.sh
