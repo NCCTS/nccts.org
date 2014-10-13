@@ -12,7 +12,7 @@ if [ -d "./$repo_dir" ]; then
     git checkout master
     git pull
     if [ "$3" = "tagged" ]; then
-        latest_tag=$(git describe --abbrev=0 2>/dev/null)
+        latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1 2>/dev/null) 2>/dev/null)
         if [ -n "$latest_tag" ]; then
             git checkout $latest_tag
         else
@@ -27,7 +27,7 @@ else
     chown -R core:core ./$repo_dir
     cd ./$repo_dir
     if [ "$3" = "tagged" ]; then
-        latest_tag=$(git describe --abbrev=0 2>/dev/null)
+        latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1 2>/dev/null) 2>/dev/null)
         if [ -n "$latest_tag" ]; then
             git checkout $latest_tag
         else
