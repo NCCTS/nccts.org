@@ -10,7 +10,9 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
     mkdir -p $source_tex/build
     mkdir -p $source_tex/build/clcc
 
-    watchman --logfile=/home/sailor/watchman.log watch $source_tex/ ; \
+    export watch_log="/home/sailor/nccts.org/site/watchman-logs" ; \
+
+    watchman --logfile=$watch_log/latex.log watch $source_tex/ ; \
 
     watchman -- trigger $source_tex/ man-tex-to-pdf "clcc-manual.tex" -- \
         $com_scripts/tex-build.sh pdf manual ; \

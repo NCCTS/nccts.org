@@ -8,7 +8,9 @@ docker run -it --rm --volumes-from data --name static nccts/baseimage:latest '\
 
     $rsync_static ; \
 
-    watchman watch $source_static/ ; \
+    export watch_log="/home/sailor/nccts.org/site/watchman-logs" ; \
+
+    watchman --logfile=$watch_log/static.log watch $source_static/ ; \
 
     watchman -- trigger $source_static/ rsync-static \
         "*" -- $rsync_static ; \

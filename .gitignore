@@ -17,6 +17,8 @@ node_modules/
 /site/source/tex/*to.pdf
 /site/source/tex/auto/
 /site/source/tex/build/
+/site/watchman-logs/*
+!/site/watchman-logs/.gitkeep
 /support/save-touch.el
 /support/secgen/base91
 

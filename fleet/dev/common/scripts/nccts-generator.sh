@@ -7,7 +7,9 @@ docker run -it --rm --volumes-from data -p 7888:7888 --name generator nccts/cloj
 
     mkdir -p $clojure_build ; \
 
-    watchman watch $clojure_build/ ; \
+    export watch_log="/home/sailor/nccts.org/site/watchman-logs" ; \
+
+    watchman --logfile=$watch_log/generator.log watch $clojure_build/ ; \
 
     watchman -- trigger $clojure_build/ rsync-generator \
         "*" -- /home/sailor/nccts.org/fleet/common/scripts/rsync-generator.sh ; \
