@@ -1,5 +1,4 @@
 [Unit]
-After=fleet.service
 Before=nccts-repo.service
 Description=Sets up repo_strap.sh in /home/core/bin
 Wants=nccts-repo.service
