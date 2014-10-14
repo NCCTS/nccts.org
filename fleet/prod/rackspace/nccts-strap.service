@@ -1,10 +1,11 @@
 [Unit]
-After=docker.service
+After=fleet.service
 Before=nccts-repo.service
 Description=Sets up repo_strap.sh in /home/core/bin
 Wants=nccts-repo.service
 
 [Service]
+ExecStartPre=/usr/bin/docker ps
 ExecStart=/usr/bin/mkdir -p /home/core/bin ; \
           /usr/bin/chown core:core /home/core/bin ; \
           /usr/bin/chmod 0755 /home/core/bin ; \
