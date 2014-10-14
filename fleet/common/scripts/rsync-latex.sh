@@ -4,6 +4,7 @@ rsync -r \
     --exclude '*.aux' \
     --exclude '*.log' \
     --exclude '*.out' \
+    --exclude '*.toc' \
     --exclude '*.xml' \
     --exclude 'companion/*.cache' \
     --exclude 'manual/*.cache' \
