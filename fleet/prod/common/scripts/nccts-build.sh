@@ -16,11 +16,11 @@ docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
     mkdir -p $source_tex/build/clcc
 
     $com_scripts/tex-build.sh pdf manual ; \
-    $com_scripts/tex-build.sh xml manual ; \
+    # $com_scripts/tex-build.sh xml manual ; \
     $com_scripts/tex-build.sh html manual ; \
 
     $com_scripts/tex-build.sh pdf companion ; \
-    $com_scripts/tex-build.sh xml companion ; \
+    # $com_scripts/tex-build.sh xml companion ; \
     $com_scripts/tex-build.sh html companion ; \
 
     $com_scripts/rsync-latex.sh'
