@@ -24,6 +24,8 @@ Prayer poem
 
 para re: CLCC from back of proto-book
 
+pictures of popes
+
 learn more, link to Companion
 
 link to Q&A
