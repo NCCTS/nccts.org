@@ -6,6 +6,7 @@ part_name=$2
 source_tex="/home/sailor/nccts.org/site/source/tex"
 
 if [ "$task" = "pdf" ]; then
+    cd $source_tex
     pdflatex \
         -output-directory "$source_tex/build/clcc" \
         "$source_tex/clcc-$part_name.tex"
