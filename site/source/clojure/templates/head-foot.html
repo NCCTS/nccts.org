@@ -3,26 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <title>Header</title>
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <style type="text/css">
+     header a:active,
+     header a:hover,
+     header a:link,
+     header a:visited {
+       color: black;
+       text-decoration: none;
+     }
+     footer a:active,
+     footer a:hover,
+     footer a:link,
+     footer a:visited {
+       color: black;
+       text-decoration: none;
+     }
+     img#cc-footer-img {
+       height: auto;
+       width: 7%;
+     }
+    </style>
   </head>
-
   <body>
-    <div id="header">
-      <p>header content</p>
-      <ul>
-        <li><a href="/">NCCTS</a></li>
-        <li><a href="/clcc/">CLCC</a></li>
-      </ul>
-    </div>
+    <header>
+      <div class="header-top">
+        <a href="mailto:questions@nccts.org"><span class="fa fa-envelope"></span>&nbsp; questions@nccts.org</a>
+        <a href="https://github.com/NCCTS" target="_blank" data-placement="bottom" rel="tooltip" title="" data-original-title="GitHub"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/nccts_stl" target="_blank" data-placement="bottom" rel="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/pages/National-Catholic-Conference-for-Total-Stewardship/216645941860866" target="_blank" data-placement="bottom" rel="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+      </div>
+    </header>
 
-    <div id="main"></div>
+    <main></main>
 
-    <div id="footer">
-      <p>footer content</p>
-      <ul>
-        <li><a href="https://github.com/NCCTS" target="_blank">github</a></li>
-        <li><a href="https://twitter.com/nccts_stl" target="_blank">twitter</a></li>
-        <li><a href="https://www.facebook.com/pages/National-Catholic-Conference-for-Total-Stewardship/216645941860866" target="_blank">facebook</a></li>
-      </ul>
-    </div>
+    <footer>
+      <span>Copyright &copy; 2014 by the NCCTS.</span>
+      <span><a href="https://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Attribution-NonCommercial 3.0 Unported</a></span>
+      <span><a href="https://creativecommons.org/licenses/by-nc/3.0/"><img id="cc-footer-img" src="/static/images/by-nc-nd.png"></a></span>
+      <a href="https://github.com/NCCTS" target="_blank" data-placement="bottom" rel="tooltip" title="" data-original-title="GitHub"><i class="fa fa-github"></i></a>
+      <a href="https://twitter.com/nccts_stl" target="_blank" data-placement="bottom" rel="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.facebook.com/pages/National-Catholic-Conference-for-Total-Stewardship/216645941860866" target="_blank" data-placement="bottom" rel="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+    </footer>
   </body>
 </html>

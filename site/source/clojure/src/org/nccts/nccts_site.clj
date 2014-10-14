@@ -60,9 +60,9 @@
          [:title]
          (enlive-html/substitute)))
 
-       [:div#main]
+       [:main]
        (enlive-html/substitute
-        (enlive-html/select pg-ct [:div#main])))))))
+        (enlive-html/select pg-ct [:main])))))))
 
 (defn hf-template-tex
   [path-ct path-tb]
@@ -81,13 +81,6 @@
        [:head]
        (enlive-html/append
         (concat
-         ;; from template
-         (enlive-html/at
-          (enlive-html/select pg-ct [:head])
-
-          [:title]
-          (enlive-html/substitute))
-
          ;; from tex output
          (enlive-html/at
           (enlive-html/select pg-tb [:head])
@@ -96,9 +89,16 @@
           (fn [node] (when-not (= :comment (:type node)) node))
 
           [#{:title :meta}]
+          (enlive-html/substitute))
+
+         ;; from template
+         (enlive-html/at
+          (enlive-html/select pg-ct [:head])
+
+          [:title]
           (enlive-html/substitute))))
 
-       [:div#main]
+       [:main]
        (enlive-html/append
         (enlive-html/at
          (enlive-html/select pg-tb [:body])
