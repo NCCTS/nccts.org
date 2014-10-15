@@ -10,4 +10,4 @@ The use and distribution terms for this software are covered by the [Eclipse Pub
 
 Original literary works in this distribution, including the *CLCC Manual* and *Companion*, are Copyright (c) 2006, 2013, 2014 by Francis Novak or the NCCTS.
 
-The use and distribution terms for these works is covered by the Creative Commons license [Attribution-NonCommercial 3.0 Unported](https://creativecommons.org/licenses/by-nc/3.0/legalcode) which can be found in the file [cc-by-nc.txt](http://nccts.github.io/nccts.org/cc-by-nc.txt) at the [root](https://github.com/NCCTS/nccts.org/tree/master/) of this distribution.
+The use and distribution terms for these works is covered by the Creative Commons license [Attribution-NonCommercial 3.0 Unported](http://creativecommons.org/licenses/by-nc/3.0/legalcode) which can be found in the file [cc-by-nc.txt](http://nccts.github.io/nccts.org/cc-by-nc.txt) at the [root](https://github.com/NCCTS/nccts.org/tree/master/) of this distribution.
