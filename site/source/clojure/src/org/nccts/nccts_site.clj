@@ -150,7 +150,7 @@
    {"/index.html"
     (emit-html
      (hf-template-simple
-     "index.html"))
+      "index.html"))
 
     "/clcc/index.html"
     (emit-html
@@ -159,13 +159,75 @@
 
     "/questions/index.html"
     (emit-html
-     (hf-template-simple
-      "questions/index.html"))
+     (let [pg-tb (html-resource (str tb "clcc/manual/index.html"))]
+       (enlive-html/at
+        (hf-template-simple
+         "questions/index.html")
+
+        [:head]
+        (enlive-html/prepend
+         (enlive-html/at
+          (enlive-html/select pg-tb [:head])
+
+          [enlive-html/any-node]
+          (fn [node] (when-not (= :comment (:type node)) node))
+
+          [#{:title :meta}]
+          (enlive-html/substitute)))
+
+        [:main]
+        (enlive-html/content
+         (enlive-html/at
+          pg-tb
+
+          [:section.ltx_document]
+          (enlive-html/content
+           (enlive-html/select
+            pg-tb
+
+            [:#A1]))
+
+          [:footer.ltx_page_footer]
+          (enlive-html/substitute))))))
 
     "/francis-novak/index.html"
     (emit-html
-     (hf-template-simple
-      "francis-novak/index.html"))
+
+     (let [pg-tb (html-resource (str tb "clcc/manual/index.html"))]
+       (enlive-html/at
+        (hf-template-simple
+         "francis-novak/index.html")
+
+        [:head]
+        (enlive-html/prepend
+         (enlive-html/at
+          (enlive-html/select pg-tb [:head])
+
+          [enlive-html/any-node]
+          (fn [node] (when-not (= :comment (:type node)) node))
+
+          [#{:title :meta}]
+          (enlive-html/substitute)))
+
+        [:main]
+        (enlive-html/content
+         (enlive-html/at
+          pg-tb
+
+          [:section.ltx_document]
+          (enlive-html/content
+           (enlive-html/at
+            (enlive-html/select
+             pg-tb
+
+             [:#A7])
+
+            [:img]
+            (enlive-html/set-attr
+             :src "/static/images/fr-novak.jpg")))
+
+          [:footer.ltx_page_footer]
+          (enlive-html/substitute))))))
 
     "/clcc/manual/index.html"
     (emit-html
