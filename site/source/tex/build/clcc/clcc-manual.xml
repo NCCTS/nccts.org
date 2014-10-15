@@ -4,8 +4,8 @@
 <!-- %Copyright (c) 2014 by the NCCTS -->
 <!-- %This work is distributed under the terms of the Creative Commons license, -->
 <!-- %Attribution-NonCommercial 3.0 Unported. -->
-<!-- %https://creativecommons.org/licenses/by-nc/3.0/us/ -->
-<!-- %https://creativecommons.org/licenses/by-nc/3.0/us/legalcode -->
+<!-- %http://creativecommons.org/licenses/by-nc/3.0/us/ -->
+<!-- %http://creativecommons.org/licenses/by-nc/3.0/us/legalcode -->
 <!-- %__ sample __ -->
 <!-- %WARNING!  Do not type any of the following 10 characters except as directed: -->
 <!-- %&   $   #   %   ˙   –   ˝   ^   ~   “ -->
@@ -52,7 +52,7 @@
   <section xml:id="Ch0.Sx1" property="manual-top-title" resource="manual">
     <title/>
     <para xml:id="Ch0.Sx1.p1">
-      <p align="center"><text fontsize="large" font="bold">CELEBRATING LIFE AS A CATHOLIC CHRISTIAN</text></p>
+      <p align="center"><text font="bold" fontsize="large">CELEBRATING LIFE AS A CATHOLIC CHRISTIAN</text></p>
       <!-- %**** clcc-manual.tex Line 75 **** -->
     </para>
     <pagination role="newpage"/>
@@ -108,7 +108,7 @@ website.</p>
       <p align="center">The <ref href="http://www.latex-project.org/">LaTeX</ref> source code for this book can
 be freely accessed on GitHub.
 <!-- %**** clcc-manual.tex Line 125 **** --></p>
-      <p align="center"><ref href="https://github.com/NCCTS/nccts.org/tree/latest/site/source/tex/"><text font="typewriter">https://github.com/NCCTS/nccts.org/tree/latest/site/source/tex/</text></ref></p>
+      <p align="center"><ref href="http://github.com/NCCTS/nccts.org/tree/latest/site/source/tex/"><text font="typewriter">http://github.com/NCCTS/nccts.org/tree/latest/site/source/tex/</text></ref></p>
       <p align="center"><ref href="https://creativecommons.org/licenses/by-nc/3.0/" property="cc-lic-graphic" resource="cc-lic">
 <graphics candidates="by-nc-nd.png" graphic="by-nc-nd" options="scale=0.4" xml:id="Ch0.Sx1.p10.g1"/>
 </ref></p>
