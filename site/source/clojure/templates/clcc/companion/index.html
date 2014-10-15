@@ -7,13 +7,37 @@
        height: auto;
        width: 10%;
      }
+     div.dl-pdf a:active,
+     div.dl-pdf a:hover,
+     div.dl-pdf a:link,
+     div.dl-pdf a:visited {
+       color: #333;
+       text-decoration: none;
+     }
+     .ltx_page_main {
+       padding:0 0 0 0 !important;
+     }
      .ltx_tag_section,
      .ltx_tag_subsection {
         display: none !important;
      }
+     .ltx_title_abstract {
+       font-weight: normal !important;
+     }
+     section[property='cc-lic-section'] {
+       display: none;
+     }
     </style>
   </head>
   <body>
-    <main></main>
+    <main>
+      <div class="dl-pdf">
+        <a class="dl-pdf" href="/clcc/clcc-companion.pdf">
+          <span class="label label-primary">
+            Download as PDF
+          </span>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
