@@ -35,6 +35,11 @@
    (java.io.File. path)
    net.cgrand.tagsoup/parser))
 
+(defn emit-html
+  [resource]
+  (prettify
+   (enlive-html/emit* resource)))
+
 (defn head-foot
   []
   (html-resource (str ct "head-foot.html")))
@@ -43,92 +48,137 @@
   [path-ct]
   (let [head-foot (head-foot)
         pg-ct (html-resource (str ct path-ct))]
-    (prettify
-     (enlive-html/emit*
+    (enlive-html/at
+     head-foot
+
+     [enlive-html/any-node]
+     (fn [node] (when-not (= :comment (:type node)) node))
+
+     [:title]
+     (enlive-html/substitute
+      (enlive-html/select pg-ct [:title]))
+
+     [:head]
+     (enlive-html/append
       (enlive-html/at
-       head-foot
+       (enlive-html/select pg-ct [:head])
+
+       [enlive-html/any-node]
+       (fn [node] (when-not (= :comment (:type node)) node))
 
        [:title]
-       (enlive-html/substitute
-        (enlive-html/select pg-ct [:title]))
+       (enlive-html/substitute)))
 
-       [:head]
-       (enlive-html/append
-        (enlive-html/at
-         (enlive-html/select pg-ct [:head])
+     [:main]
+     (enlive-html/substitute
+      (enlive-html/select
+       (enlive-html/at
+        pg-ct
 
-         [:title]
-         (enlive-html/substitute)))
+        [enlive-html/any-node]
+        (fn [node] (when-not (= :comment (:type node)) node)))
 
-       [:main]
-       (enlive-html/substitute
-        (enlive-html/select pg-ct [:main])))))))
+       [:main])))))
 
 (defn hf-template-tex
   [path-ct path-tb]
   (let [head-foot (head-foot)
         pg-ct (html-resource (str ct path-ct))
         pg-tb (html-resource (str tb path-tb))]
-    (prettify
-     (enlive-html/emit*
-      (enlive-html/at
-       head-foot
+    (enlive-html/at
+     head-foot
 
-       [:title]
-       (enlive-html/substitute
-        (enlive-html/select pg-ct [:title]))
+     [enlive-html/any-node]
+     (fn [node] (when-not (= :comment (:type node)) node))
 
-       [:head]
-       (enlive-html/append
-        (concat
-         ;; from tex output
-         (enlive-html/at
-          (enlive-html/select pg-tb [:head])
+     [:title]
+     (enlive-html/substitute
+      (enlive-html/select pg-ct [:title]))
 
-          [enlive-html/any-node]
-          (fn [node] (when-not (= :comment (:type node)) node))
+     [:head]
+     (enlive-html/append
+      (concat
+       ;; from tex output
+       (enlive-html/at
+        (enlive-html/select pg-tb [:head])
 
-          [#{:title :meta}]
-          (enlive-html/substitute))
+        [enlive-html/any-node]
+        (fn [node] (when-not (= :comment (:type node)) node))
 
-         ;; from template
-         (enlive-html/at
-          (enlive-html/select pg-ct [:head])
+        [#{:title :meta}]
+        (enlive-html/substitute))
 
-          [:title]
-          (enlive-html/substitute))))
+       ;; from template
+       (enlive-html/at
+        (enlive-html/select pg-ct [:head])
 
-       [:main]
-       (enlive-html/append
-        (enlive-html/at
-         (enlive-html/select pg-tb [:body])
+        [enlive-html/any-node]
+        (fn [node] (when-not (= :comment (:type node)) node))
 
-         [:footer.ltx_page_footer]
-         (enlive-html/substitute)
+        [:title]
+        (enlive-html/substitute))))
 
-         [:body]
-         enlive-html/unwrap)))))))
+     [:main]
+     (enlive-html/append
+      (concat
+       (enlive-html/select pg-ct [:main])
+
+       (enlive-html/at
+        (enlive-html/select pg-tb [:body])
+
+        [enlive-html/any-node]
+        (fn [node] (when-not (= :comment (:type node)) node))
+
+        [:footer.ltx_page_footer]
+        (enlive-html/substitute)
+
+        [:body]
+        enlive-html/unwrap))))))
+
+(defn xform-companion|abs-title
+  [resource]
+  (enlive-html/at
+   resource
+
+   [:h6.ltx_title_abstract]
+   (enlive-html/content
+    (enlive-html/html-snippet "<em>Veni, Sancte Spiritus!</em>"))))
 
 (defn pages
   []
   (merge
    {"/index.html"
-    (hf-template-simple
-     "index.html")
+    (emit-html
+     (hf-template-simple
+     "index.html"))
 
     "/clcc/index.html"
-    (hf-template-simple
-     "clcc/index.html")
+    (emit-html
+     (hf-template-simple
+      "clcc/index.html"))
+
+    "/questions/index.html"
+    (emit-html
+     (hf-template-simple
+      "questions/index.html"))
+
+    "/francis-novak/index.html"
+    (emit-html
+     (hf-template-simple
+      "francis-novak/index.html"))
 
     "/clcc/manual/index.html"
-    (hf-template-tex
-     "clcc/manual/index.html"
-     "clcc/manual/index.html")
+    (emit-html
+     (hf-template-tex
+      "clcc/manual/index.html"
+      "clcc/manual/index.html"))
 
     "/clcc/companion/index.html"
-    (hf-template-tex
-     "clcc/companion/index.html"
-     "clcc/companion/index.html")}))
+    (emit-html
+     (xform-companion|abs-title
+      (hf-template-tex
+       "clcc/companion/index.html"
+       "clcc/companion/index.html")))}))
 
 (def target-dir "site/source/clojure/build")
 
