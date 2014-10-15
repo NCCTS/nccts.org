@@ -1,9 +1,6 @@
 # header
 
-right[ questions@nccts.org, social-icons(github, twitter, facebook) ]
-
-LOGO graphic, Home, CLCC,
-Pages[ Fr. Novak, Q&A(from Manual), Manual, Companion ], "At the Service...", button(Donate Now)
+LOGO/NAME, Home, CLCC, Resources[ Manual, Companion, Q&A(from Manual), Founder, Contact ], "At the Service...", button(Donate Now)
 
 # pages
 
@@ -20,7 +17,7 @@ Founded by Fr. Novak, link to his page
 
 Prayer poem
 
-## clcc
+## CLCC
 
 para re: CLCC from back of proto-book
 
@@ -32,21 +29,23 @@ link to Q&A
 
 endorsements
 
-## Fr. Novak
+### Resources
 
-short bio adapted "About the author" of Manual and write-up pub'd by his Order after his death
-
-## Questions & Answers
-
-adapted from Manual
-
-## Manual
+### Manual
 
 styled outfrom from latexmlpost, with link to clcc-manual.pdf
 
-## Companion
+### Companion
 
 styled outfrom from latexmlpost, with link to clcc-companion.pdf
+
+### Questions & Answers
+
+adapted from Manual
+
+### Fr. Novak
+
+short bio adapted "About the author" of Manual and write-up pub'd by his Order after his death
 
 # footer
 
