@@ -8,19 +8,104 @@
     <link rel="stylesheet" href="https://checkout.stripe.com/v3/checkout/button.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <style type="text/css">
+     body {
+       background-image: url('/static/images/body-bg.png');
+       background-repeat: repeat;
+       background-position: top left;
+       background-attachment: scroll;
+     }
+     div#body-wrapper {
+       width: 100%;
+     }
+     div#page-filler {
+       background-color: #fff;
+       height: 100%;
+     }
+     div#page-wrapper {
+       background-color: #fff;
+       box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 915px;
+       padding-top: 50px;
+     }
+     div#page-wrapper-top-stripe {
+       background-color: #daa520;
+       height: 4px;
+     }     div.nav-xs-olph {
+       margin-left: auto;
+       margin-right: auto;
+     }
      .circular {
-       margin-top: 5px;
-       margin-left: 15px;
-       margin-right: 15px;
-       width: 40px;
-       height: 40px;
-       border-radius: 150px;
-       -webkit-border-radius: 150px;
-       -moz-border-radius: 150px;
-       background: url(https://avatars3.githubusercontent.com/u/6654244?v=2&amp;s=40) no-repeat;
+       height: 46px;
+       margin-top: 3px;
+       width: 47px;
+     }
+     .circular img {
+       background: #fff;
+       width: 35px;
+       height: 35px;
+       display: block;
+       -webkit-border-radius: 32px;
+       -moz-border-radius: 32px;
+       -ms-border-radius: 32px;
+       -o-border-radius: 32px;
+       border-radius: 32px;
+       margin: 4px 6px 0;
+     }
+     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all
+     .circular:after {
+       background-image: url('https://checkout.stripe.com/v3/images/icon-border@2x.png');
+     }
+     .circular:after {
+       content: '';
+       position: absolute;
+       left: 0;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       background: url('https://checkout.stripe.com/v3/images/icon-border.png') no-repeat;
+       background-size: 100% 100%;
+     }
+     .circular-xs {
+       height: 46px;
+       margin-top: 0;
+       margin-bottom: -7px;
+       width: 47px;
+     }
+     .circular-xs img {
+       background: #fff;
+       width: 35px;
+       height: 35px;
+       display: block;
+       -webkit-border-radius: 32px;
+       -moz-border-radius: 32px;
+       -ms-border-radius: 32px;
+       -o-border-radius: 32px;
+       border-radius: 32px;
+       margin: 4px 6px 0;
+     }
+     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all
+     .circular-xs:after {
+       background-image: url('https://checkout.stripe.com/v3/images/icon-border@2x.png');
+     }
+     .circular-xs:after {
+       content: '';
+       position: absolute;
+       left: 0;
+       top: -4px;
+       right: 0;
+       bottom: 4px;
+       background: url('https://checkout.stripe.com/v3/images/icon-border.png') no-repeat;
+       background-size: 100% 100%;
+     }
+     footer nav {
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 915px;
      }
      footer a:active,
      footer a:hover,
@@ -32,160 +117,255 @@
      footer a.copy-notice {
        padding-top: 9px;
      }
-     footer div.container-fluid {
-       margin-bottom: -10px;
-     }
      footer i.fa {
        font-size: 130%;
+     }
+     header div.navbar-header a.navbar-brand {
+       margin-right: 33%;
+     }
+     header div.navbar-header button {
+       margin-left: 14%;
+     }
+     header div.navbar-header ul.nav {
+       float: left;
+     }
+     header nav {
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 915px;
      }
      img#cc-footer-img {
        border: 2px solid white;
        height: auto;
-       width: 20%;
+       width: 80px;
+     }
+     li.copy-notice {
+       width: 114px;
      }
      li.support-button {
        padding: 7px 15px 0 15px;
      }
      main {
-       margin:0 0 6em 0; padding:1em 3em 1em 2em;
+       margin:0 0 6em 0;
+       padding:1em 3em 1em 2em;
+     }
+     nav.nav-bottom-xs ul.navbar-left {
+       float: left !important;
+     }
+     nav.nav-bottom-xs ul.navbar-right {
+       float: right !important;
+     }
+     nav.nav-bottom-xs div.navbar-header {
+       float: left;
+       margin-right: 15px;
+     }
+     nav.nav-bottom-xs li {
+       float: left;
+     }
+     nav.nav-bottom-xs li {
+       float: left;
+     }
+     nav.nav-bottom-xs img#cc-footer-img {
+       border: 2px solid white;
+       height: auto;
+       width: 65px;
+     }
+     nav.nav-bottom-xs li.copy-notice {
+       width: 99px;
+     }
+     nav.nav-bottom-xs a.copy-notice {
+       padding-top: 5px;
+     }
+     ul.nav-top-left {
+       width: 39%;
+     }
+     nav.navbar-inverse {
+       border-radius: 0;
+       margin-bottom: 0;
+       padding-top: 5px;
      }
     </style>
     <title>Header</title>
   </head>
   <body>
     <!-- // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // -->
-    <header>
-      <nav class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#navbar-collapse-top">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">NCCTS</a>
-          </div>
-          <div class="collapse navbar-collapse"
-               id="navbar-collapse-top">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <!-- <li class="active"><a href="/">Home</a></li> -->
-              <li><a href="/clcc">CLCC</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Resources <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/clcc/manual/">CLCC Manual</a></li>
-                  <li><a href="/clcc/companion/">Companion to the Manual</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/questions/">Questions &amp; Answers</a></li>
-                  <li><a href="/francis-novak/">Our Founder &mdash; Fr. Francis Novak</a></li>
-                  <li class="divider"></li>
-                  <li><a href="mailto:questions@nccts.org">Contact Us &mdash; info@nccts.org</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a href="http://www.usccb.org/beliefs-and-teachings/how-we-teach/new-evangelization/"
-                   target="_blank">
-                  <em>At the service of the New Evangelization.</em>
-                </a>
-              </li>
-              <li class="support-button">
-                <button class="stripe-button-el" id="customButton">
-                  <span>Support Our Work</span>
+    <div id="body-wrapper">
+      <div id="page-wrapper">
+        <header>
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div id="page-wrapper-top-stripe"></div>
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#navbar-collapse-top">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
                 </button>
-                <script>
-                 var handler = StripeCheckout.configure({
-                   key: 'pk_test_NWKLnQJq4y9zjf1foPyAZj8e',
-                   image: 'https://avatars3.githubusercontent.com/u/6654244?v=2&s=200',
-                   token: function(token) {
-                     console.log("this was the token:", token);
-                   }
-                 });
+                <a class="navbar-brand" href="/">NCCTS</a>
+                <ul class="hidden-sm hidden-md hidden-lg nav navbar-nav">
+                  <li class="circular-xs">
+                    <img src="/static/images/olph.jpg">
+                  </li>
+                </ul>
+                <!-- <div class="hidden-sm hidden-md hidden-lg circular nav-xs-olph"></div> -->
+              </div>
+              <div class="collapse navbar-collapse"
+                   id="navbar-collapse-top">
+                <ul class="nav navbar-nav nav-top-left">
+                  <li><a href="/">Home</a></li>
+                  <!-- <li class="active"><a href="/">Home</a></li> -->
+                  <li><a href="/clcc">CLCC</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      Resources <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/clcc/manual/">CLCC Manual</a></li>
+                      <li><a href="/clcc/companion/">Companion to the Manual</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/questions/">Questions &amp; Answers</a></li>
+                      <li><a href="/francis-novak/">Our Founder</a></li>
+                      <li class="divider"></li>
+                      <li><a href="mailto:questions@nccts.org">Contact Us &mdash; info@nccts.org</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="hidden-xs nav navbar-nav">
+                  <li class="circular">
+                    <img src="/static/images/olph.jpg">
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                  <li class="support-button">
+                    <button class="stripe-button-el" id="customButton">
+                      <span>Support Our Work</span>
+                    </button>
+                    <script>
+                     var handler = StripeCheckout.configure({
+                       key: 'pk_test_NWKLnQJq4y9zjf1foPyAZj8e',
+                       image: 'https://avatars3.githubusercontent.com/u/6654244',
+                       token: function(token) {
+                         console.log("this was the token:", token);
+                       }
+                     });
 
-                 document.getElementById('customButton').addEventListener('click', function(e) {
-                   handler.open({
-                     name: 'NCCTS',
-                     description: 'One-time Donation. Tax deductible.',
-                     amount: 1200,
-                     panelLabel: "Donate",
-                     allowRememberMe: false
-                   });
-                   e.preventDefault();
-                 });
-                </script>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+                     document.getElementById('customButton').addEventListener('click', function(e) {
+                       handler.open({
+                         name: 'NCCTS',
+                         description: 'One-time Donation. Tax deductible.',
+                         amount: 1200,
+                         panelLabel: "Donate",
+                         allowRememberMe: false
+                       });
+                       e.preventDefault();
+                     });
+                    </script>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
 
-    <main></main>
+        <main></main>
+        <div id="page-filler"></div>
 
-    <footer>
-      <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#navbar-collapse-bottom">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">NCCTS</a>
-          </div>
-          <div class="collapse navbar-collapse"
-               id="navbar-collapse-bottom">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode"
-                   target="_blank">
-                  Copyright &copy; 2014
-                </a>
-              </li>
-              <li>
-                <a class="copy-notice"
-                   href="http://creativecommons.org/licenses/by-nc/3.0/"
-                   target="_blank">
-                  <img alt="Creative Commons BY-NC" id="cc-footer-img"
-                       src="/static/images/by-nc.png"></a>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="circular"></li>
-              <li>
-                <a href="https://www.facebook.com/pages/National-Catholic-Conference-for-Total-Stewardship/216645941860866"
-                   target="_blank">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/nccts_stl" target="_blank">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/NCCTS" target="_blank">
-                  <i class="fa fa-github"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </footer>
-    <script src="/static/js/jquery-1.11.1.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
+        <footer>
+          <nav class="navbar navbar-inverse hidden-sm hidden-md hidden-lg nav-bottom-xs" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand"
+                   href="http://creativecommons.org/licenses/by-nc/3.0/legalcode"
+                   target="_blank">&copy; 2014</a>
+              </div>
+              <div>
+                <ul class="nav navbar-nav navbar-left">
+                  <li class="copy-notice">
+                    <a class="copy-notice"
+                       href="http://creativecommons.org/licenses/by-nc/3.0/"
+                       target="_blank">
+                      <img alt="Creative Commons BY-NC" id="cc-footer-img"
+                           src="/static/images/by-nc.png"></a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="https://www.facebook.com/pages/National-Catholic-Conference-for-Total-Stewardship/216645941860866"
+                       target="_blank">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/nccts_stl" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/NCCTS" target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-inverse hidden-xs" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/">NCCTS</a>
+              </div>
+              <div>
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="http://www.usccb.org/beliefs-and-teachings/how-we-teach/new-evangelization/"
+                       target="_blank">
+                      <em>At the service of the New Evangelization.</em>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode"
+                       target="_blank">
+                      Copyright &copy; 2014
+                    </a>
+                  </li>
+                  <li class="copy-notice">
+                    <a class="copy-notice"
+                       href="http://creativecommons.org/licenses/by-nc/3.0/"
+                       target="_blank">
+                      <img alt="Creative Commons BY-NC" id="cc-footer-img"
+                           src="/static/images/by-nc.png"></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/pages/National-Catholic-Conference-for-Total-Stewardship/216645941860866"
+                       target="_blank">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/nccts_stl" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/NCCTS" target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </footer>
+        <script src="/static/js/jquery-1.11.1.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+      </div>
+    </div>
     <!-- // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // -->
   </body>
 </html>
