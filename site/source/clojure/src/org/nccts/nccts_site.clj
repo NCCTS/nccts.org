@@ -105,7 +105,7 @@
         [enlive-html/any-node]
         (fn [node] (when-not (= :comment (:type node)) node))
 
-        [#{:title :meta}]
+        [#{:link :meta :title}]
         (enlive-html/substitute))
 
        ;; from template
@@ -172,7 +172,7 @@
           [enlive-html/any-node]
           (fn [node] (when-not (= :comment (:type node)) node))
 
-          [#{:title :meta}]
+          [#{:link :meta :title}]
           (enlive-html/substitute)))
 
         [:main]
@@ -206,7 +206,7 @@
           [enlive-html/any-node]
           (fn [node] (when-not (= :comment (:type node)) node))
 
-          [#{:title :meta}]
+          [#{:link :meta :title}]
           (enlive-html/substitute)))
 
         [:main]
