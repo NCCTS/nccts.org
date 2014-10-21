@@ -121,7 +121,11 @@
      [:main]
      (enlive-html/append
       (concat
-       (enlive-html/select pg-ct [:main])
+       (enlive-html/at
+        (enlive-html/select pg-ct [:main])
+
+        [:main]
+        enlive-html/unwrap)
 
        (enlive-html/at
         (enlive-html/select pg-tb [:body])
