@@ -182,7 +182,7 @@
         [:main]
         (enlive-html/content
          (enlive-html/at
-          pg-tb
+          (enlive-html/select pg-tb [:body])
 
           [:section.ltx_document]
           (enlive-html/content
@@ -216,7 +216,7 @@
         [:main]
         (enlive-html/content
          (enlive-html/at
-          pg-tb
+          (enlive-html/select pg-tb [:body])
 
           [:section.ltx_document]
           (enlive-html/content
