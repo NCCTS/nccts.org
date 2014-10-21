@@ -29,8 +29,8 @@
        padding-top: 50px;
      }
      div#page-wrapper-top-pinstripe {
-       background-color: #daa520;
-       height: 4px;
+       background-color: goldenrod;
+       height: 5px;
      }
      footer nav {
        margin-left: auto;
@@ -141,6 +141,23 @@
        width: 100%;
        z-index: 10000;
      }
+     .olph-icon-outer {
+       height: 75px;
+       margin: -79px auto 0 auto;
+       position: relative;
+       width: 76px;
+     }
+     .olph-icon-outer:after {
+       border: 5px solid goldenrod;
+       border-radius: 40px;
+       bottom: 0px;
+       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+       content: '';
+       left: -7px;
+       position: absolute;
+       right: 5px;
+       top: -3px;
+     }
     </style>
     <title>Header</title>
   </head>
@@ -150,6 +167,7 @@
       <div class="olph-icon">
         <img src="/static/images/olph.jpg">
       </div>
+      <div class="olph-icon-outer"></div>
     </div>
     <div id="body-wrapper">
       <div id="page-wrapper">
