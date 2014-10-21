@@ -9,20 +9,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://checkout.stripe.com/checkout.js"></script>
     <style type="text/css">
      body {
-       background-image: url('/static/images/body-bg.png');
-       background-repeat: repeat;
-       background-position: top left;
        background-attachment: scroll;
+       background-image: url('/static/images/body-bg.png');
+       background-position: top left;
+       background-repeat: repeat;
+
      }
      div#body-wrapper {
        width: 100%;
-     }
-     div#page-filler {
-       background-color: #fff;
-       height: 100%;
      }
      div#page-wrapper {
        background-color: #fff;
@@ -32,75 +28,9 @@
        max-width: 915px;
        padding-top: 50px;
      }
-     div#page-wrapper-top-stripe {
+     div#page-wrapper-top-pinstripe {
        background-color: #daa520;
        height: 4px;
-     }     div.nav-xs-olph {
-       margin-left: auto;
-       margin-right: auto;
-     }
-     .circular {
-       height: 46px;
-       margin-top: 3px;
-       width: 47px;
-     }
-     .circular img {
-       background: #fff;
-       width: 35px;
-       height: 35px;
-       display: block;
-       -webkit-border-radius: 32px;
-       -moz-border-radius: 32px;
-       -ms-border-radius: 32px;
-       -o-border-radius: 32px;
-       border-radius: 32px;
-       margin: 4px 6px 0;
-     }
-     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all
-     .circular:after {
-       background-image: url('https://checkout.stripe.com/v3/images/icon-border@2x.png');
-     }
-     .circular:after {
-       content: '';
-       position: absolute;
-       left: 0;
-       top: 0;
-       right: 0;
-       bottom: 0;
-       background: url('https://checkout.stripe.com/v3/images/icon-border.png') no-repeat;
-       background-size: 100% 100%;
-     }
-     .circular-xs {
-       height: 46px;
-       margin-top: 0;
-       margin-bottom: -7px;
-       width: 47px;
-     }
-     .circular-xs img {
-       background: #fff;
-       width: 35px;
-       height: 35px;
-       display: block;
-       -webkit-border-radius: 32px;
-       -moz-border-radius: 32px;
-       -ms-border-radius: 32px;
-       -o-border-radius: 32px;
-       border-radius: 32px;
-       margin: 4px 6px 0;
-     }
-     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all
-     .circular-xs:after {
-       background-image: url('https://checkout.stripe.com/v3/images/icon-border@2x.png');
-     }
-     .circular-xs:after {
-       content: '';
-       position: absolute;
-       left: 0;
-       top: -4px;
-       right: 0;
-       bottom: 4px;
-       background: url('https://checkout.stripe.com/v3/images/icon-border.png') no-repeat;
-       background-size: 100% 100%;
      }
      footer nav {
        margin-left: auto;
@@ -120,15 +50,6 @@
      footer i.fa {
        font-size: 130%;
      }
-     header div.navbar-header a.navbar-brand {
-       margin-right: 33%;
-     }
-     header div.navbar-header button {
-       margin-left: 14%;
-     }
-     header div.navbar-header ul.nav {
-       float: left;
-     }
      header nav {
        margin-left: auto;
        margin-right: auto;
@@ -147,7 +68,7 @@
      }
      main {
        margin:0 0 6em 0;
-       padding:1em 3em 1em 2em;
+       padding:4em 3em 1em 2em;
      }
      nav.nav-bottom-xs ul.navbar-left {
        float: left !important;
@@ -176,24 +97,65 @@
      nav.nav-bottom-xs a.copy-notice {
        padding-top: 5px;
      }
-     ul.nav-top-left {
-       width: 39%;
-     }
      nav.navbar-inverse {
        border-radius: 0;
        margin-bottom: 0;
        padding-top: 5px;
+     }
+     .olph-icon {
+       height: 75px;
+       margin: 0 auto 0 auto;
+       position: relative;
+       width: 76px;
+     }
+     .olph-icon img {
+       background: #fff;
+       border-radius: 32px;
+       -webkit-border-radius: 32px;
+       -moz-border-radius: 32px;
+       -ms-border-radius: 32px;
+       -o-border-radius: 32px;
+       display: block;
+       height: 64px;
+       width: 64px;
+     }
+     .olph-icon:after {
+       background: url('/static/images/olph-cover.png') no-repeat;
+       background-size: 76px 75px;
+       bottom: 0;
+       content: '';
+       left: -6px;
+       position: absolute;
+       right: 0;
+       top: -4px;
+     }
+     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all
+     .olph-icon:after {
+       background-image: url('/static/images/olph-cover@2x.png');
+     }
+     .olph-icon-container {
+       height: 1px;
+       margin: 0 0 0 0;
+       position: fixed;
+       top: 20px;
+       width: 100%;
+       z-index: 10000;
      }
     </style>
     <title>Header</title>
   </head>
   <body>
     <!-- // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // -->
+    <div class="olph-icon-container">
+      <div class="olph-icon">
+        <img src="/static/images/olph.jpg">
+      </div>
+    </div>
     <div id="body-wrapper">
       <div id="page-wrapper">
         <header>
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div id="page-wrapper-top-stripe"></div>
+            <div id="page-wrapper-top-pinstripe"></div>
             <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
@@ -206,24 +168,20 @@
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">NCCTS</a>
-                <ul class="hidden-sm hidden-md hidden-lg nav navbar-nav">
-                  <li class="circular-xs">
-                    <img src="/static/images/olph.jpg">
-                  </li>
-                </ul>
-                <!-- <div class="hidden-sm hidden-md hidden-lg circular nav-xs-olph"></div> -->
               </div>
               <div class="collapse navbar-collapse"
                    id="navbar-collapse-top">
                 <ul class="nav navbar-nav nav-top-left">
                   <li><a href="/">Home</a></li>
                   <!-- <li class="active"><a href="/">Home</a></li> -->
-                  <li><a href="/clcc">CLCC</a></li>
+                  <li class="hidden-sm"><a href="/clcc">CLCC</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       Resources <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
+                      <li class="hidden-xs hidden-md hidden-lg"><a href="/clcc/">CLCC</a></li>
+                      <li class="divider hidden-xs hidden-md hidden-lg"></li>
                       <li><a href="/clcc/manual/">CLCC Manual</a></li>
                       <li><a href="/clcc/companion/">Companion to the Manual</a></li>
                       <li class="divider"></li>
@@ -234,36 +192,11 @@
                     </ul>
                   </li>
                 </ul>
-                <ul class="hidden-xs nav navbar-nav">
-                  <li class="circular">
-                    <img src="/static/images/olph.jpg">
-                  </li>
-                </ul>
                 <ul class="nav navbar-nav navbar-right hidden-xs">
                   <li class="support-button">
                     <button class="stripe-button-el" id="customButton">
                       <span>Support Our Work</span>
                     </button>
-                    <script>
-                     var handler = StripeCheckout.configure({
-                       key: 'pk_test_NWKLnQJq4y9zjf1foPyAZj8e',
-                       image: 'https://avatars3.githubusercontent.com/u/6654244',
-                       token: function(token) {
-                         console.log("this was the token:", token);
-                       }
-                     });
-
-                     document.getElementById('customButton').addEventListener('click', function(e) {
-                       handler.open({
-                         name: 'NCCTS',
-                         description: 'One-time Donation. Tax deductible.',
-                         amount: 1200,
-                         panelLabel: "Donate",
-                         allowRememberMe: false
-                       });
-                       e.preventDefault();
-                     });
-                    </script>
                   </li>
                 </ul>
               </div>
@@ -272,7 +205,6 @@
         </header>
 
         <main></main>
-        <div id="page-filler"></div>
 
         <footer>
           <nav class="navbar navbar-inverse hidden-sm hidden-md hidden-lg nav-bottom-xs" role="navigation">
@@ -364,6 +296,28 @@
         </footer>
         <script src="/static/js/jquery-1.11.1.min.js"></script>
         <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/URI.js"></script>
+         <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script>
+         var handler = StripeCheckout.configure({
+           key: 'pk_test_NWKLnQJq4y9zjf1foPyAZj8e',
+           image: URI(window.location).path('/static/images/olph.jpg').toString(),
+           token: function(token) {
+             console.log("this was the token:", token);
+           }
+         });
+
+         document.getElementById('customButton').addEventListener('click', function(e) {
+           handler.open({
+             name: 'NCCTS',
+             description: 'One-time Donation. Tax deductible.',
+             amount: 1200,
+             panelLabel: "Donate",
+             allowRememberMe: false
+           });
+           e.preventDefault();
+         });
+        </script>
       </div>
     </div>
     <!-- // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // -->
