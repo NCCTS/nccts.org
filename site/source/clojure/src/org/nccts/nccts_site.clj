@@ -167,101 +167,100 @@
 
 (defn pages
   []
-  (merge
-   {"/index.html"
-    (emit-html
-     (hf-template-simple
-      "index.html"))
+  {"/index.html"
+   (emit-html
+    (hf-template-simple
+     "index.html"))
 
-    "/clcc/index.html"
-    (emit-html
-     (hf-template-simple
-      "clcc/index.html"))
+   "/clcc/index.html"
+   (emit-html
+    (hf-template-simple
+     "clcc/index.html"))
 
-    "/questions/index.html"
-    (emit-html
-     (let [pg-tb (html-resource (str tb "clcc/manual/index.html"))]
-       (enlive-html/at
-        (hf-template-simple
-         "questions/index.html")
+   "/questions/index.html"
+   (emit-html
+    (let [pg-tb (html-resource (str tb "clcc/manual/index.html"))]
+      (enlive-html/at
+       (hf-template-simple
+        "questions/index.html")
 
-        [:head]
-        (enlive-html/prepend
-         (enlive-html/at
-          (enlive-html/select pg-tb [:head])
+       [:head]
+       (enlive-html/prepend
+        (enlive-html/at
+         (enlive-html/select pg-tb [:head])
 
-          [enlive-html/any-node]
-          (fn [node] (when-not (= :comment (:type node)) node))
+         [enlive-html/any-node]
+         (fn [node] (when-not (= :comment (:type node)) node))
 
-          [#{:link :meta :title}]
-          (enlive-html/substitute)))
+         [#{:link :meta :title}]
+         (enlive-html/substitute)))
 
-        [:main]
-        (enlive-html/content
-         (enlive-html/at
-          (enlive-html/select pg-tb [:body])
+       [:main]
+       (enlive-html/content
+        (enlive-html/at
+         (enlive-html/select pg-tb [:body])
 
-          [:section.ltx_document]
-          (enlive-html/content
+         [:section.ltx_document]
+         (enlive-html/content
+          (enlive-html/select
+           pg-tb
+
+           [:#A1]))
+
+         [:footer.ltx_page_footer]
+         (enlive-html/substitute))))))
+
+   "/francis-novak/index.html"
+   (emit-html
+
+    (let [pg-tb (html-resource (str tb "clcc/manual/index.html"))]
+      (enlive-html/at
+       (hf-template-simple
+        "francis-novak/index.html")
+
+       [:head]
+       (enlive-html/prepend
+        (enlive-html/at
+         (enlive-html/select pg-tb [:head])
+
+         [enlive-html/any-node]
+         (fn [node] (when-not (= :comment (:type node)) node))
+
+         [#{:link :meta :title}]
+         (enlive-html/substitute)))
+
+       [:main]
+       (enlive-html/content
+        (enlive-html/at
+         (enlive-html/select pg-tb [:body])
+
+         [:section.ltx_document]
+         (enlive-html/content
+          (enlive-html/at
            (enlive-html/select
             pg-tb
 
-            [:#A1]))
+            [:#A7])
 
-          [:footer.ltx_page_footer]
-          (enlive-html/substitute))))))
+           [:img]
+           (enlive-html/set-attr
+            :src "/static/images/fr-novak.jpg")))
 
-    "/francis-novak/index.html"
-    (emit-html
+         [:footer.ltx_page_footer]
+         (enlive-html/substitute))))))
 
-     (let [pg-tb (html-resource (str tb "clcc/manual/index.html"))]
-       (enlive-html/at
-        (hf-template-simple
-         "francis-novak/index.html")
+   "/clcc/manual/index.html"
+   (emit-html
+    (hf-template-tex
+     "clcc/manual/index.html"
+     "clcc/manual/index.html"))
 
-        [:head]
-        (enlive-html/prepend
-         (enlive-html/at
-          (enlive-html/select pg-tb [:head])
-
-          [enlive-html/any-node]
-          (fn [node] (when-not (= :comment (:type node)) node))
-
-          [#{:link :meta :title}]
-          (enlive-html/substitute)))
-
-        [:main]
-        (enlive-html/content
-         (enlive-html/at
-          (enlive-html/select pg-tb [:body])
-
-          [:section.ltx_document]
-          (enlive-html/content
-           (enlive-html/at
-            (enlive-html/select
-             pg-tb
-
-             [:#A7])
-
-            [:img]
-            (enlive-html/set-attr
-             :src "/static/images/fr-novak.jpg")))
-
-          [:footer.ltx_page_footer]
-          (enlive-html/substitute))))))
-
-    "/clcc/manual/index.html"
-    (emit-html
+   "/clcc/companion/index.html"
+   (emit-html
+    (xform-companion|abs-title
      (hf-template-tex
-      "clcc/manual/index.html"
-      "clcc/manual/index.html"))
-
-    "/clcc/companion/index.html"
-    (emit-html
-     (xform-companion|abs-title
-      (hf-template-tex
-       "clcc/companion/index.html"
-       "clcc/companion/index.html")))}))
+      "clcc/companion/index.html"
+      "clcc/companion/index.html")))})
 
 (def target-dir "site/source/clojure/build")
 
