@@ -265,10 +265,36 @@
 
 (def target-dir "site/source/clojure/build")
 
-(defn export []
+(defn inject-ga*
+  [page]
+  (emit-html
+   (enlive-html/at
+    (enlive-html/html-snippet page)
+
+    [:div#template-scripts]
+    (enlive-html/append
+     (enlive-html/at
+      (enlive-html/select
+       (html-resource (str ct "ga.html"))
+       [:div#template-scripts])
+
+      [:div#template-scripts]
+      enlive-html/unwrap)))))
+
+(defn inject-ga
+  [pages]
+  (into {} (for [[k v] pages] [k (inject-ga* v)])))
+
+(defn export-ga
+  []
+  (stasis/empty-directory! target-dir)
+  (stasis/export-pages (#'inject-ga (#'pages)) target-dir))
+
+(defn export
+  []
   (stasis/empty-directory! target-dir)
   (stasis/export-pages (#'pages) target-dir))
 
 (defn -main
   [& args]
-  (export))
+  (export-ga))
