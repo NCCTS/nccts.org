@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <!-- // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // -->
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-patched.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-xxs-tn.min.css">
     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://checkout.stripe.com/v3/checkout/button.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -154,6 +155,13 @@
        right: 7px;
        top: -1px;
      }
+     @media screen and ( max-height: 380px ){
+       .scrollable-menu {
+         height: auto;
+         max-height: 232px;
+         overflow-x: hidden;
+       }
+     }
     </style>
     <title>Header</title>
   </head>
@@ -185,7 +193,7 @@
               </div>
               <div class="collapse navbar-collapse"
                    id="navbar-collapse-top">
-                <ul class="nav navbar-nav nav-top-left">
+                <ul class="nav navbar-nav nav-top-left scrollable-menu">
                   <li><a href="/">Home</a></li>
                   <!-- <li class="active"><a href="/">Home</a></li> -->
                   <li class="hidden-sm"><a href="/clcc">CLCC</a></li>
@@ -194,8 +202,8 @@
                       Resources <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                      <li class="hidden-xs hidden-md hidden-lg"><a href="/clcc/">CLCC</a></li>
-                      <li class="divider hidden-xs hidden-md hidden-lg"></li>
+                      <li class="hidden-tn hidden-xxs hidden-xs hidden-md hidden-lg"><a href="/clcc/">CLCC</a></li>
+                      <li class="divider hidden-tn hidden-xxs hidden-xs hidden-md hidden-lg"></li>
                       <li><a href="/clcc/manual/">CLCC Manual</a></li>
                       <li><a href="/clcc/companion/">Companion to the Manual</a></li>
                       <li class="divider"></li>
@@ -206,7 +214,7 @@
                     </ul>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right hidden-xs">
+                <ul class="nav navbar-nav navbar-right hidden-tn hidden-xxs hidden-xs">
                   <li class="support-button">
                     <button class="stripe-button-el" id="customButton">
                       <span>Support Our Work</span>
@@ -221,7 +229,7 @@
         <main></main>
 
         <footer>
-          <nav class="navbar navbar-inverse hidden-sm hidden-md hidden-lg nav-bottom-xs" role="navigation">
+          <nav class="navbar navbar-inverse nav-bottom-xs hidden-sm hidden-md hidden-lg" role="navigation">
             <div class="container-fluid">
               <div class="navbar-header">
                 <a class="navbar-brand"
@@ -259,7 +267,7 @@
               </div>
             </div>
           </nav>
-          <nav class="navbar navbar-inverse hidden-xs" role="navigation">
+          <nav class="navbar navbar-inverse hidden-tn hidden-xxs hidden-xs" role="navigation">
             <div class="container-fluid">
               <div class="navbar-header">
                 <a class="navbar-brand" href="/">NCCTS</a>
@@ -308,32 +316,34 @@
             </div>
           </nav>
         </footer>
-        <script src="/static/js/jquery-1.11.1.min.js"></script>
-        <script src="/static/js/bootstrap.min.js"></script>
-        <script src="/static/js/URI.js"></script>
-        <script src="https://checkout.stripe.com/checkout.js"></script>
-        <script>
-         var handler = StripeCheckout.configure({
-           key: 'pk_test_NWKLnQJq4y9zjf1foPyAZj8e',
-           image: URI(window.location).path('/static/images/olph.jpg').toString(),
-           token: function(token) {
-             console.log("this was the token:", token);
-           }
-         });
-
-         document.getElementById('customButton').addEventListener('click', function(e) {
-           handler.open({
-             name: 'NCCTS',
-             description: 'One-time Donation. Tax deductible.',
-             amount: 1200,
-             panelLabel: "Donate",
-             allowRememberMe: false
-           });
-           e.preventDefault();
-         });
-        </script>
       </div>
     </div>
     <!-- // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // -->
+    <div id="template-scripts">
+      <script src="/static/js/jquery-1.11.1.min.js"></script>
+      <script src="/static/js/bootstrap.min.js"></script>
+      <script src="/static/js/jssor.slider.mini.js"></script>
+      <script src="/static/js/URI.js"></script>
+      <script src="https://checkout.stripe.com/checkout.js"></script>
+      <script>
+       var handler = StripeCheckout.configure({
+         key: 'pk_test_NWKLnQJq4y9zjf1foPyAZj8e',
+         image: URI(window.location).path('/static/images/olph.jpg').toString(),
+         token: function(token) {
+           console.log("this was the token:", token);
+         }
+       });
+       document.getElementById('customButton').addEventListener('click', function(e) {
+         handler.open({
+           name: 'NCCTS',
+           description: 'One-time Donation. Tax deductible.',
+           amount: 1200,
+           panelLabel: "Donate",
+           allowRememberMe: false
+         });
+         e.preventDefault();
+       });
+      </script>
+    </div>
   </body>
 </html>
