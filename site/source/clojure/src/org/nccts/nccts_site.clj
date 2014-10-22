@@ -78,7 +78,15 @@
         [enlive-html/any-node]
         (fn [node] (when-not (= :comment (:type node)) node)))
 
-       [:main])))))
+       [:main]))
+
+     [:div#template-scripts]
+     (enlive-html/append
+      (enlive-html/at
+       (enlive-html/select pg-ct [:div#template-scripts])
+
+       [:div#template-scripts]
+       enlive-html/unwrap)))))
 
 (defn hf-template-tex
   [path-ct path-tb]
@@ -137,7 +145,16 @@
         (enlive-html/substitute)
 
         [:body]
-        enlive-html/unwrap))))))
+        enlive-html/unwrap)))
+
+
+     [:div#template-scripts]
+     (enlive-html/append
+      (enlive-html/at
+       (enlive-html/select pg-ct [:div#template-scripts])
+
+       [:div#template-scripts]
+       enlive-html/unwrap)))))
 
 (defn xform-companion|abs-title
   [resource]
