@@ -1,15 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+     main {
+       margin: 0;
+       padding: 0 !important;
+     }
+     section.main-content {
+       margin: 0;
+       padding: 4em 3em 4em 3em;
+     }
+    </style>
     <title>CLCC &mdash; Celebrating Life as a Catholic Christian</title>
   </head>
   <body>
     <main>
-      <p>Celebrating Life as a Catholic Christian (CLCC) is a process for New Evangelization that develops knowledge of the faith in Catholics starving for Gospel truth. It is modeled from official Church documents of four modern popes with a view to ignite a passion to grow in personal holiness and zeal to help carry out a high priority of the Church's mission: to receover millions of lapsed, indifferent, fallen-away Catholics by personal outreach to them.</p>
-      <p><a href="manual/">Manual</a></p>
-      <p><a href="clcc-manual.pdf">Manual PDF</a></p>
-      <p><a href="companion/">Companion</a></p>
-      <p><a href="clcc-companion.pdf">Companion PDF</a></p>
+
+      <img id="slider_container_sub"
+           src="/static/images/basilica.jpg"
+           style="height: auto;
+                  left: 0px;
+                  position: relative;
+                  top: -1px;
+                  width: 100%;">
+
+      <div id="slider_container"
+           style="display: none;
+                  height: 300px;
+                  left: 0px;
+                  position: relative;
+                  top: -1px;
+                  width: 915px;">
+        <div style="height: 300px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 915px;"
+             u="slides">
+          <div>
+            <img src="/static/images/basilica.jpg"
+                 u="image">
+            <div style="left: 40px;
+                        position: absolute;
+                        top: 30px;"
+                 t="trans_1"
+                 u="caption">
+              <img src="/static/images/john-xxiii-head.png"
+                   style="border: 2px solid #f8f8f8;
+                          border-radius: 32px;
+                          box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.8);
+                          height: 64px;
+                          margin-right: 12px;
+                          width: auto;">
+              <img src="/static/images/paul-vi-head.png"
+                   style="border: 2px solid #f8f8f8;
+                          border-radius: 32px;
+                          box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.8);
+                          height: 64px;
+                          margin-right: 12px;
+                          width: auto;">
+              <img src="/static/images/john-paul-ii-head.png"
+                   style="border: 2px solid #f8f8f8;
+                          border-radius: 32px;
+                          box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.6);
+                          height: 64px;
+                          margin-right: 12px;
+                          width: auto;">
+              <img src="/static/images/benedict-xvi-head.png"
+                   style="border: 2px solid #f8f8f8;
+                          border-radius: 32px;
+                          box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.6);
+                          height: 64px;
+                          margin-right: 12px;
+                          width: auto;">
+            </div>
+            <div style="position: absolute;
+                        left: 180px;
+                        top: 185px;"
+                 t="trans_2"
+                 u="caption">
+              <h1 style="color: #f8f8f8;
+                         font-size: 7em;
+                         font-weight: 900;
+                         letter-spacing: 0.1em;
+                         margin-bottom: 0;
+                         margin-top: 0;
+                         padding-top: 0;
+                         text-shadow: 4px 4px 2px rgba(20, 20, 20, 0.8),
+                                      -1px -1px 0 rgba(20, 20, 20, 0.8),
+                                      1px -1px 0 rgba(20, 20, 20, 0.8),
+                                      -1px 1px 0 rgba(20, 20, 20, 0.8),
+                                      1px 1px 0 rgba(20, 20, 20, 0.8);">
+                CLCC
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="main-content">
+
+        <p class="lead">Celebrating Life as a Catholic Christian (CLCC) is a
+        process for <a href="http://www.usccb.org/beliefs-and-teachings/how-we-teach/new-evangelization/">
+        New Evangelization</a> that develops knowledge of the faith in Catholics
+        starving for Gospel truth. It is modeled from official Church documents
+        of our modern popes with a view to ignite a passion to grow in personal
+        holiness and zeal to help carry out a high priority of the Church's
+        mission: to receover millions of lapsed, indifferent, fallen-away
+        Catholics by personal outreach to them.</p>
+
+        <p class="lead"><a href="manual/">CLCC Manual</a></p>
+
+        <p class="lead"><a href="companion/">Companion to the Manual</a></p>
+
+      </section>
     </main>
+    <div id="template-scripts">
+      <script>
+       jQuery(document).ready(function ($) {
+         var _CaptionTransitions = [];
+         _CaptionTransitions['trans_1'] = {
+           $Duration: 700,
+           $Opacity: 2
+         };
+         _CaptionTransitions['trans_2'] = {
+           $Duration: 700,
+           $Opacity: 2
+         };
+
+         var options = {
+           $AutoPlay: false,
+           $CaptionSliderOptions: {
+             $Class: $JssorCaptionSlider$,
+             $CaptionTransitions: _CaptionTransitions,
+             $PlayInMode: 3,
+             $PlayOutMode: 0
+           },
+           $DragOrientation: 0
+         };
+
+         var slider_container = $('#slider_container'),
+         slider_container_sub = $('#slider_container_sub'),
+         jssor_slider = new $JssorSlider$('slider_container', options);
+
+         function ScaleSlider() {
+           var parentWidth = $('#slider_container').parent().width();
+           if (parentWidth) {
+             jssor_slider.$ScaleWidth(parentWidth);
+           } else {
+             window.setTimeout(ScaleSlider, 30);
+           }
+         }
+
+         slider_container_sub.toggle();
+         slider_container.toggle();
+         ScaleSlider();
+
+         if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+           $(window).bind('resize', ScaleSlider);
+         } else {
+           $(window).bind('orientationchange', ScaleSlider);
+         }
+       });
+      </script>
+    </div>
   </body>
 </html>

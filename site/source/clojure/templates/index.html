@@ -1,34 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
+    <style>
+     main {
+       margin: 0;
+       padding: 0 !important;
+     }
+     section.main-content {
+       margin: 0;
+       padding: 4em 3em 4em 3em;
+     }
+    </style>
     <title>NCCTS &mdash; National Catholic Conference for Total Stewardship</title>
   </head>
   <body>
     <main>
-      <p>Total Stewardship</p>
 
-      <p>Evangelization. Discipleship. Service.</p>
+      <img id="slider_container_sub"
+           src="/static/images/clouds.jpg"
+           style="height: auto;
+                  left: 0px;
+                  position: relative;
+                  top: -1px;
+                  width: 100%;">
 
-      <p>Start our CLCC Faith Formation Process.</p> <!-- <p>Holy Spirit dove
-      image</p> --> <p>We pray you will join us in the work of a lifetime.</p>
+      <div id="slider_container"
+           style="display: none;
+                  height: 300px;
+                  left: 0px;
+                  position: relative;
+                  top: -1px;
+                  width: 915px;">
+        <div style="height: 300px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 915px;"
+             u="slides">
+          <div>
+            <img src="/static/images/clouds.jpg"
+                 u="image">
+            <div style="left: 70px;
+                        position: absolute;
+                        top: 70px;"
+                 t="trans_1"
+                 u="caption">
+              <p style="color: #666;
+                        font-family: 'Alegreya SC', sans-serif;
+                        font-size: 2.5em;
+                        font-variant: small-caps;
+                        font-weight: 300;
+                        margin-bottom: 0;">
+                Total&nbsp;Stewardship
+              </p>
+              <h1 style="font-size: 6em;
+                         font-weight: 900;
+                         margin-bottom: 0;
+                         margin-top: 0;
+                         padding-top: 0;">
+                NCCTS
+              </h1>
+              <p style="color: #666;
+                        font-size: 2em;
+                        font-weight: 400;
+                        margin-left: 1em;">
+                Evangelization.&nbsp;Discipleship.&nbsp;Service
+              </p>
+            </div>
+            <div style="position: absolute;
+                        right: 10px;
+                        top: 10px;"
+                 t="trans_2"
+                 u="caption">
+              <img src="/static/images/dove-flying.png"
+                   style="height: 300px;
+                          width: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <p>NCCTS was founded by the late Fr. Francis A. Novak, C.Ss.R.</p>
+      <section class="main-content">
+        <p class="lead">The NCCTS was founded by the late <a href="/francis-novak/">
+          Fr. Francis A. Novak, C.Ss.R.</a>, and is committed to spreading his
+          vision for a great renewal in Catholic parish life throughout the
+          world.</p>
 
-      <p>The CLCC Formation Process sprang from his heart as a gift to the
-        Church he so loved.  Father believed it to be the work of God the Holy
-        Spirit in him, for the benefit of his brothers and sisters in
-        Christ.</p>
+        <p class="lead">The <a href="/clcc/">CLCC Formation Process</a> sprang from his heart
+          as a gift to the Church he so loved.  Father believed it to be the
+          work of God the Holy Spirit in him, for the benefit of his brothers
+          and sisters in Christ.</p>
 
-      <p>We agree!</p>
+        <p class="lead">We agree! &nbsp;And we pray you will join us in the work of a lifetime.</p>
 
-      <p>The NCCTS is committed to spreading Fr. Novak's vision for a great
-        renewal in Catholic parish life throughout the world.</p>
-
-      <p>The world aflame with Pentecost's fire, Evangelization, the Good News
-      spreading, God's people true conversion seeking; Enlightened by the
-      Spirit's fire, Enlivened by the Savior's Body and Blood, Protected under
-      Virgin Mother's care, Entrusted with the Church's teaching faithfully to
-      live and share.</p>
+        <p class="lead well" style="margin-top: 2em;"><em>The world aflame with Pentecost's fire, Evangelization, the Good News
+          spreading, God's people true conversion seeking; Enlightened by the
+          Spirit's fire, Enlivened by the Savior's Body and Blood, Protected under
+          Virgin Mother's care, Entrusted with the Church's teaching faithfully to
+          live and share.</em></p>
+      </section>
     </main>
+    <div id="template-scripts">
+      <script>
+       jQuery(document).ready(function ($) {
+         var _CaptionTransitions = [];
+         _CaptionTransitions['trans_1'] = {
+           $Duration: 700,
+           $Opacity: 2
+         };
+         _CaptionTransitions['trans_2'] = {
+           $Duration: 700,
+           $Opacity: 2
+         };
+
+         var options = {
+           $AutoPlay: false,
+           $CaptionSliderOptions: {
+             $Class: $JssorCaptionSlider$,
+             $CaptionTransitions: _CaptionTransitions,
+             $PlayInMode: 3,
+             $PlayOutMode: 0
+           },
+           $DragOrientation: 0
+         };
+
+         var slider_container = $('#slider_container'),
+             slider_container_sub = $('#slider_container_sub'),
+             jssor_slider = new $JssorSlider$('slider_container', options);
+
+         function ScaleSlider() {
+           var parentWidth = $('#slider_container').parent().width();
+           if (parentWidth) {
+             jssor_slider.$ScaleWidth(parentWidth);
+           } else {
+             window.setTimeout(ScaleSlider, 30);
+           }
+         }
+
+         slider_container_sub.toggle();
+         slider_container.toggle();
+         ScaleSlider();
+
+         if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+           $(window).bind('resize', ScaleSlider);
+         } else {
+           $(window).bind('orientationchange', ScaleSlider);
+         }
+       });
+      </script>
+    </div>
   </body>
 </html>
