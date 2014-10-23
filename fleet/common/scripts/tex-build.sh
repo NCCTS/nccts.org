@@ -10,6 +10,9 @@ if [ "$task" = "pdf" ]; then
     pdflatex \
         -output-directory "$source_tex/build/clcc" \
         "$source_tex/clcc-$part_name.tex"
+    pdflatex \
+        -output-directory "$source_tex/build/clcc" \
+        "$source_tex/clcc-$part_name.tex"
 elif [ "$task" = "xml" ]; then
     latexml \
         --output="$source_tex/build/clcc/clcc-$part_name.xml" \
