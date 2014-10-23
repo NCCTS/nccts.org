@@ -201,6 +201,32 @@
          } else {
            $(window).bind('orientationchange', scaleSlider);
          }
+
+         _V_("novak_intro_video").ready(function () {
+           var novak_intro_video = $('#novak_intro_video'),
+               novak_intro_video_sub = $('#novak_intro_video_sub'),
+               aspectRatio = 9/16;
+
+           function resizeVideoJS() {
+             var parentWidth = $('#novak_intro_video').parent().width();
+             if (parentWidth) {
+               novak_intro_video.width(parentWidth).height( parseInt( parentWidth * aspectRatio ) );
+             } else {
+               window.setTimeout(resizeVideoJS, 30);
+             }
+           }
+
+           novak_intro_video_sub.toggle();
+           novak_intro_video.toggle();
+           jQuery("#novak_intro_video > video").toggle();
+           resizeVideoJS();
+
+           if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+             $(window).bind('resize', resizeVideoJS);
+           } else {
+             $(window).bind('orientationchange', resizeVideoJS);
+           }
+         });
        });
       </script>
     </div>
