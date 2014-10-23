@@ -42,42 +42,29 @@
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{lxRDFa}
-% \usepackage[explicit]{titlesec}
-% \usepackage{tocloft}
 
 \title{\textbf{CELEBRATING LIFE} \\ AS A \\ \textbf{CATHOLIC CHRISTIAN}}
 \author{{\small BY} \\ FRANCIS ALPHONSUS NOVAK \\
         {\small OF THE CONGREGATION OF THE MOST HOLY REDEEMER}}
 \date{\vfill
-      {\small NATIONAL CATHOLIC CONFERENCE FOR TOTAL STEWARDSHIP \\ 2014}
-      \clearpage}
-
-% \newcommand*\Hide{%
-% \titleformat{\part}
-%   {}{}{0pt}{}
-% }
+      {\small NATIONAL CATHOLIC CONFERENCE FOR TOTAL STEWARDSHIP \\ 2014}}
 
 \begin{document}
-\pagestyle{plain}
+
+% ------------------------------------------------------------------------------
+
+\pagestyle{empty}
+\maketitle
 
 % ------------------------------------------------------------------------------
 
 \frontmatter
-
 \setcounter{secnumdepth}{-1}
-\section*{} \lxRDFa{property=manual-top-title,resource={manual}}
-
-\vspace*{\fill}
-\begin{center}
-
-{\large \textbf{CELEBRATING LIFE AS A CATHOLIC CHRISTIAN}}
-
-\end{center}
-\vspace*{\fill}
-\pagebreak
-
-% ------------------------------------------------------------------------------
-
+\chapter{}
+\setcounter{page}{2}
+\thispagestyle{empty}
+\section*{} \lxRDFa{property=pub-info-section,resource={manual}}
+{\small
 Nihil Obstat: + Kelvin E. Felix, D.D.  Archbishop of Castries Castries,
 St. Lucia, West Indies
 
@@ -107,20 +94,17 @@ rights other persons may have either in the work itself or in how the work is
 used, such as publicity or privacy rights; notice for any reuse or distribution,
 you must make clear to others the license terms of this work.
 
-Scripture selections, unless otherwise noted, are taken from the New American
-Bible, Copyright 1991, 1986, 1970 by the Confraternity of Christian Doctrine,
-Incenterfold found on pages 144-145 by Chris Schwartz Studios, Saint Louis,
-Missouri.
-
 For more information and additional electronic resources, please visit the NCCTS
 website.
 
 \begin{center}
-
 http://www.nccts.org \\
 e-mail: questions@nccts.org
+\end{center}
 
-\section{} \lxRDFa{property=cc-lic-section,resource={manual}}
+\section*{}
+\lxRDFa{property=cc-lic-section,resource={manual}}
+\begin{center}
 
 The \href{http://www.latex-project.org/}{\LaTeX} source code for this book can
 be freely accessed on GitHub.
@@ -133,17 +117,12 @@ be freely accessed on GitHub.
 \lxRDFa{property=cc-lic-graphic,resource={manual}}}
 
 \end{center}
-
-\vfill
-\begin{center}
-
-{\small National Catholic Conference for Total Stewardship \\ 2014}
-
-\end{center}
-\clearpage
+}
 \pagebreak
 
 % ------------------------------------------------------------------------------
+
+\section*{} \lxRDFa{property=title-quote-section,resource={manual}}
 
 \vspace*{\fill}
 \begin{center}
@@ -158,6 +137,8 @@ and of every believer.
 \pagebreak
 
 % ------------------------------------------------------------------------------
+
+\section*{} \lxRDFa{property=prayer-poem-section,resource={manual}}
 
 \vspace*{\fill}
 \begin{center}
@@ -176,6 +157,8 @@ Entrusted with the Church's teaching faithfully to live and share.}
 
 % ------------------------------------------------------------------------------
 
+\section*{} \lxRDFa{property=dedication-section,resource={manual}}
+
 \vspace*{\fill}
 \begin{center}
 
@@ -189,9 +172,12 @@ and to my Redemptorist family and friends
 
 % ------------------------------------------------------------------------------
 
-\maketitle
+\section*{} \lxRDFa{property=endorsements-section,resource={manual}}
 
-% ------------------------------------------------------------------------------
+\ldots the best of all the renewal programs at this time.
+\\ \\
+Francis Cardinal George, O.M.I. \\
+Archbishop of Chicago \\
 
 Celebrating Life as a Catholic Christian is a proven and efficacious tool for
 the New Evangelization, that is, the teaching and celebrating and living of our
@@ -208,15 +194,33 @@ discussion of the texts of recent Papal Magisterium, members of the small
 communities, under the pastoral guidance of the Vicar of Christ on earth, are
 prepared in the best manner possible to be effective heralds and agents of the
 New Evangelization.
-
+\\ \\
 Raymond Leo Cardinal Burke \\
 Archbishop Emeritus of Saint Louis \\
-Prefect, Supreme Tribunal of the Apostolic Signatura
+Prefect, Supreme Tribunal of the Apostolic Signatura \\
+
+By far this is the best faith formation program for laity I have ever
+encountered. The process described in this manual is based solidly on bibilical
+teaching, Catholic tradition, and Church documents, thus furthering the Churchs
+goal of New Evangelization.
+\\ \\
+Germaine F. Murray, Ph.D. \\
+Professor of English and Humanities \\
+Maryville University, Saint Louis, Missouri \\
+
+For thirty years this lay formation process has been developed in the United
+States, Canada, and St. Lucia in the Caribbean. It has been tested and it
+works. Every bishop and pastor should know of it and use it.
+\\ \\
+Reverend Brian Van Hove, S.J., Ph.D. \\
+Alma, Michigan
 
 \pagebreak
 
 % ------------------------------------------------------------------------------
 
+\pagestyle{plain}
+\setcounter{page}{7}
 \chapter{Foreword}
 
 % NEED TO LOOK OUT FOR period-comma problem areas that may have resulted in bad
@@ -790,9 +794,8 @@ Total session time should not exceed 90 minutes.
 % ------------------------------------------------------------------------------
 
 \mainmatter
-% \addtocontents{toc}{\cftpagenumbersoff{part}}
+\setcounter{page}{25}
 \part{The Process}
-% \addtocontents{toc}{\cftpagenumberson{part}}
 
 % ------------------------------------------------------------------------------
 
@@ -5646,9 +5649,7 @@ effective fisher of men, thus, Celebrating Life as a Catholic Christian.
 
 % ------------------------------------------------------------------------------
 
-% \addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{Authoritative Sources}
-% \addtocontents{toc}{\cftpagenumberson{part}}
 
 % ------------------------------------------------------------------------------
 
@@ -10884,12 +10885,7 @@ the Father's house.
 % ------------------------------------------------------------------------------
 
 \appendix \setcounter{secnumdepth}{-2}
-% {
-% \Hide
-% \addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{Appendices}
-% \addtocontents{toc}{\cftpagenumberson{part}}
-% }
 
 % ------------------------------------------------------------------------------
 
@@ -11066,12 +11062,7 @@ Glossary entries.
 % ------------------------------------------------------------------------------
 
 \backmatter
-% {
-% \Hide
-% \addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{Indexes}
-% \addtocontents{toc}{\cftpagenumberson{part}}
-% }
 
 % ------------------------------------------------------------------------------
 
@@ -11087,12 +11078,7 @@ Some index entries.
 
 % ------------------------------------------------------------------------------
 
-% {
-% \Hide
-% \addtocontents{toc}{\cftpagenumbersoff{part}}
 \part{}
-% \addtocontents{toc}{\cftpagenumberson{part}}
-% }
 
 % ------------------------------------------------------------------------------
 
