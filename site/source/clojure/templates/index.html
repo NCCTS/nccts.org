@@ -183,23 +183,23 @@
              slider_container_sub = $('#slider_container_sub'),
              jssor_slider = new $JssorSlider$('slider_container', options);
 
-         function ScaleSlider() {
+         function scaleSlider() {
            var parentWidth = $('#slider_container').parent().width();
            if (parentWidth) {
              jssor_slider.$ScaleWidth(parentWidth);
            } else {
-             window.setTimeout(ScaleSlider, 30);
+             window.setTimeout(scaleSlider, 30);
            }
          }
 
          slider_container_sub.toggle();
          slider_container.toggle();
-         ScaleSlider();
+         scaleSlider();
 
          if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-           $(window).bind('resize', ScaleSlider);
+           $(window).bind('resize', scaleSlider);
          } else {
-           $(window).bind('orientationchange', ScaleSlider);
+           $(window).bind('orientationchange', scaleSlider);
          }
        });
       </script>
