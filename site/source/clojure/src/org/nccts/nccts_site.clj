@@ -51,8 +51,8 @@
     (enlive-html/at
      head-foot
 
-     [enlive-html/any-node]
-     (fn [node] (when-not (= :comment (:type node)) node))
+     ;; [enlive-html/any-node]
+     ;; (fn [node] (when-not (= :comment (:type node)) node))
 
      [:title]
      (enlive-html/substitute
@@ -96,8 +96,8 @@
     (enlive-html/at
      head-foot
 
-     [enlive-html/any-node]
-     (fn [node] (when-not (= :comment (:type node)) node))
+     ;; [enlive-html/any-node]
+     ;; (fn [node] (when-not (= :comment (:type node)) node))
 
      [:title]
      (enlive-html/substitute
