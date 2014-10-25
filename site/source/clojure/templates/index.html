@@ -267,9 +267,9 @@
              }
            }
 
-           novak_intro_video_sub.toggle();
-           novak_intro_video.toggle();
-           jQuery("#novak_intro_video > video").toggle();
+           novak_intro_video_sub.toggle(false);
+           novak_intro_video.toggle(true);
+           jQuery("#novak_intro_video > video").toggle(true);
            resizeVideoJS();
 
            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
