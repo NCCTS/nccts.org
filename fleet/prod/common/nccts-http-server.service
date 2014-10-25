@@ -5,7 +5,7 @@ PartOf=nccts-build.service
 [Service]
 ExecStartPre=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh http-server ; \
              -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh http-server
-ExecStart=/home/core/repos/nccts.org/fleet/common/scripts/nccts-http-server.sh
+ExecStart=/home/core/repos/nccts.org/fleet/prod/common/scripts/nccts-http-server.sh
 ExecStop=-/home/core/repos/nccts.org/fleet/common/scripts/cont-kill.sh http-server ; \
          -/home/core/repos/nccts.org/fleet/common/scripts/cont-rm.sh http-server
 Type=simple
