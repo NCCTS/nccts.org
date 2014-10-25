@@ -276,6 +276,11 @@
              $(window).bind('orientationchange', resizeVideoJS);
            }
          });
+
+         var swf = $("#novak_intro_video > object[type='application/x-shockwave-flash']");
+         if (swf.length) {
+           videojs("novak_intro_video").triggerReady();
+         }
        });
       </script>
     </div>
