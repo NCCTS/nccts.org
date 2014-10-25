@@ -261,7 +261,7 @@
            function resizeVideoJS() {
              var parentWidth = $('#novak_intro_video').parent().width();
              if (parentWidth) {
-               novak_intro_video.width(parentWidth).height( parseInt( parentWidth * aspectRatio ) );
+               novak_intro_video.width(parentWidth).height( Math.ceil( parentWidth * aspectRatio ) );
              } else {
                window.setTimeout(resizeVideoJS, 30);
              }
