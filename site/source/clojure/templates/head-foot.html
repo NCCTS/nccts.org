@@ -334,7 +334,7 @@
            console.log("this was the token:", token);
          }
        });
-       document.getElementById('customButton').addEventListener('click', function(e) {
+       jQuery('#customButton').bind('click', function(e) {
          handler.open({
            name: 'NCCTS',
            description: 'One-time Donation. Tax deductible.',
