@@ -17,7 +17,6 @@ node_modules/
 /site/source/tex/*to.pdf
 /site/source/tex/auto/
 /site/source/tex/build/clcc/*
-!/site/source/tex/build/clcc/*.xml
 /site/watchman-logs/*
 !/site/watchman-logs/.gitkeep
 /support/save-touch.el
