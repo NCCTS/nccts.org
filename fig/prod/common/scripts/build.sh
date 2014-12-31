@@ -9,21 +9,21 @@ docker run \
        --rm \
        --volumes-from build-data \
        --name static \
-       quay.io/nccts/baseimage:latest \
-       '/home/sailor/nccts.org/fig/prod/mounted/scripts/rsync-static.sh'
+       quay.io/nccts/baseimage \
+       '/home/sailor/nccts.org/fig/prod/common/scripts/rsync-static.sh'
 
 docker run \
        --rm \
        --volumes-from build-data \
        --name latex \
-       quay.io/nccts/latex:latest \
-       '/home/sailor/nccts.org/fig/prod/mounted/scripts/run-tex.sh'
+       quay.io/nccts/latex \
+       '/home/sailor/nccts.org/fig/prod/common/scripts/run-tex.sh'
 
 docker run \
        --rm \
        --volumes-from build-data \
        --name generator \
-       quay.io/nccts/clojure:latest \
-       '/home/sailor/nccts.org/fig/prod/mounted/scripts/run-clj.sh'
+       quay.io/nccts/clojure \
+       '/home/sailor/nccts.org/fig/prod/common/scripts/run-clj.sh'
 
 docker rm build-data

@@ -1,7 +1,14 @@
-xdata:
+data:
+  command: 'clone_site.sh tagged'
   image: quay.io/nccts/nccts-data
   volumes:
-    - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
+    - /home/sailor/nccts.org
+
+update:
+  command: 'pull_site.sh tagged'
+  image: quay.io/nccts/nccts-data
+  volumes_from:
+    - data
 
 builder:
   command: 'nccts.org/fig/prod/common/scripts/build.sh'
