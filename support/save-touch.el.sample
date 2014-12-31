@@ -8,6 +8,8 @@
                        (f-relative (buffer-file-name)
                                    "/Users/michael/repos/NCCTS/nccts.org/site/")))
       (deferred:$
+        ;; revise this to use the `boot2docker ssh ...' command (i.e. pass touch
+        ;; command through it)
         (deferred:process "ssh"
           "-i"
           "/Users/michael/.vagrant.d/insecure_private_key"
