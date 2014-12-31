@@ -1,0 +1,79 @@
+data:
+  image: nccts/nccts-data
+  # !!! REMEMBER TO SWITCH BACK TO TAGGED AND REMOVE THE host part of the volume directive !!!
+  # command: 'clone_site.sh tagged'
+  # command: 'clone_site.sh'
+  volumes:
+    - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
+
+update:
+  image: nccts/nccts-data
+  # !!! REMEMBER TO SWITCH BACK TO TAGGED !!!
+  # command: 'pull_site.sh tagged'
+  # command: 'pull_site.sh'
+  volumes_from:
+    - data
+
+# docker run -it --rm --privileged --volume /var/lib/docker:/var/lib/docker --name build nccts/builder
+build:
+  image: nccts/builder
+  # !!! REMEMBER !!!
+  # the support scripts will be available owing to clone/update of repo by data,update services defined above
+  # though I will want to reorg and revise them (i.e. w.r.t. paths, no longer anchored to fleet)
+
+  # need to push to master and reload 'data' via fig to test this...
+  # or mod 'data' so that it doesn't run clone script and instead makes ues of fact that boot2docker
+  # has /Users mounted as /Users, so could map to my repo directly, which is what I would want to do
+  # in a dev fig.yml in any case
+  command: '/home/sailor/nccts.org/fig/prod/scripts/build.sh'
+  # command: |
+  #   docker run -it --rm --volumes-from data --name static nccts/baseimage:latest '\
+  #       source /home/sailor/.bashrc ; \
+
+  #       /home/sailor/nccts.org/fleet/common/scripts/rsync-static.sh'
+
+  #   docker run -it --rm --volumes-from data --name latex nccts/latex:latest '\
+  #       source /home/sailor/.bashrc ; \
+  #       export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH ; \
+
+  #       export source_tex=/home/sailor/nccts.org/site/source/tex ; \
+  #       export com_scripts=/home/sailor/nccts.org/fleet/common/scripts ; \
+
+  #       mkdir -p $source_tex/build
+  #       mkdir -p $source_tex/build/clcc
+
+  #       $com_scripts/tex-build.sh pdf manual ; \
+  #       # cannot run latexml build in mem constrained env < 4GB
+  #       # $com_scripts/tex-build.sh xml manual ; \
+  #       $com_scripts/tex-build.sh html manual ; \
+
+  #       $com_scripts/tex-build.sh pdf companion ; \
+  #       # cannot run latexml build in mem constrained env < 4GB
+  #       # $com_scripts/tex-build.sh xml companion ; \
+  #       $com_scripts/tex-build.sh html companion ; \
+
+  #       $com_scripts/rsync-latex.sh'
+
+  #   docker run -it --rm --volumes-from data --name generator nccts/clojure:latest '\
+  #       source /home/sailor/.bashrc ; \
+
+  #       cd /home/sailor/nccts.org ; \
+  #       lein run ; \
+
+  #       mkdir -p /home/sailor/nccts.org/site/source/clojure/build ; \
+
+  #       /home/sailor/nccts.org/fleet/common/scripts/rsync-generator.sh'
+  privileged: true
+  volumes:
+    - /var/run:/var/docker_host/run
+    # - /var/lib/docker:/var/lib/docker
+  volumes_from:
+    - data
+
+http:
+  image: nccts/node
+  command: '/home/sailor/nccts.org/fig/prod/master/scripts/http.sh'
+  ports:
+    - "80:8080"
+  volumes_from:
+    - data
