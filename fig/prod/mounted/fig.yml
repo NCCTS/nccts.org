@@ -1,4 +1,4 @@
-xdata:
+data:
   image: quay.io/nccts/nccts-data
   volumes:
     - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
