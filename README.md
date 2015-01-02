@@ -18,6 +18,9 @@ The use and distribution terms for these works is covered by the Creative Common
 
 ## Donations
 
-The recommended annual donation for usage of and/or creation of derivative works from NCCTS software is `USD $1` for independent developers, and `USD $100 ⨉ ceiling( no. of developers ÷ 10 )` for corporations.
+There is a recommended annual donation for usage of and/or creation of derivative works from NCCTS software:
+
+* USD &dollar;10 for independent developers.
+* USD &dollar;100 &times; ceiling&lpar; &numero; developers ÷ 10 &rpar; for corporations.
 
 The NCCTS is a 501(c)(3) charitable organization and all donations are tax deductible. Any donation amount is welcome, but giving is neither expected nor required and in no way tied to the organization's open source licensing.
