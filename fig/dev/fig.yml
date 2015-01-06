@@ -1,0 +1,23 @@
+data:
+  image: quay.io/nccts/nccts-data
+  volumes:
+    - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
+
+builder:
+  command: '/home/sailor/nccts.org/fig/dev/scripts/builder.sh'
+  environment:
+    - DIND
+  image: quay.io/nccts/builder
+  privileged: true
+  volumes:
+    - /var/lib/docker:/var/lib/docker
+  volumes_from:
+    - data
+
+http:
+  command: '/home/sailor/nccts.org/fig/dev/scripts/http.sh'
+  image: quay.io/nccts/node
+  ports:
+    - "80:8080"
+  volumes_from:
+    - data
