@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/home/sailor/nccts.org/fig/build/prod/scripts/rsync-static.sh
+/home/sailor/nccts.org/fig/build/common/scripts/rsync-static.sh
