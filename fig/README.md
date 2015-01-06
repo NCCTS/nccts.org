@@ -20,7 +20,6 @@ $ docker run --name inception \
              'while true; do sleep 86400; done'
 
 $ docker exec -it inception bash
-
 $ su - sailor
 
 $ docker pull quay.io/nccts/baseimage
