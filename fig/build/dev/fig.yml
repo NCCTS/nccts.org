@@ -18,5 +18,7 @@ latex:
 generator:
   command: '/home/sailor/nccts.org/fig/build/dev/scripts/generator.sh'
   image: quay.io/nccts/clojure
+  ports:
+    - "7888:7888"
   volumes_from:
     - data

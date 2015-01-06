@@ -8,6 +8,8 @@ builder:
   environment:
     - DIND
   image: quay.io/nccts/builder
+  ports:
+    - "7888:7888"
   privileged: true
   volumes:
     - /var/lib/docker:/var/lib/docker
