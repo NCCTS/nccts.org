@@ -23,16 +23,16 @@ $ docker exec -it inception bash
 
 $ su - sailor
 
-$ mkdir repos
-$ cd repos
-$ git clone https://github.com/NCCTS/nccts.org.git
-
 $ docker pull quay.io/nccts/baseimage
 $ docker pull quay.io/nccts/builder
 $ docker pull quay.io/nccts/clojure
 $ docker pull quay.io/nccts/latex
 $ docker pull quay.io/nccts/nccts-data
 $ docker pull quay.io/nccts/node
+
+$ mkdir repos
+$ cd repos
+$ git clone https://github.com/NCCTS/nccts.org.git
 
 $ cd nccts.org/fig/prod/tagged
 $ fig up data
