@@ -4,7 +4,7 @@ data:
     - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
 
 builder:
-  command: 'nccts.org/fig/prod/common/scripts/build.sh'
+  command: '/home/sailor/nccts.org/fig/prod/common/scripts/build.sh'
   environment:
     - DIND
   image: quay.io/nccts/builder
@@ -15,7 +15,7 @@ builder:
     - data
 
 http:
-  command: 'nccts.org/fig/prod/common/scripts/http.sh'
+  command: '/home/sailor/nccts.org/fig/prod/common/scripts/http.sh'
   image: quay.io/nccts/node
   ports:
     - "80:8080"
