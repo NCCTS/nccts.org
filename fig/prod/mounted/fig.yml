@@ -4,7 +4,7 @@ data:
     - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
 
 builder:
-  command: '/home/sailor/nccts.org/fig/prod/common/scripts/build.sh'
+  command: '/home/sailor/nccts.org/fig/prod/common/scripts/builder.sh'
   environment:
     - DIND
   image: quay.io/nccts/builder

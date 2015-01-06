@@ -4,19 +4,19 @@ data:
     - /home/sailor/nccts.org:/home/sailor/nccts.org
 
 static:
-  command: '/home/sailor/nccts.org/fig/build/prod/scripts/rsync-static.sh'
+  command: '/home/sailor/nccts.org/fig/build/prod/scripts/static.sh'
   image: quay.io/nccts/baseimage
   volumes_from:
     - data
 
 latex:
-  command: '/home/sailor/nccts.org/fig/build/prod/scripts/run-tex.sh'
+  command: '/home/sailor/nccts.org/fig/build/prod/scripts/latex.sh'
   image: quay.io/nccts/latex
   volumes_from:
     - data
 
 generator:
-  command: '/home/sailor/nccts.org/fig/build/prod/scripts/run-clj.sh'
+  command: '/home/sailor/nccts.org/fig/build/prod/scripts/generator.sh'
   image: quay.io/nccts/clojure
   volumes_from:
     - data

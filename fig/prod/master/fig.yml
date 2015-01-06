@@ -11,7 +11,7 @@ update:
     - data
 
 builder:
-  command: '/home/sailor/nccts.org/fig/prod/common/scripts/build.sh'
+  command: '/home/sailor/nccts.org/fig/prod/common/scripts/builder.sh'
   environment:
     - DIND
   image: quay.io/nccts/builder
