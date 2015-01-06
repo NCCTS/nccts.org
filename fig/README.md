@@ -10,7 +10,7 @@ $ machine create -d digitalocean \
 
 $ export DOCKER_HOST=$(machine url) DOCKER_AUTH=identity
 
-$ alias docker="$HOME/bin/docker-1.3.1-dev-identity-auth"
+$ alias docker="$HOME/bin/docker-1.4.1-136b351e-identity"
 
 $ docker run --name inception \
              -d --privileged \
