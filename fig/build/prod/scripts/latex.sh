@@ -14,4 +14,4 @@ $build_prod_scripts/tex-build.sh pdf companion
 $build_prod_scripts/tex-build.sh xml companion
 $build_prod_scripts/tex-build.sh html companion
 
-$build_prod_scripts/rsync-latex.sh
+/home/sailor/nccts.org/fig/build/common/scripts/rsync-latex.sh
