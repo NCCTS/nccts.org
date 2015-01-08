@@ -142,6 +142,9 @@ tmux attach -t fig/build/dev:generator
 # in another terminal
 open http://$(boot2docker ip)/
 
+# in yet another terminal, open to the root of the nccts.org repository
+tail -f site/watchman-logs/*.log
+
 # a clojure REPL should open at $(boot2docker ip):7888 but the latex builds
 # should be completed prior to invoking `(org.nccts.nccts-site/export)` therein
 
