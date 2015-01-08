@@ -24,7 +24,7 @@ docker run --name inception \
            quay.io/nccts/builder \
            'while true; do sleep 86400; done'
 
-docker exec -it inception bash -c 'sudo -i -u sailor -- bash -i'
+docker exec -it inception sudo -i -u sailor
 export TERM=xterm-256color
 
 docker pull quay.io/nccts/baseimage
