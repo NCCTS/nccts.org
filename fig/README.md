@@ -1,6 +1,6 @@
 # Usage Guides
 
-The following are not shell scripts *per se*,  but rather guides for working in depolyment and dev contexts. The latest version of `bash` is assumed to be the top-level shell. The various commands can be pasted into a shell, but pasting large groups of them at a time is not guaranteed to work.
+The following are not shell scripts *per se*,  but rather guides for working in deployment and dev contexts. The latest version of `bash` is assumed to be the top-level shell. The various commands can be pasted into a shell, but pasting large groups of them at a time is not guaranteed to work.
 
 ## Deploying remotely with Docker `machine`
 
