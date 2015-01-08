@@ -1,4 +1,4 @@
-data:
+builddata:
   image: quay.io/nccts/nccts-data
   volumes:
     - /home/sailor/nccts.org:/home/sailor/nccts.org
@@ -7,13 +7,13 @@ static:
   command: '/home/sailor/nccts.org/fig/build/dev/scripts/static.sh'
   image: quay.io/nccts/baseimage
   volumes_from:
-    - data
+    - builddata
 
 latex:
   command: '/home/sailor/nccts.org/fig/build/dev/scripts/latex.sh'
   image: quay.io/nccts/latex
   volumes_from:
-    - data
+    - builddata
 
 generator:
   command: '/home/sailor/nccts.org/fig/build/dev/scripts/generator.sh'
@@ -21,4 +21,4 @@ generator:
   ports:
     - "7888:7888"
   volumes_from:
-    - data
+    - builddata

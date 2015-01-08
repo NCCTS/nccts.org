@@ -22,7 +22,7 @@ script_path () {
 script_dir=$(dirname -- "$(script_path)")
 cd $script_dir/../../../build/prod/
 
-fig up data
+fig up builddata
 fig up static
 fig up latex
 fig up generator
