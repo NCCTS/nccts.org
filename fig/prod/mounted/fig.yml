@@ -1,6 +1,9 @@
 data:
   image: quay.io/nccts/nccts-data
   volumes:
+    # would prefer (but it doesn't work)...
+    # - /home/sailor/nccts.org:/home/sailor/nccts.org
+    # but this is a hack that works...
     - /Users/michael/repos/NCCTS/nccts.org:/home/sailor/nccts.org
 
 builder:
