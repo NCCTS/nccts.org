@@ -17,7 +17,7 @@
 
   :min-lein-version "2.5.0"
 
-  :plugins [[cider/cider-nrepl "0.8.0-SNAPSHOT"]]
+  :plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]]
 
   :resource-paths ["site/source"]
 
