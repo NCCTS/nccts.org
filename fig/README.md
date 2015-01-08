@@ -141,7 +141,7 @@ tmux new-session -s bldr/dev -d ' \
 
 sleep 6
 
-tmux attach -t fig/build/dev:generator
+tmux attach -t bldr/dev:generator
 
 # in another terminal
 open http://$(boot2docker ip)/
