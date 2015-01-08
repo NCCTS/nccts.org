@@ -104,7 +104,7 @@ docker run --name inception \
 
 export TERM=xterm-256color
 
-tmux new-session -s fig/dev -d ' \
+tmux new-session -s dev -d ' \
     tmux set-option -g status-bg colour202 ; \
     t_win_dev () { \
         tmux new-window -n "$1" \
@@ -117,7 +117,7 @@ tmux new-session -s fig/dev -d ' \
 
 sleep 6
 
-tmux new-session -s fig/build/dev -d ' \
+tmux new-session -s bldr/dev -d ' \
     t_win_bld_dev () { \
         local curr_bldr="$(cd /home/sailor/nccts.org/fig/dev ; \
                         echo $(fig ps | awk "\$1 ~ /build/ { print \$1 }"))" ; \
