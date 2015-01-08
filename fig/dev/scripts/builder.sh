@@ -22,9 +22,4 @@ script_path () {
 script_dir=$(dirname -- "$(script_path)")
 cd $script_dir/../../build/dev/
 
-# revise for build per old fleet scripts
-# --------------------------------------
-# fig up data
-# fig up static
-# fig up latex
-# fig up generator
+while true; do sleep 86400; done

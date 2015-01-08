@@ -32,3 +32,5 @@ watchman -- trigger $source_tex/build/ rsync-latex \
 sleep 5
 touch $source_tex/clcc-manual.tex
 touch $source_tex/clcc-companion.tex
+
+while true; do sleep 86400; done

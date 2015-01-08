@@ -11,3 +11,5 @@ watchman --logfile=$watch_log/static.log watch $source_static/
 
 watchman -- trigger $source_static/ rsync-static \
          "*" -- $rsync_static
+
+while true; do sleep 86400; done
