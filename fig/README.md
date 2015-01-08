@@ -55,6 +55,9 @@ open http://$(machine ip nccts-prod)/
 ## Deploying locally with `boot2docker`
 
 ```shell
+# in the root of the nccts.org repository
+
+scripts/clean.sh
 
 docker run --name inception \
            -it --rm \
