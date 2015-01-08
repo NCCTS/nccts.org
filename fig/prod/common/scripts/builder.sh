@@ -27,4 +27,5 @@ fig up static
 fig up latex
 fig up generator
 
+fig stop
 fig rm --force -v
