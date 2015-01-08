@@ -43,6 +43,8 @@ git clone https://github.com/NCCTS/nccts.org.git
 cd nccts.org/fig/prod/tagged
 
 fig up data
+# for rekicks of master,tagged there's also
+# fig up update
 fig up builder
 fig up -d http
 
@@ -74,6 +76,8 @@ export TERM=xterm-256color
 cd nccts.org/fig/prod/mounted
 
 fig up data
+# for rekicks of master,tagged there's also
+# fig up update
 fig up builder
 fig up http
 
